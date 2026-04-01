@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diyorbek Ziyokhujaev | Rezyume</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #c0392b;
+            --text-color: #333;
+            --bg-color: #f4f7f6;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        /* Header Section */
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 80px 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        /* Container */
+        .container {
+            max-width: 900px;
+            margin: -40px auto 40px;
+            padding: 0 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        /* Sections */
+        h2 {
+            color: var(--primary-color);
+            border-left: 5px solid var(--accent-color);
+            padding-left: 15px;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            font-size: 1.4rem;
+        }
+
+        .item {
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .item:last-child { border-bottom: none; }
+
+        .date {
+            color: var(--accent-color);
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+
+        .job-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: block;
+        }
+
+        .company {
+            color: #555;
+            font-style: italic;
+        }
+
+        /* Contact Grid */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .contact-item {
+            font-size: 0.9rem;
+        }
+
+        .contact-item i {
+            color: var(--accent-color);
+            margin-right: 10px;
+        }
+
+        /* Language Badges */
+        .badge {
+            background: #e9ecef;
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin-right: 5px;
+            display: inline-block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 600px) {
+            header h1 { font-size: 1.8rem; }
+            .card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Diyorbek Ziyokhujaev</h1>
+    <p>Senior Law Student | Future Legal Expert in Business & Tech</p>
+</header>
+
+<div class="container">
+    
+    <div class="card">
+        <h2>About Me</h2>
+        <p>I am Diyorbek Ziyokhujaev, a senior year student at Tashkent State University of Law. My passion lies at the intersection of law, business, and technology. I am dedicated to finding lawful solutions to complex disputes and navigating the legal landscapes of the modern corporate world.</p>
+        
+        <div class="contact-grid">
+            <div class="contact-item"><i class="fas fa-phone"></i> +998 90 004 17 06</div>
+            <div class="contact-item"><i class="fas fa-envelope"></i> diyorbekziyoxojayev@gmail.com</div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Tashkent, Uzbekistan</div>
+            <div class="contact-item"><i class="fas fa-birthday-cake"></i> 17/06/2004</div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Work Experience</h2>
+        
+        <div class="item">
+            <span class="date">10/11/2025 – Present</span>
+            <span class="job-title">Paralegal</span>
+            <span class="company">"Law and justice" law firm</span>
+        </div>
+
+        <div class="item">
+            <span class="date">06/06/2025 – 20/10/2025</span>
+            <span class="job-title">Paralegal</span>
+            <span class="company">"BUKVA ZAKOVA" law firm</span>
+            <p>Assisted in legal disputes, drafted claim statements, petitions, contracts, and company charters. Participated in court hearings as a legal assistant.</p>
+        </div>
+
+        <div class="item">
+            <span class="date">07/01/2025 – 15/05/2025</span>
+            <span class="job-title">Judicial Assistant</span>
+            <span class="company">Tashkent Interdistrict Administrative Court</span>
+            <p>Drafted court documents and analyzed disputes between legal entities and state authorities.</p>
+        </div>
+
+        <div class="item">
+            <span class="date">15/01/2024 – 01/08/2024</span>
+            <span class="job-title">English Instructor</span>
+            <span class="company">Self-employed</span>
+            <p>Taught grammar, writing, and IELTS preparation to beginner/intermediate students.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Education</h2>
+        <div class="item">
+            <span class="date">2022 – Current</span>
+            <span class="job-title">Bachelor’s Degree in Law</span>
+            <span class="company">Tashkent State University of Law (TSUL)</span>
+        </div>
+    </div>
+
+    <div class="card">
+        <h2>Language Skills</h2>
+        <p><strong>Uzbek:</strong> Native</p>
+        <p><strong>English:</strong> <span class="badge">C1 Listening/Reading</span> <span class="badge">B2 Speaking/Writing</span></p>
+        <p><strong>Russian:</strong> <span class="badge">B2 Listening</span> <span class="badge">B1 Writing/Reading</span></p>
+    </div>
+
+    <div class="card">
+        <h2>Honors & Publications</h2>
+        <div class="item">
+            <span class="job-title">"Bo‘lajak Sudya" Law Competition</span>
+            <p>Second-Degree Diploma - Supreme Court of Uzbekistan (2024).</p>
+        </div>
+        <div class="item">
+            <span class="job-title">Publication: Cartel Agreements</span>
+            <p>Journal of New Century Innovations, Vol. 74, No. 1, pp. 54–69 (2025).</p>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+    <p>&copy; 2026 Diyorbek Ziyokhujaev. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
