@@ -3,101 +3,73 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Diyorbek | Law & AI</title>
-
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<title>Diyorbek | Portfolio</title>
 
 <style>
-:root {
-    --primary: #1e293b;
-    --accent: #6366f1;
-    --bg: #f8fafc;
-}
-
 body {
     margin: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg);
-    color: #333;
-}
-
-/* HERO */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.6)),
-    url('https://images.unsplash.com/photo-1526378722484-bd91ca387e72');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    color: white;
-}
-
-.hero h1 {
-    font-size: 3rem;
-    margin: 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-top: 10px;
+    font-family: sans-serif;
 }
 
 /* NAV */
 nav {
     position: fixed;
     width: 100%;
-    top: 0;
-    background: rgba(30,41,59,0.9);
-    padding: 10px;
+    background: #111;
+    padding: 15px;
     text-align: center;
-    z-index: 1000;
 }
-
 nav a {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-    font-size: 0.9rem;
 }
 
-/* SECTIONS */
+/* HERO */
+.hero {
+    height: 100vh;
+    background: url('https://images.unsplash.com/photo-1581090700227-1e37b190418e') center/cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+}
+
+.hero h1 {
+    font-size: 3rem;
+}
+.hero p {
+    font-size: 1.2rem;
+}
+
+/* SECTION */
 .section {
+    padding: 80px 20px;
     max-width: 900px;
-    margin: 60px auto;
-    padding: 0 20px;
+    margin: auto;
 }
 
-.section h2 {
-    border-left: 5px solid var(--accent);
+h2 {
+    border-left: 5px solid red;
     padding-left: 10px;
 }
 
-/* CARD */
-.card {
-    background: white;
+/* PROJECTS */
+.project {
+    background: #f4f4f4;
     padding: 20px;
     margin-top: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
-/* BADGE */
-.badge {
-    background: #e5e7eb;
-    padding: 5px 10px;
-    margin: 3px;
+/* BUTTON */
+.btn {
     display: inline-block;
-    border-radius: 5px;
-}
-
-/* FOOTER */
-footer {
-    text-align: center;
-    padding: 30px;
-    color: #777;
+    padding: 10px 20px;
+    background: red;
+    color: white;
+    margin-top: 10px;
+    text-decoration: none;
 }
 
 </style>
@@ -107,62 +79,42 @@ footer {
 
 <nav>
     <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="#languages">Languages</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
 </nav>
 
 <section class="hero">
     <div>
         <h1>Diyorbek Ziyokhujaev</h1>
-        <p>Law Student | AI & Corporate Law Enthusiast</p>
+        <p>Law Student | Corporate Law & AI</p>
+        <a href="#contact" class="btn">Contact Me</a>
     </div>
 </section>
 
 <section id="about" class="section">
     <h2>About Me</h2>
-    <div class="card">
-        <p>I am a senior law student at TSUL focusing on corporate law, taxation, and digital assets. I am passionate about combining law with technology and solving complex legal problems in modern business environments.</p>
-    </div>
+    <p>I am a law student at TSUL focused on corporate law, taxation, and digital assets.</p>
 </section>
 
-<section id="education" class="section">
-    <h2>Education</h2>
-    <div class="card">
-        <p><strong>TSUL</strong> — Bachelor of Law (2022 – Present)</p>
-    </div>
-</section>
+<section id="projects" class="section">
+    <h2>Projects</h2>
 
-<section id="experience" class="section">
-    <h2>Experience</h2>
-
-    <div class="card">
-        <p><strong>Paralegal</strong> — Law and Justice (2025–Present)</p>
+    <div class="project">
+        <h3>Business Judgment Rule Article</h3>
+        <p>Comparative legal analysis with reform proposals for Uzbekistan.</p>
     </div>
 
-    <div class="card">
-        <p><strong>Paralegal</strong> — Bukva Zakova</p>
-        <p>Drafted legal documents, contracts, and participated in court hearings.</p>
-    </div>
-
-    <div class="card">
-        <p><strong>Judicial Assistant</strong> — Administrative Court</p>
+    <div class="project">
+        <h3>Cartel Agreements Publication</h3>
+        <p>Published in Journal of New Century Innovations.</p>
     </div>
 
 </section>
 
-<section id="languages" class="section">
-    <h2>Languages</h2>
-    <div class="card">
-        <span class="badge">Uzbek — Native</span>
-        <span class="badge">English — IELTS 7</span>
-        <span class="badge">Russian — Intermediate</span>
-    </div>
+<section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: diyorbekziyoxojayev@gmail.com</p>
 </section>
-
-<footer>
-    <p>© 2026 Diyorbek</p>
-</footer>
 
 </body>
 </html>
