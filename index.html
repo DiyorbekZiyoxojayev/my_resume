@@ -639,9 +639,9 @@ footer span{color:var(--purple-m)}
             </select>
           </div>
           <div class="fg"><label data-en="Your Message" data-uz="Xabaringiz">Your Message</label><textarea id="fm" placeholder="Describe what you need..." required></textarea></div>
-          <p class="form-note" data-en="Your message will open in your email client and arrive directly in my Gmail." data-uz="Xabaringiz email ilovangizda ochiladi va Gmail'imga to'g'ridan-to'g'ri keladi.">Your message will open in your email client and arrive directly in my Gmail.</p>
+          <p class="form-note" data-en="Your message will be sent directly to my Gmail inbox." data-uz="Xabaringiz to'g'ridan-to'g'ri Gmail'imga yuboriladi.">Your message will be sent directly to my Gmail inbox.</p>
           <div class="fstatus" id="fs2"></div>
-          <button type="submit" class="btn-p" style="width:100%;justify-content:center;font-family:'Inter',sans-serif;border-radius:12px" data-en="Send Message →" data-uz="Xabar Yuborish →">Send Message →</button>
+          <button type="submit" id="submitBtn" class="btn-p" style="width:100%;justify-content:center;font-family:'Inter',sans-serif;border-radius:12px" data-en="Send Message →" data-uz="Xabar Yuborish →">Send Message →</button>
         </form>
       </div>
     </div>
@@ -652,7 +652,10 @@ footer span{color:var(--purple-m)}
   <p>© 2025 <span>Diyorbek Ziyokhujaev</span> · Law & Technology · Tashkent, Uzbekistan</p>
 </footer>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script>
+emailjs.init("9mgs9BoBSXqgZPhrF");
+
 let lang='en';
 function setLang(l){
   lang=l;
@@ -675,16 +678,36 @@ document.getElementById('cf').addEventListener('submit',function(e){
   const s=document.getElementById('fs').value;
   const m=document.getElementById('fm').value.trim();
   const st=document.getElementById('fs2');
+  const btn=document.getElementById('submitBtn');
+
   if(!n||!em||!m){
     st.className='fstatus err';
     st.textContent=lang==='uz'?'Iltimos, barcha maydonlarni to\'ldiring.':'Please fill in all required fields.';
     return;
   }
-  const sub=encodeURIComponent('Portfolio Inquiry'+(s?': '+s:''));
-  const body=encodeURIComponent('Name: '+n+'\nEmail: '+em+'\nService: '+(s||'Not specified')+'\n\nMessage:\n'+m);
-  window.location.href='mailto:diyorbekziyoxojayev@gmail.com?subject='+sub+'&body='+body;
-  st.className='fstatus ok';
-  st.textContent=lang==='uz'?'Email ilovangiz ochilmoqda...':'Opening your email client...';
+
+  btn.disabled=true;
+  btn.textContent=lang==='uz'?'Yuborilmoqda...':'Sending...';
+  btn.style.opacity='0.7';
+
+  emailjs.send("service_v1d13sv","template_dvxw8pb",{
+    from_name: n,
+    from_email: em,
+    service_type: s||'Not specified',
+    message: m
+  }).then(function(){
+    st.className='fstatus ok';
+    st.textContent=lang==='uz'?'Xabar muvaffaqiyatli yuborildi! Tez orada javob beraman.':'Message sent successfully! I\'ll get back to you soon.';
+    btn.textContent=lang==='uz'?'Yuborildi ✓':'Sent ✓';
+    document.getElementById('cf').reset();
+  }).catch(function(err){
+    st.className='fstatus err';
+    st.textContent=lang==='uz'?'Xatolik yuz berdi. Iltimos, qayta urinib ko\'ring.':'Something went wrong. Please try again.';
+    btn.disabled=false;
+    btn.style.opacity='1';
+    btn.textContent=lang==='uz'?'Xabar Yuborish →':'Send Message →';
+    console.error('EmailJS error:',err);
+  });
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
