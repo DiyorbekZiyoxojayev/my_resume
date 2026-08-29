@@ -12,29 +12,29 @@
 --------------------------------------------------------------*/
 /* Fonts */
 :root {
-  --default-font: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
-  --heading-font: "Fraunces", "Raleway", sans-serif;
+  --default-font: "Roboto",  system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --heading-font: "Raleway",  sans-serif;
   --nav-font: "Poppins",  sans-serif;
 }
 
-/* Global Colors - Diyorbek Ziyokhujaev · Law & Technology palette */
+/* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #2b2f36; /* Default color used for the majority of the text content across the entire website */
-  --heading-color: #0b1220; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #b9924a; /* Warm gold accent — nods to law & credibility, pairs with the dark sidebar */
+  --default-color: #272829; /* Default color used for the majority of the text content across the entire website */
+  --heading-color: #050d18; /* Color for headings, subheadings and title throughout the website */
+  --accent-color: #149ddd; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
 
 /* Nav Menu Colors - The following color variables are used specifically for the navigation menu. They are separate from the global colors to allow for more customization options */
 :root {
-  --nav-color: #9aa3b2;  /* The default color of the main navmenu links */
-  --nav-hover-color: #b9924a; /* Applied to main navmenu links when they are hovered over or active */
-  --nav-mobile-background-color: #0b1220; /* Used as the background color for mobile navigation menu */
-  --nav-dropdown-background-color: #0b1220; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
-  --nav-dropdown-color: #9aa3b2; /* Used for navigation links of the dropdown items in the navigation menu. */
-  --nav-dropdown-hover-color: #b9924a; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
+  --nav-color: #a8a9b4;  /* The default color of the main navmenu links */
+  --nav-hover-color: #ffffff; /* Applied to main navmenu links when they are hovered over or active */
+  --nav-mobile-background-color: #040b14; /* Used as the background color for mobile navigation menu */
+  --nav-dropdown-background-color: #040b14; /* Used as the background color for dropdown items that appear when hovering over primary navigation items */
+  --nav-dropdown-color: #a8a9b4; /* Used for navigation links of the dropdown items in the navigation menu. */
+  --nav-dropdown-hover-color: #ffffff; /* Similar to --nav-hover-color, this color is applied to dropdown navigation links when they are hovered over. */
 }
 
 /* Color Presets - These classes override global colors when applied to any section or element, providing reuse of the sam color scheme. */
@@ -45,7 +45,7 @@
 }
 
 .dark-background {
-  --background-color: #0b1220;
+  --background-color: #040b14;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --surface-color: #151f2b;
@@ -1272,201 +1272,4 @@ section,
 --------------------------------------------------------------*/
 .starter-section {
   /* Add your styles here */
-}
-
-/*--------------------------------------------------------------
-# Custom additions — Diyorbek Ziyokhujaev portfolio
---------------------------------------------------------------*/
-
-/* Language switch buttons in the sidebar */
-.lang-switch {
-  display: flex;
-  gap: 6px;
-  justify-content: center;
-  margin-top: 20px;
-}
-
-.lang-switch button {
-  background: transparent;
-  border: 1px solid color-mix(in srgb, var(--contrast-color), transparent 70%);
-  color: var(--nav-color);
-  font-family: var(--nav-font);
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.5px;
-  padding: 5px 12px;
-  border-radius: 30px;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.lang-switch button:hover {
-  border-color: var(--accent-color);
-  color: var(--contrast-color);
-}
-
-.lang-switch button.on {
-  background: var(--accent-color);
-  border-color: var(--accent-color);
-  color: #0b1220;
-}
-
-/* Facts grid inside About */
-.facts-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 24px 0;
-}
-
-.facts-grid .fact-item {
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
-  border-radius: 8px;
-  padding: 14px 16px;
-}
-
-.facts-grid .fact-item .fl {
-  font-family: var(--nav-font);
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.5px;
-  color: color-mix(in srgb, var(--default-color), transparent 40%);
-  margin-bottom: 4px;
-}
-
-.facts-grid .fact-item .fv {
-  font-weight: 600;
-  color: var(--heading-color);
-}
-
-/* Skill pills */
-.skills-pills {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  margin: 20px 0 30px;
-}
-
-.skills-pills span {
-  border: 1px solid color-mix(in srgb, var(--accent-color), transparent 55%);
-  color: var(--heading-color);
-  background: color-mix(in srgb, var(--accent-color), transparent 92%);
-  font-family: var(--nav-font);
-  font-size: 13px;
-  padding: 6px 14px;
-  border-radius: 30px;
-}
-
-/* Language proficiency bars (reuses .progress from Skills section) */
-.lang-level {
-  font-family: var(--nav-font);
-  font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 30%);
-}
-
-/* Downloads / certificates section */
-.downloads .download-item {
-  background-color: var(--surface-color);
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 90%);
-  border-radius: 8px;
-  padding: 30px 24px;
-  height: 100%;
-  text-align: center;
-  transition: 0.3s;
-}
-
-.downloads .download-item:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 22px rgba(0, 0, 0, 0.08);
-}
-
-.downloads .download-item .dl-icon {
-  font-size: 34px;
-  margin-bottom: 14px;
-  color: var(--accent-color);
-}
-
-.downloads .download-item h4 {
-  font-size: 17px;
-  margin-bottom: 6px;
-}
-
-.downloads .download-item .dl-org {
-  font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 35%);
-  margin-bottom: 16px;
-}
-
-.downloads .download-item .dl-btn {
-  display: inline-block;
-  border: 1px solid var(--accent-color);
-  color: var(--accent-color);
-  font-family: var(--nav-font);
-  font-size: 13px;
-  font-weight: 600;
-  padding: 8px 18px;
-  border-radius: 30px;
-  transition: 0.3s;
-}
-
-.downloads .download-item .dl-btn:hover {
-  background: var(--accent-color);
-  color: #0b1220;
-}
-
-.downloads .download-hero {
-  background: var(--heading-color);
-  color: #fff;
-  border-radius: 8px;
-  padding: 36px 32px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-.downloads .download-hero h3 {
-  color: #fff;
-  margin-bottom: 6px;
-}
-
-.downloads .download-hero p {
-  color: color-mix(in srgb, #fff, transparent 25%);
-  margin: 0;
-}
-
-.downloads .download-hero .dl-btn {
-  border-color: var(--accent-color);
-  background: var(--accent-color);
-  color: #0b1220;
-  white-space: nowrap;
-}
-
-/* Publication card in About/Resume */
-.publication-card {
-  border: 1px solid color-mix(in srgb, var(--default-color), transparent 88%);
-  border-left: 3px solid var(--accent-color);
-  border-radius: 6px;
-  padding: 18px 20px;
-}
-
-.publication-card .pub-year {
-  font-family: var(--nav-font);
-  font-size: 12px;
-  color: var(--accent-color);
-  font-weight: 600;
-  margin-bottom: 6px;
-}
-
-.publication-card h4 {
-  font-size: 16px;
-  margin-bottom: 6px;
-}
-
-.publication-card p {
-  font-size: 13px;
-  color: color-mix(in srgb, var(--default-color), transparent 35%);
-  margin: 0;
 }

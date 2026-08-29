@@ -128,13 +128,11 @@
   });
 
   /**
-   * Initiate glightbox (only if the library and matching elements are present)
+   * Initiate glightbox
    */
-  if (typeof GLightbox === 'function' && document.querySelector('.glightbox')) {
-    const glightbox = GLightbox({
-      selector: '.glightbox'
-    });
-  }
+  const glightbox = GLightbox({
+    selector: '.glightbox'
+  });
 
   /**
    * Init isotope layout and filters
