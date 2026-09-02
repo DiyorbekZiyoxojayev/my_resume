@@ -37,6 +37,11 @@
 
       const name = document.getElementById('name-field').value.trim();
       const email = document.getElementById('email-field').value.trim();
+      
+      // Phone inputni olish va qiymatini tekshirish
+      const phoneInput = document.getElementById('phone-field');
+      const phone = phoneInput ? phoneInput.value.trim() : '';
+
       const service = document.getElementById('service-field').value;
       const message = document.getElementById('message-field').value.trim();
       const status = document.getElementById('form-status');
@@ -54,9 +59,11 @@
       const originalLabel = btn.textContent;
       btn.textContent = lang === 'uz' ? 'Yuborilmoqda...' : 'Sending...';
 
+      // EmailJS ga parametr sifatida phone_number qo'shildi
       emailjs.send('service_v1d13sv', 'template_dvxw8pb', {
         from_name: name,
         from_email: email,
+        phone_number: phone || 'Kiritilmadi',
         service_type: service || 'Not specified',
         message: message
       }).then(function () {
