@@ -1,11 +1,6 @@
-/**
-* custom.css — extends main.css (iPortfolio template)
-* Only additions for content types the original template didn't ship with.
-* No core template rule is overridden; all colors/fonts pull from the
-* same CSS variables defined in main.css so everything stays 1:1 in style.
-*/
 
-/* ---------- Sidebar: language switch + CV button ---------- */
+
+/* Sidebar */
 .header .lang-switch{
   display:flex;
   justify-content:center;
@@ -256,12 +251,6 @@
 /* ---------- Hero: role line uses the user's photo as background, not a stock image ---------- */
 .hero .hero-photo-credit{ display:none; }
 
-/* =========================================================================
-   RESPONSIVE / MOBILE — hardens the custom-added sections above so they
-   adapt cleanly on tablets and phones. main.css already handles the core
-   sidebar → off-canvas menu switch at 1199px and the hero/portfolio grid;
-   these rules only cover the new blocks that shipped without breakpoints.
-   ========================================================================= */
 
 /* Prevent any accidental horizontal scroll on small screens */
 html, body{
@@ -269,7 +258,7 @@ html, body{
   overflow-x:hidden;
 }
 
-/* ---------- Tablet (≤991px): documents grid gets a little breathing room ---------- */
+/* ---------- TableT : documents grid gets a little breathing room ---------- */
 @media (max-width:991px){
   .documents .doc-hero{
     padding:28px 26px;
@@ -282,8 +271,7 @@ html, body{
 /* ---------- Mobile (≤768px) ---------- */
 @media (max-width:768px){
 
-  /* Sidebar header-toggle button sits over content; give the top of every
-     section a little extra clearance so headings don't hide behind it */
+ 
   .header .header-toggle{
     top:12px;
     right:12px;
