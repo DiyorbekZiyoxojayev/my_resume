@@ -1,6 +1,3 @@
-
-
-/* Sidebar */
 .header .lang-switch{
   display:flex;
   justify-content:center;
@@ -46,7 +43,6 @@
   color:var(--contrast-color);
 }
 
-/* ---------- About: skill tags ---------- */
 .about .skill-tags{
   display:flex;
   flex-wrap:wrap;
@@ -68,7 +64,6 @@
   color:var(--accent-color);
 }
 
-/* ---------- Services: sub-list under description ---------- */
 .services .service-item .sub-list{
   list-style:none;
   padding:0;
@@ -85,7 +80,6 @@
   margin-right:6px;
 }
 
-/* ---------- Portfolio: text-based cards (no project screenshots) ---------- */
 .portfolio .portfolio-content-text{
   height:100%;
   background:var(--surface-color);
@@ -144,7 +138,6 @@
   color:color-mix(in srgb, var(--accent-color), transparent 25%);
 }
 
-/* ---------- Documents section ---------- */
 .documents .doc-hero{
   background-color:var(--heading-color);
   color:#fff;
@@ -228,7 +221,6 @@
   color:var(--contrast-color);
 }
 
-/* ---------- Contact form status message (EmailJS) ---------- */
 .contact .form-status{
   display:none;
   padding:12px 15px;
@@ -248,17 +240,13 @@
   color:#fff;
 }
 
-/* ---------- Hero: role line uses the user's photo as background, not a stock image ---------- */
 .hero .hero-photo-credit{ display:none; }
 
-
-/* Prevent any accidental horizontal scroll on small screens */
 html, body{
   max-width:100%;
   overflow-x:hidden;
 }
 
-/* ---------- TableT : documents grid gets a little breathing room ---------- */
 @media (max-width:991px){
   .documents .doc-hero{
     padding:28px 26px;
@@ -268,10 +256,8 @@ html, body{
   }
 }
 
-/* ---------- Mobile (≤768px) ---------- */
 @media (max-width:768px){
 
- 
   .header .header-toggle{
     top:12px;
     right:12px;
@@ -280,7 +266,6 @@ html, body{
     font-size:20px;
   }
 
-  /* Lang switch + CV button: comfortable tap targets, no overflow */
   .header .lang-switch{
     gap:8px;
   }
@@ -293,7 +278,6 @@ html, body{
     padding:12px 14px;
   }
 
-  /* About: info list wraps instead of clipping long values (email, phone) */
   .about .content ul li{
     flex-wrap:wrap;
     row-gap:2px;
@@ -306,7 +290,6 @@ html, body{
     font-size:11px;
   }
 
-  /* Services: icon + text stack cleanly instead of squeezing side by side */
   .services .service-item{
     flex-direction:column;
   }
@@ -314,7 +297,6 @@ html, body{
     margin:0 0 14px 0;
   }
 
-  /* Portfolio cards: tighter padding, tags/links stay readable */
   .portfolio .portfolio-content-text{
     padding:20px;
   }
@@ -322,7 +304,6 @@ html, body{
     font-size:16px;
   }
 
-  /* Documents hero banner: stack text above the button, full-width button */
   .documents .doc-hero{
     flex-direction:column;
     align-items:flex-start;
@@ -337,19 +318,16 @@ html, body{
     padding:22px;
   }
 
-  /* Contact: shrink the embedded map so it doesn't dominate the screen */
   .contact .info-wrap iframe{
     height:180px;
   }
 
-  /* Contact form status banner: matches narrower padding of the form */
   .contact .form-status{
     padding:10px 14px;
     font-size:14px;
   }
 }
 
-/* ---------- Small phones (≤480px) ---------- */
 @media (max-width:480px){
   .header .profile-img img{
     width:96px;
