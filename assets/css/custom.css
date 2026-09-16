@@ -253,5 +253,49 @@
   color:#fff;
 }
 
-/* ---------- Hero: role line uses the user's photo as background, not a stock image ---------- */
 .hero .hero-photo-credit{ display:none; }
+
+.portfolio .portfolio-filters{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+}
+.portfolio .portfolio-filters li{
+  margin:0;
+  padding:8px 16px;
+  border-radius:50px;
+  border:1px solid color-mix(in srgb, var(--default-color), transparent 85%);
+  background:var(--surface-color);
+  font-size:13px;
+  font-weight:600;
+  color:color-mix(in srgb, var(--default-color), transparent 15%);
+  transition:.3s;
+}
+.portfolio .portfolio-filters li:hover,
+.portfolio .portfolio-filters li.filter-active{
+  background:var(--accent-color);
+  border-color:var(--accent-color);
+  color:var(--contrast-color);
+}
+
+@media (max-width: 575px){
+  .portfolio .portfolio-filters{
+    flex-wrap:nowrap;
+    overflow-x:auto;
+    justify-content:flex-start;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    margin:0 -20px 20px;
+    padding:0 20px 6px;
+  }
+  .portfolio .portfolio-filters::-webkit-scrollbar{
+    display:none;
+  }
+  .portfolio .portfolio-filters li{
+    flex:0 0 auto;
+    white-space:nowrap;
+    font-size:12px;
+    padding:7px 14px;
+  }
+}
