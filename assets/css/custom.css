@@ -61,7 +61,7 @@
 #contact,
 #footer {
   position: relative;
-  background-image: url('../../photos/background_image.jfif'); /* Rasm kengaytmasiga e'tibor bering (.jpg/.png) */
+  background-image: url('../../photos/background.png'); /* Rasm kengaytmasiga e'tibor bering (.jpg/.png) */
   background-size: cover;
   background-position: center;
   background-attachment: fixed; /* Parallax effekt: sahifa aylanganda rasm joyida qoladi */
