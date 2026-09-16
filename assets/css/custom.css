@@ -310,16 +310,6 @@
   }
 
 
-  .about img.img-fluid{
-    border-radius:18px;
-    box-shadow:0 16px 34px rgba(0,0,0,.16);
-    transform:rotate(-1.5deg);
-    transition:transform .35s ease;
-  }
-  .about img.img-fluid:active{
-    transform:rotate(0deg) scale(1.02);
-  }
-
 
   .about .content{
     background:var(--surface-color);
