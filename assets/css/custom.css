@@ -19,7 +19,7 @@
 }
 .header .lang-switch button.on,
 .header .lang-switch button:hover{
-  background:var(--accent-color);
+  /* background:var(--accent-color); */
   border-color:var(--accent-color);
   color:var(--contrast-color);
 }
