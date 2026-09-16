@@ -19,7 +19,7 @@
 }
 .header .lang-switch button.on,
 .header .lang-switch button:hover{
-  /* background:var(--accent-color); */
+  background:var(--accent-color);
   border-color:var(--accent-color);
   color:var(--contrast-color);
 }
@@ -47,11 +47,7 @@
 
 .hero .hero-photo-credit{ display:none; }
 
-/* =========================================================
-   HERO BO'LIMIDAN TASHQARI BARCHA BO'LIMLAR UCHUN FON RASMI
-   ========================================================= */
 
-/* 1. Orqa fon rasmini yuklash */
 #about, 
 #stats, 
 #resume, 
@@ -61,14 +57,13 @@
 #contact,
 #footer {
   position: relative;
-  background-image: url('../../photos/background.png'); /* Rasm kengaytmasiga e'tibor bering (.jpg/.png) */
+  background-image: url('../../photos/background.png');
   background-size: cover;
   background-position: center;
-  background-attachment: fixed; /* Parallax effekt: sahifa aylanganda rasm joyida qoladi */
+  background-attachment: fixed;
   background-repeat: no-repeat;
 }
 
-/* 2. Matnlar va kartochkalar yaxshi o'qilishi uchun orqa fonga shaffof qatlam (overlay) */
 #about::before, 
 #stats::before, 
 #resume::before, 
@@ -84,7 +79,6 @@
   z-index: 1;
 }
 
-/* 3. Kontentni overlay qatlamidan ustga chiqarish */
 #about .container, 
 #stats .container, 
 #resume .container, 
