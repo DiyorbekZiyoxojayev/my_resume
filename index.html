@@ -1,1065 +1,837 @@
 <!DOCTYPE html>
 <html class="light" lang="uz">
 <head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Diyorbek Ziyoxo'jayev — Yurisprudensiya va hisoblash intellekti</title>
-<link href="photos/favicon.png" rel="icon">
-<link href="photos/favicon.png" rel="apple-touch-icon">
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta name="description" content="Diyorbek Ziyoxujayev — Jurist va Data Analyst. Yurisprudensiya va hisoblash intellekti uyg'unligi." />
+  <title>Diyorbek Ziyoxujayev — Yurist va Data Analyst</title>
 
-<!-- Google Fonts -->
-<link href="https://fonts.googleapis.com" rel="preconnect"/>
-<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link href="photos/favicon.png" rel="icon" />
+  <link href="photos/favicon.png" rel="apple-touch-icon" />
 
-<!-- Tailwind CSS -->
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "background": "#fafaf3",
-          "surface": "#fafaf3",
-          "surface-container-lowest": "#ffffff",
-          "surface-container-low": "#f4f4ed",
-          "surface-container": "#eeeee7",
-          "surface-container-high": "#e8e9e2",
-          "surface-container-highest": "#e3e3dc",
-          "surface-dim": "#dadad4",
-          "surface-bright": "#fafaf3",
-          "on-background": "#1a1c18",
-          "on-surface": "#28372b",
-          "on-surface-variant": "#626f63",
-          "primary": "#3e5641",
-          "primary-container": "#dce4d6",
-          "on-primary": "#ffffff",
-          "on-primary-container": "#202d22",
-          "secondary": "#9e5353",
-          "secondary-container": "#fdeee9",
-          "on-secondary": "#ffffff",
-          "on-secondary-container": "#522525",
-          "tertiary": "#4a5248",
-          "tertiary-container": "#e3ebd9",
-          "outline": "#d6dad0",
-          "outline-variant": "#e6e8de"
-        },
-        borderRadius: {
-          "DEFAULT": "1rem",
-          "lg": "1.5rem",
-          "xl": "2rem",
-          "2xl": "2.25rem",
-          "3xl": "2.75rem",
-          "full": "9999px"
-        },
-        fontFamily: {
-          "sans": ["Plus Jakarta Sans", "sans-serif"]
-        }
-      }
-    }
-  };
-</script>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect" />
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 
-<style>
-  html, body { margin: 0; padding: 0; }
-  body { overscroll-behavior: none; background-color: #fafaf3; }
-  main > :first-child { margin-top: 0 !important; }
-  main > :last-child { margin-bottom: 0 !important; }
-  ::-webkit-scrollbar { display: none; }
-  .filter-btn { cursor: pointer; }
-  .portfolio-item.hidden-item { display: none !important; }
-</style>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script src="tailwind.config.js"></script>
+
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 
 <body class="bg-[#fafaf3] font-sans text-[#28372b] antialiased selection:bg-[#dce4d6] selection:text-[#202d22] relative min-h-screen">
 
-<!-- ==================== HEADER ==================== -->
-<header class="fixed top-0 left-0 right-0 w-full z-50 bg-[#fafaf3]/90 backdrop-blur-xl border-b border-[#e6e8de] shadow-[0_2px_12px_rgba(40,55,43,0.03)]">
-  <div class="h-20 max-w-7xl mx-auto px-6 lg:px-12 flex items-center justify-between gap-4">
-    <div class="flex items-center gap-4 shrink-0">
-      <a class="flex items-center gap-3 group" href="#">
-        <div class="w-10 h-10 rounded-full bg-[#e3ebd9] border border-[#d6dad0] flex items-center justify-center text-[#3e5641] group-hover:bg-[#3e5641] group-hover:text-white transition-all shadow-sm">
-          <span class="font-bold text-xs tracking-wider">DZ</span>
-        </div>
-        <div class="flex flex-col">
-          <span class="text-sm lg:text-base font-bold tracking-tight text-[#28372b] group-hover:text-[#3e5641] transition-colors">Diyorbek Ziyoxo'jayev</span>
-          <span class="text-[11px] text-[#626f63] font-medium tracking-normal">Yurist va ma'lumotlar tahlilchisi</span>
-        </div>
-      </a>
-      <div class="hidden xl:flex items-center gap-2 pl-3 bg-[#f4f4ed] border border-[#e6e8de] rounded-full py-1 pr-3.5">
-        <span class="relative flex h-2 w-2">
-          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#3e5641] opacity-75"></span>
-          <span class="relative inline-flex rounded-full h-2 w-2 bg-[#3e5641]"></span>
-        </span>
-        <span class="text-[11px] text-[#3e5641] font-semibold">Hamkorlik uchun ochiq</span>
-      </div>
-    </div>
-
-    <nav class="hidden lg:flex items-center gap-1 xl:gap-2">
-      <a aria-current="page" class="px-3.5 py-1.5 transition-all bg-[#e3ebd9] text-[#28372b] font-semibold rounded-full border border-[#d6dad0]/60 text-xs" href="#">Men haqimda</a>
-      <a class="px-3.5 py-1.5 rounded-full text-[#626f63] text-xs font-medium hover:text-[#28372b] hover:bg-[#f4f4ed] transition-all" href="#experience">Sud va amaliy tajriba</a>
-      <a class="px-3.5 py-1.5 rounded-full text-[#626f63] text-xs font-medium hover:text-[#28372b] hover:bg-[#f4f4ed] transition-all" href="#portfolio">Loyihalar va ishlanmalar</a>
-      <a class="px-3.5 py-1.5 rounded-full text-[#626f63] text-xs font-medium hover:text-[#28372b] hover:bg-[#f4f4ed] transition-all" href="#credentials">Malaka va sertifikatlar</a>
-      <a class="px-3.5 py-1.5 rounded-full text-[#626f63] text-xs font-medium hover:text-[#28372b] hover:bg-[#f4f4ed] transition-all" href="#contact">Aloqa</a>
-    </nav>
-
-    <div class="flex items-center gap-3 shrink-0">
-      <a class="hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white border border-[#e6e8de] text-[#28372b] text-xs font-semibold hover:bg-[#3e5641] hover:text-white transition-all shadow-xs" href="files/Diyorbek_Ziyokhujaev_resume.pdf" download>
-        <span class="material-symbols-outlined text-[15px]">download</span>
-        <span>Rezyume (pdf)</span>
-      </a>
-      <div class="w-8 h-8 rounded-full bg-[#e3ebd9] border border-[#d6dad0] flex items-center justify-center shrink-0 text-[#3e5641]">
-        <span class="material-symbols-outlined text-[17px]">spa</span>
-      </div>
-    </div>
-  </div>
-</header>
-
-<main class="w-full pt-20 bg-[#fafaf3] relative">
-<div class="flex flex-col w-full text-[#28372b] overflow-hidden">
-
-<!-- ==================== HERO SECTION ==================== -->
-<section class="relative w-full overflow-hidden pb-16 pt-8 lg:pt-14 bg-gradient-to-b from-[#fafaf3] via-[#f7f8f1] to-[#fafaf3]">
-  <div class="absolute -top-32 -left-32 w-96 h-96 rounded-full bg-[#e3ebd9]/50 blur-[110px] pointer-events-none"></div>
-  <div class="absolute top-1/4 right-0 w-[34rem] h-[34rem] rounded-full bg-[#fdeee9]/45 blur-[120px] pointer-events-none"></div>
-  <div class="absolute bottom-0 left-1/3 w-[28rem] h-[28rem] rounded-full bg-[#dce4d6]/40 blur-[110px] pointer-events-none"></div>
-
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-    <!-- Top Pill Badges -->
-    <div class="flex flex-wrap items-center gap-2.5 mb-6">
-      <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white border border-[#e6e8de] shadow-[0_2px_8px_rgba(40,55,43,0.04)]">
-        <span class="flex h-2 w-2 rounded-full bg-[#3e5641]"></span>
-        <span class="text-xs font-semibold text-[#28372b]">LL.B. (TSUL '26) · Mashinali o'rganish muhandisi</span>
-      </div>
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#fdeee9] border border-[#f5dad4] text-[#9e5353] text-xs font-semibold shadow-xs">
-        <span class="material-symbols-outlined text-[15px]" style="font-variation-settings: 'FILL' 1;">gavel</span>
-        <span>Sud zalida tasdiqlangan amaliyot</span>
-      </div>
-      <div class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#e3ebd9] border border-[#d6dad0] text-[#3e5641] text-xs font-semibold shadow-xs">
-        <span class="material-symbols-outlined text-[15px]">psychology</span>
-        <span>RAG va neyron tizimlar</span>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-8 items-center">
-      <div class="lg:col-span-7 flex flex-col gap-6">
-        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#1e2b20] leading-[1.18]">
-          Yurisprudensiya va hisoblash <br class="hidden sm:inline"/>
-          <span class="text-[#3e5641]">intellekti uyg'unligi.</span>
-        </h1>
-        <p class="text-base lg:text-lg text-[#626f63] max-w-2xl leading-relaxed">
-          Men sud protsessining qat'iy talablarini chuqur o'rganish quvvati bilan birlashtiraman. Fuqarolik kodeksining 1 196 ta moddasini yuqori aniqlikdagi vektorlarga aylantirish, sud qarorlarini modellashtirish va muassasalar uchun ishonchli sun'iy intellekt tizimlarini yaratish bilan shug'ullanaman.
-        </p>
-
-        <div class="flex items-center gap-3 p-3.5 rounded-2xl bg-white border border-[#e6e8de] shadow-xs max-w-xl">
-          <div class="w-8 h-8 rounded-full bg-[#e3ebd9] flex items-center justify-center text-[#3e5641] shrink-0">
-            <span class="material-symbols-outlined text-[18px]">nature</span>
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-brand">
+        <a class="brand-link" href="#">
+          <div class="brand-avatar">DZ</div>
+          <div class="brand-text">
+            <span class="brand-name" data-i18n="brand.name">Diyorbek Ziyoxujayev</span>
+            <span class="brand-role" data-i18n="brand.role">Yurist va data analyst</span>
           </div>
-          <p class="text-xs text-[#626f63] leading-snug">
-            <span class="font-bold text-[#28372b]">Aniq tahlil:</span> Har bir modda va algoritm huquqiy me'yorlar hamda hisoblash aniqligiga to'liq asoslanadi.
-          </p>
-        </div>
-
-        <div class="flex flex-wrap items-center gap-3 pt-1">
-          <a class="group inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-[#3e5641] text-white text-xs font-bold shadow-md hover:bg-[#314434] transition-all hover:-translate-y-0.5" href="#portfolio">
-            <span>Tizimlar va ishlarni ko'rish</span>
-            <span class="material-symbols-outlined text-[16px] transition-transform group-hover:translate-x-1">arrow_forward</span>
-          </a>
-          <a class="inline-flex items-center gap-2 px-5 py-3.5 rounded-full bg-white hover:bg-[#f4f4ed] border border-[#e6e8de] text-[#28372b] text-xs font-semibold transition-all shadow-xs" href="#contact">
-            <span class="material-symbols-outlined text-[16px] text-[#9e5353]">event</span>
-            <span>Maslahat olish</span>
-          </a>
-          <button class="inline-flex items-center gap-1.5 px-4 py-3.5 rounded-full bg-[#f4f4ed] hover:bg-white border border-[#e6e8de] text-[#626f63] hover:text-[#28372b] text-xs font-medium transition-colors" onclick="navigator.clipboard.writeText('diyorbekziyoxojayev@gmail.com'); alert('Elektron pochta nusxalandi');" title="Pochtani nusxalash">
-            <span class="material-symbols-outlined text-[15px]">content_copy</span>
-            <span>Email manzilni nusxalash</span>
-          </button>
+        </a>
+        <div class="status-pill">
+          <span class="pulse">
+            <span class="pulse-ping"></span>
+            <span class="pulse-dot"></span>
+          </span>
+          <span class="status-text" data-i18n="nav.status">Hamkorlik uchun ochiq</span>
         </div>
       </div>
 
-      <!-- Profile Card -->
-      <div class="lg:col-span-5 relative">
-        <div class="relative rounded-3xl bg-white/95 backdrop-blur-md p-6 shadow-[0_12px_36px_rgba(40,55,43,0.08)] border border-[#e6e8de] flex flex-col gap-5 z-10">
-          <div class="flex items-center justify-between pb-3.5 border-b border-[#e6e8de]">
-            <div class="flex items-center gap-2">
-              <span class="w-2.5 h-2.5 rounded-full bg-[#3e5641]"></span>
-              <span class="text-xs font-bold text-[#28372b]">Shaxsiy profil</span>
+      <nav class="main-nav">
+        <a class="nav-link active" href="#about" data-i18n="nav.about">Men haqimda</a>
+        <a class="nav-link" href="#experience" data-i18n="nav.experience">Amaliy tajriba</a>
+        <a class="nav-link" href="#portfolio" data-i18n="nav.portfolio">Loyihalar</a>
+        <a class="nav-link" href="#credentials" data-i18n="nav.credentials">Sertifikatlar</a>
+        <a class="nav-link" href="#contact" data-i18n="nav.contact">Aloqa</a>
+      </nav>
+
+      <div class="header-actions">
+        <button class="lang-toggle" id="langToggle" type="button" aria-label="Switch language">
+          <span class="lang-option lang-active" data-lang="en">EN</span>
+          <span class="lang-sep">/</span>
+          <span class="lang-option" data-lang="uz">UZ</span>
+        </button>
+        <a class="btn btn-ghost hidden sm:inline-flex" href="files/Diyorbek_Ziyokhujaev_resume.pdf" download>
+          <span class="material-symbols-outlined icon-sm">download</span>
+          <span data-i18n="nav.resume">Rezyume (pdf)</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main class="w-full pt-20 bg-[#fafaf3] relative">
+    <div class="flex flex-col w-full text-[#28372b] overflow-hidden">
+
+      <!-- ==================== HERO ==================== -->
+      <section class="hero">
+        <div class="hero-blob hero-blob-1"></div>
+        <div class="hero-blob hero-blob-2"></div>
+        <div class="hero-blob hero-blob-3"></div>
+
+        <div class="container">
+          <!-- Simple single badge -->
+          <div class="hero-badge">
+            <span class="dot"></span>
+            <span data-i18n="hero.badge">Yurist va data analyst</span>
+          </div>
+
+          <div class="hero-grid">
+            <div class="hero-copy">
+              <h1 class="hero-title">
+                <span data-i18n="hero.title1">Yurisprudensiya va hisoblash</span><br class="hidden sm:inline" />
+                <span class="text-primary" data-i18n="hero.title2">intellekti uyg'unligi.</span>
+              </h1>
+              <p class="hero-desc" data-i18n="hero.desc">
+                Men sud protsessining qat'iy talablarini chuqur o'rganish quvvati bilan birlashtiraman...
+              </p>
+
+              <div class="note-card">
+                <div class="note-icon">
+                  <span class="material-symbols-outlined icon-sm">nature</span>
+                </div>
+                <p class="note-text">
+                  <span class="note-strong" data-i18n="hero.noteStrong">Aniq tahlil:</span>
+                  <span data-i18n="hero.noteText">Har bir modda va algoritm huquqiy me'yorlar hamda hisoblash aniqligiga to'liq asoslanadi.</span>
+                </p>
+              </div>
+
+              <div class="hero-actions">
+                <a class="btn btn-primary" href="#portfolio">
+                  <span data-i18n="hero.ctaPrimary">Tizimlar va ishlarni ko'rish</span>
+                  <span class="material-symbols-outlined icon-sm">arrow_forward</span>
+                </a>
+                <a class="btn btn-outline" href="#contact">
+                  <span class="material-symbols-outlined icon-sm text-secondary">event</span>
+                  <span data-i18n="hero.ctaSecondary">Maslahat olish</span>
+                </a>
+                <button class="btn btn-muted" type="button" data-copy="email">
+                  <span class="material-symbols-outlined icon-xs">content_copy</span>
+                  <span data-i18n="hero.copyEmail">Email nusxalash</span>
+                </button>
+              </div>
             </div>
-            <span class="text-[11px] font-semibold text-[#3e5641] bg-[#e3ebd9] px-2.5 py-0.5 rounded-full">Faol holatda</span>
+
+            <!-- Profile card -->
+            <div class="profile-card-wrap">
+              <div class="profile-card">
+                <div class="profile-card-head">
+                  <div class="flex items-center gap-2">
+                    <span class="w-2.5 h-2.5 rounded-full bg-primary"></span>
+                    <span class="text-xs font-bold" data-i18n="profile.title">Shaxsiy profil</span>
+                  </div>
+                  <span class="profile-status" data-i18n="profile.status">Faol holatda</span>
+                </div>
+
+                <div class="profile-hero">
+                  <div class="profile-hero-img"></div>
+                  <div class="profile-hero-overlay"></div>
+                  <div class="profile-hero-info">
+                    <div>
+                      <div class="profile-hero-name" data-i18n="profile.name">Diyorbek Ziyoxujayev</div>
+                      <div class="profile-hero-univ" data-i18n="profile.univ">Toshkent davlat yuridik universiteti · 2026-yil bitiruvchisi</div>
+                    </div>
+                    <div class="profile-hero-badge">
+                      <span class="material-symbols-outlined icon-sm filled">balance</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="profile-mini-grid">
+                  <div class="mini-card">
+                    <span class="mini-label" data-i18n="profile.focusLabel">Asosiy yo'nalish</span>
+                    <span class="mini-value" data-i18n="profile.focusValue">Korporativ biznes raqobat huquqi</span>
+                  </div>
+                  <div class="mini-card mini-card-alt">
+                    <span class="mini-label" data-i18n="profile.techLabel">Texnologiyalar</span>
+                    <span class="mini-value" data-i18n="profile.techValue">Python, Machine Learning, Deep Learning, AI</span>
+                  </div>
+                </div>
+
+                <div class="profile-footer">
+                  <div class="flex items-center gap-1.5">
+                    <span class="material-symbols-outlined text-primary icon-sm">verified</span>
+                    <span data-i18n="profile.verified">Tasdiqlangan mutaxassis</span>
+                  </div>
+                  <a class="profile-link" href="https://github.com/DiyorbekZiyoxojayev" target="_blank" rel="noopener noreferrer">
+                    <span>GitHub</span>
+                    <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div class="relative w-full h-52 rounded-2xl overflow-hidden group border border-[#e6e8de]">
-            <div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105" style="background-image: url('photos/diyorbek_image.jpg');"></div>
-            <div class="absolute inset-0 bg-gradient-to-t from-[#1e2b20]/80 via-transparent to-transparent"></div>
-            <div class="absolute bottom-3 left-4 right-4 flex items-end justify-between">
+          <!-- Metrics -->
+          <div class="metrics-grid">
+            <div class="metric-card">
+              <div class="metric-head">
+                <span class="metric-label" data-i18n="metrics.m1.label">Amaliyot muddati</span>
+                <span class="material-symbols-outlined text-primary icon-lg">history_edu</span>
+              </div>
+              <div class="metric-value">2<span class="text-primary">+</span> <span data-i18n="metrics.m1.unit">yil</span></div>
+              <p class="metric-sub" data-i18n="metrics.m1.sub">Sud majlislari va advokatlik firmalarida faoliyat</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-head">
+                <span class="metric-label" data-i18n="metrics.m2.label">Yaratilgan modellar</span>
+                <span class="material-symbols-outlined text-primary icon-lg">model_training</span>
+              </div>
+              <div class="metric-value">15<span class="text-primary">+</span> <span data-i18n="metrics.m2.unit">ta</span></div>
+              <p class="metric-sub" data-i18n="metrics.m2.sub">Mashinali o'rganish modellari va AI tizimlari</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-head">
+                <span class="metric-label" data-i18n="metrics.m3.label">Sud organlari</span>
+                <span class="material-symbols-outlined text-secondary icon-lg">account_balance</span>
+              </div>
+              <div class="metric-value">4 <span data-i18n="metrics.m3.unit">ta</span></div>
+              <p class="metric-sub" data-i18n="metrics.m3.sub">Sudya yordamchisi va yurist yordamchisi vazifalari</p>
+            </div>
+            <div class="metric-card">
+              <div class="metric-head">
+                <span class="metric-label" data-i18n="metrics.m4.label">Ilmiy izlanishlar</span>
+                <span class="material-symbols-outlined text-primary icon-lg">menu_book</span>
+              </div>
+              <div class="metric-value">2 <span data-i18n="metrics.m4.unit">ta</span></div>
+              <p class="metric-sub" data-i18n="metrics.m4.sub">Kartellar va raqobat huquqi bo'yicha ilmiy maqolalar</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== ABOUT ==================== -->
+      <section class="section-alt" id="about">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <div class="eyebrow">
+                <span class="material-symbols-outlined icon-xs">spa</span>
+                <span data-i18n="about.eyebrow">Gibrid yondashuv</span>
+              </div>
+              <h2 class="section-title" data-i18n="about.title">Yurist va ma'lumotlar tahlilchisi: gibrid ustunlik</h2>
+            </div>
+            <p class="section-desc" data-i18n="about.desc">
+              Hisoblash imkoniyatlarisiz huquqiy tahlil sekinlashadi, me'yoriy chegaralarsiz esa algoritmlar xatoga yo'l qo'yadi.
+            </p>
+          </div>
+
+          <div class="about-grid">
+            <!-- Legal card -->
+            <div class="about-card">
+              <div class="about-card-head">
+                <div class="about-icon about-icon-secondary">
+                  <span class="material-symbols-outlined icon-lg filled">balance</span>
+                </div>
+                <span class="tag tag-secondary" data-i18n="about.legal.tag">Qonunchilik amaliyoti</span>
+              </div>
+              <h3 class="about-card-title" data-i18n="about.legal.title">Yuridik va institutsional maslahat</h3>
+              <p class="about-card-desc" data-i18n="about.legal.desc">
+                Toshkent davlat yuridik universitetida ta'lim olgan hamda ma'muriy va fuqarolik sudlarida amaliy tajribaga ega.
+              </p>
+              <div class="about-features">
+                <div class="feature-box">
+                  <span class="feature-title text-secondary" data-i18n="about.legal.f1.title">Sud da'volari</span>
+                  <span class="feature-text" data-i18n="about.legal.f1.text">Da'vo arizalari, iltimosnomalar va sud vakilligi</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-secondary" data-i18n="about.legal.f2.title">Korporativ hujjatlar</span>
+                  <span class="feature-text" data-i18n="about.legal.f2.text">Ta'sis shartnomalari, ustavlar va komplayens</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-secondary" data-i18n="about.legal.f3.title">Raqobat huquqi</span>
+                  <span class="feature-text" data-i18n="about.legal.f3.text">Kartel kelishuvlari va bozor talablarini tahlil qilish</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-secondary" data-i18n="about.legal.f4.title">Raqamli aktivlar</span>
+                  <span class="feature-text" data-i18n="about.legal.f4.text">Axborot texnologiyalari shartnomalari va litsenziyalash</span>
+                </div>
+              </div>
+              <div class="tag-row">
+                <span class="tag tag-plain" data-i18n="about.legal.t1">Korporativ huquq</span>
+                <span class="tag tag-plain" data-i18n="about.legal.t2">Raqobat huquqi</span>
+                <span class="tag tag-plain" data-i18n="about.legal.t3">Soliq masalalari</span>
+                <span class="tag tag-plain" data-i18n="about.legal.t4">Sud simulyatsiyasi</span>
+              </div>
+            </div>
+
+            <!-- Tech card -->
+            <div class="about-card">
+              <div class="about-card-head">
+                <div class="about-icon about-icon-primary">
+                  <span class="material-symbols-outlined icon-lg">terminal</span>
+                </div>
+                <span class="tag tag-primary" data-i18n="about.tech.tag">Hisoblash aniqligi</span>
+              </div>
+              <h3 class="about-card-title" data-i18n="about.tech.title">Sun'iy intellekt va ma'lumotlar tahlili</h3>
+              <p class="about-card-desc" data-i18n="about.tech.desc">
+                Mashinali o'rganish modellari va chuqur o'rganish usullari yordamida huquqiy ma'lumotlarni tahlil qilish, bashoratli modellar yaratish va katta hajmdagi ma'lumotlar bilan ishlash.
+              </p>
+              <div class="about-features">
+                <div class="feature-box">
+                  <span class="feature-title text-primary" data-i18n="about.tech.f1.title">Sun'iy intellekt tizimlari</span>
+                  <span class="feature-text" data-i18n="about.tech.f1.text">Python, mashinali o'rganish va chuqur o'rganish asosidagi modellar</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-primary" data-i18n="about.tech.f2.title">Bashoratli tahlil</span>
+                  <span class="feature-text" data-i18n="about.tech.f2.text">Kredit berish qarori, mijozlar oqimi, tibbiy bashorat modellari</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-primary" data-i18n="about.tech.f3.title">Ma'lumotlar tahlili</span>
+                  <span class="feature-text" data-i18n="about.tech.f3.text">Katta hajmdagi ma'lumotlarni qayta ishlash va vizualizatsiya</span>
+                </div>
+                <div class="feature-box">
+                  <span class="feature-title text-primary" data-i18n="about.tech.f4.title">Avtomatlashtirish</span>
+                  <span class="feature-text" data-i18n="about.tech.f4.text">Huquqiy tahlil skriptlari, botlar va API integratsiyalari</span>
+                </div>
+              </div>
+              <div class="tag-row">
+                <span class="tag tag-plain" data-i18n="about.tech.t1">Python</span>
+                <span class="tag tag-plain" data-i18n="about.tech.t2">Machine Learning</span>
+                <span class="tag tag-plain" data-i18n="about.tech.t3">Deep Learning</span>
+                <span class="tag tag-plain" data-i18n="about.tech.t4">Sun'iy intellekt</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Perspective banner -->
+          <div class="perspective-banner">
+            <div class="perspective-items">
+              <div class="perspective-item">
+                <span class="material-symbols-outlined text-primary icon-lg">location_on</span>
+                <span class="perspective-strong" data-i18n="perspective.location">Toshkent, O'zbekiston</span>
+              </div>
+              <div class="perspective-item">
+                <span class="material-symbols-outlined text-secondary icon-lg">translate</span>
+                <span class="perspective-soft" data-i18n="perspective.langs">O'zbek tili (C2) · Ingliz tili (C1) · Rus tili (B1)</span>
+              </div>
+              <div class="perspective-item">
+                <span class="material-symbols-outlined text-muted icon-lg">sports_soccer</span>
+                <span class="perspective-soft" data-i18n="perspective.hobbies">Futbol taktikasi · Shaxmat strategiyasi · Kinematografiya</span>
+              </div>
+            </div>
+            <div class="perspective-cta">
+              <span class="dot-primary"></span>
+              <span data-i18n="perspective.cta">Masofaviy va Toshkentdagi loyihalar uchun tayyor</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== EXPERIENCE ==================== -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-plain" data-i18n="exp.eyebrow">Amaliy tajriba va akademik faoliyat</span>
+              <h2 class="section-title" data-i18n="exp.title">Kasbiy yo'l va akademik rivojlanish</h2>
+            </div>
+            <div class="chip" data-i18n="exp.chip">Xronologiya: 2022 — 2026</div>
+          </div>
+
+          <div class="timeline">
+            <div class="timeline-line"></div>
+
+            <!-- Item 1 -->
+            <div class="timeline-item">
+              <div class="timeline-card timeline-left">
+                <div class="timeline-card-inner">
+                  <span class="tag tag-primary mb-2" data-i18n="exp.e1.badge">Hozirgi faoliyat</span>
+                  <h3 class="timeline-title" data-i18n="exp.e1.title">Yurist yordamchisi (paralegal)</h3>
+                  <div class="timeline-org" data-i18n="exp.e1.org">"Law and Justice" advokatlik firmasi · Toshkent</div>
+                  <p class="timeline-desc" data-i18n="exp.e1.desc">Murakkab da'vo arizalari, tijorat shartnomalari va ta'sis hujjatlarini loyihalashtirish.</p>
+                </div>
+              </div>
+              <div class="timeline-dot timeline-dot-primary">
+                <span class="material-symbols-outlined icon-xs">gavel</span>
+              </div>
+              <div class="timeline-date timeline-right">
+                <span class="chip chip-light" data-i18n="exp.e1.date">2025-yil noyabr — hozir</span>
+              </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="timeline-item">
+              <div class="timeline-date timeline-left">
+                <span class="chip chip-light" data-i18n="exp.e2.date">2025-yil iyun — 2025-yil oktyabr</span>
+              </div>
+              <div class="timeline-dot timeline-dot-secondary">
+                <span class="material-symbols-outlined icon-xs">balance</span>
+              </div>
+              <div class="timeline-card timeline-right">
+                <div class="timeline-card-inner">
+                  <h3 class="timeline-title" data-i18n="exp.e2.title">Yurist yordamchisi (paralegal)</h3>
+                  <div class="timeline-org" data-i18n="exp.e2.org">"Bukva Zakona" advokatlik firmasi · Toshkent</div>
+                  <p class="timeline-desc" data-i18n="exp.e2.desc">Fuqarolik va xo'jalik nizolari bo'yicha huquqiy tadqiqotlar o'tkazish.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="timeline-item">
+              <div class="timeline-card timeline-left">
+                <div class="timeline-card-inner">
+                  <h3 class="timeline-title" data-i18n="exp.e3.title">Sudya yordamchisi</h3>
+                  <div class="timeline-org" data-i18n="exp.e3.org">Toshkent tumanlararo ma'muriy sudi</div>
+                  <p class="timeline-desc" data-i18n="exp.e3.desc">Rasmiy sud hujjatlarini rasmiylashtirish va ma'muriy nizolarni tahlil qilish.</p>
+                </div>
+              </div>
+              <div class="timeline-dot timeline-dot-primary">
+                <span class="material-symbols-outlined icon-xs">assured_workload</span>
+              </div>
+              <div class="timeline-date timeline-right">
+                <span class="chip chip-light" data-i18n="exp.e3.date">2025-yil yanvar — 2025-yil may</span>
+              </div>
+            </div>
+
+            <!-- Item 4 -->
+            <div class="timeline-item">
+              <div class="timeline-date timeline-left">
+                <span class="chip chip-light" data-i18n="exp.e4.date">2024-yil sentyabr — 2024-yil dekabr</span>
+              </div>
+              <div class="timeline-dot timeline-dot-primary">
+                <span class="material-symbols-outlined icon-xs">folder_special</span>
+              </div>
+              <div class="timeline-card timeline-right">
+                <div class="timeline-card-inner">
+                  <h3 class="timeline-title" data-i18n="exp.e4.title">Sudya yordamchisi</h3>
+                  <div class="timeline-org" data-i18n="exp.e4.org">Fuqarolik ishlari bo'yicha Yakkasaroy tumanlararo sudi</div>
+                  <p class="timeline-desc" data-i18n="exp.e4.desc">Sud buyruqlari, protokollari va ijro hujjatlarini tuzish.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Item 5 -->
+            <div class="timeline-item">
+              <div class="timeline-card timeline-left">
+                <div class="timeline-card-inner">
+                  <span class="tag tag-primary mb-2" data-i18n="exp.e5.badge">Akademik asos</span>
+                  <h3 class="timeline-title" data-i18n="exp.e5.title">Yurisprudensiya bakalavri (LL.B.)</h3>
+                  <div class="timeline-org" data-i18n="exp.e5.org">Toshkent davlat yuridik universiteti (TDYU / TSUL)</div>
+                  <p class="timeline-desc" data-i18n="exp.e5.desc">Korporativ boshqaruv, raqobat huquqi, soliq siyosati va raqamli huquq yo'nalishlari.</p>
+                </div>
+              </div>
+              <div class="timeline-dot timeline-dot-primary">
+                <span class="material-symbols-outlined icon-xs">school</span>
+              </div>
+              <div class="timeline-date timeline-right">
+                <span class="chip chip-light" data-i18n="exp.e5.date">2022 — 2026-yillar · Toshkent</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== PORTFOLIO ==================== -->
+      <section class="section-alt" id="portfolio">
+        <div class="container">
+          <div class="portfolio-head">
+            <div>
+              <span class="eyebrow-plain" data-i18n="portfolio.eyebrow">Amaliy natijalar</span>
+              <h2 class="section-title" data-i18n="portfolio.title">Tanlangan mashinali o'rganish va sun'iy intellekt loyihalari</h2>
+            </div>
+
+            <!-- Fixed filter (no overflow) -->
+            <div class="portfolio-filter" id="portfolioFilter">
+              <button class="filter-btn active" data-filter="all" type="button" data-i18n="portfolio.filters.all">Barchasi (7)</button>
+              <button class="filter-btn" data-filter="legal-ai" type="button" data-i18n="portfolio.filters.legalAi">Yuridik AI</button>
+              <button class="filter-btn" data-filter="ml" type="button" data-i18n="portfolio.filters.ml">Mashinali o'rganish</button>
+              <button class="filter-btn" data-filter="web" type="button" data-i18n="portfolio.filters.web">Veb platformalar</button>
+              <button class="filter-btn" data-filter="pub" type="button" data-i18n="portfolio.filters.pub">Ilmiy ishlar</button>
+            </div>
+          </div>
+
+          <div class="portfolio-grid" id="portfolioGrid">
+            <!-- Project 1 -->
+            <div class="portfolio-item" data-category="legal-ai">
+              <div class="portfolio-item-head">
+                <span class="tag tag-primary" data-i18n="portfolio.p1.tag">Yuridik sun'iy intellekt</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p1.stack">Python · ML</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p1.title">O'zbekiston qonunchiligi bo'yicha AI yordamchisi</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p1.desc">Konstitutsiyaning 155 ta moddasi hamda Fuqarolik kodeksining 1 196 ta moddasi bo'yicha aniq javob beruvchi sun'iy intellekt tizimi.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p1.meta">1 351 ta modda indeksi</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/my_constitution" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="portfolio-item" data-category="legal-ai">
+              <div class="portfolio-item-head">
+                <span class="tag tag-primary" data-i18n="portfolio.p2.tag">Yuridik komplayens</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p2.stack">Python · AI</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p2.title">ComplianceUZ tizimi</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p2.desc">O'zbekiston raqobat qonunchiligi talablari asosida bozor amaliyoti va shartnomaviy qoidalarni avtomatik tekshiruvchi tizim.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p2.meta">Bozor audit moduli</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/ComplianceUZ" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="portfolio-item" data-category="web">
+              <div class="portfolio-item-head">
+                <span class="tag tag-plain" data-i18n="portfolio.p3.tag">To'liq platforma</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p3.stack">Full-stack</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p3.title">IjaraPro platformasi</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p3.desc">Ijaraga oluvchilar va mulk egalari uchun raqamli ijara shartnomasi rasmiylashtirish va boshqaruv panelini taqdim etuvchi ekotizim.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p3.meta">REST API · Dashboard</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/ijarapro" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="portfolio-item" data-category="ml">
+              <div class="portfolio-item-head">
+                <span class="tag tag-secondary" data-i18n="portfolio.p4.tag">Mashinali o'rganish</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p4.stack">Fintex</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p4.title">Kredit berish qarorini bashorat qilish</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p4.desc">Mijozlarning moliyaviy ko'rsatkichlari va xavf darajalari asosida bank kreditlarini ma'qullash natijalarini hisoblovchi model.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p4.meta">Scikit-Learn · Pandas</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/mijozga-kredit-berishni-predict-qilish" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 5 -->
+            <div class="portfolio-item" data-category="ml">
+              <div class="portfolio-item-head">
+                <span class="tag tag-primary" data-i18n="portfolio.p5.tag">Mashinali o'rganish</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p5.stack">Biotibbiyot</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p5.title">Diabet kasalligini aniqlash modeli</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p5.desc">Klinik biometrik ko'rsatkichlar asosida diabet ehtimolini aniqlovchi optimallashtirilgan klassifikator.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p5.meta">Tasniflash tahlili</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/diagnostik-o-lchovlar-asosida-bemorda-diabet-bor-yo-qligini-taxmin-qilish" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Project 6 -->
+            <div class="portfolio-item" data-category="ml">
+              <div class="portfolio-item-head">
+                <span class="tag tag-primary" data-i18n="portfolio.p6.tag">Mashinali o'rganish</span>
+                <span class="portfolio-stack" data-i18n="portfolio.p6.stack">Ansambl usullari</span>
+              </div>
+              <h3 class="portfolio-title" data-i18n="portfolio.p6.title">Mijozlar oqimi va klinik omon qolish klassifikatori</h3>
+              <p class="portfolio-desc" data-i18n="portfolio.p6.desc">Bank mijozlarining ketish ehtimoli va jigar sirrozi bilan og'rigan bemorlarning omon qolish ehtimolini baholovchi ansambl modeli.</p>
+              <div class="portfolio-item-footer">
+                <span class="portfolio-meta" data-i18n="portfolio.p6.meta">Kross-validatsiya</span>
+                <a class="portfolio-link" href="https://github.com/DiyorbekZiyoxojayev/bank-mijozlarini-kelish-ketishini-bashorat-qilish" target="_blank" rel="noopener noreferrer">
+                  <span data-i18n="portfolio.viewCode">Kodni ko'rish</span>
+                  <span class="material-symbols-outlined icon-xs">arrow_outward</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Publication -->
+            <div class="portfolio-item portfolio-item-wide" data-category="pub">
+              <div class="portfolio-pub-row">
+                <div class="portfolio-pub-copy">
+                  <div class="portfolio-pub-tags">
+                    <span class="tag tag-secondary" data-i18n="portfolio.pub.tag">Ilmiy nashr · 2025</span>
+                    <span class="portfolio-meta" data-i18n="portfolio.pub.journal">Journal of New Century Innovations · 74-jild</span>
+                  </div>
+                  <h3 class="portfolio-title portfolio-title-lg" data-i18n="portfolio.pub.title">O'zbekiston raqobat huquqida kartel kelishuvlarining o'ziga xos jihatlari</h3>
+                  <p class="portfolio-desc" data-i18n="portfolio.pub.desc">Raqobatga qarshi kartel kelishuvlari, narxlarni kelishib belgilash mexanizmlari hamda antimonopoliya qonunchiligida huquqiy tartibga solish bo'yicha ilmiy tahlil.</p>
+                </div>
+                <div>
+                  <a class="btn btn-secondary" href="https://scientific-jl.com/new/article/view/7035" target="_blank" rel="noopener noreferrer">
+                    <span data-i18n="portfolio.pub.cta">Maqolani o'qish</span>
+                    <span class="material-symbols-outlined icon-sm">menu_book</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ==================== CREDENTIALS ==================== -->
+      <section class="section" id="credentials">
+        <div class="container">
+          <div class="section-head">
+            <div>
+              <span class="eyebrow-plain" data-i18n="cred.eyebrow">Akkreditatsiya va xalqaro nishonlar</span>
+              <h2 class="section-title" data-i18n="cred.title">Sertifikatlar va kasbiy malakalar</h2>
+            </div>
+            <p class="section-desc" data-i18n="cred.desc">
+              Oxford, UNESCO, Hugging Face, UNODC, Kaggle, Clio va Harvey AI kabi muassasalar tomonidan tasdiqlangan sertifikatlar.
+            </p>
+          </div>
+
+          <!-- Resume banner -->
+          <div class="resume-banner">
+            <div class="resume-banner-copy">
+              <div class="resume-icon">
+                <span class="material-symbols-outlined icon-lg">picture_as_pdf</span>
+              </div>
               <div>
-                <div class="text-base font-bold text-white">Diyorbek Ziyoxo'jayev</div>
-                <div class="text-[11px] text-[#e3ebd9]">Toshkent davlat yuridik universiteti · 2026-yil bitiruvchisi</div>
-              </div>
-              <div class="w-8 h-8 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-[#3e5641] shadow-xs">
-                <span class="material-symbols-outlined text-[17px]" style="font-variation-settings: 'FILL' 1;">balance</span>
+                <h3 class="resume-title" data-i18n="cred.resumeTitle">To'liq rezyume (pdf)</h3>
+                <p class="resume-sub" data-i18n="cred.resumeSub">Sud amaliyoti, ishlab chiqilgan arxitekturalar va TDYU baholari ilovasi bilan.</p>
               </div>
             </div>
+            <a class="btn btn-primary" href="files/Diyorbek_Ziyokhujaev_resume.pdf" download>
+              <span class="material-symbols-outlined icon-sm">download</span>
+              <span data-i18n="cred.download">Rezyumeni yuklab olish</span>
+            </a>
           </div>
 
-          <div class="grid grid-cols-2 gap-3">
-            <div class="p-3 rounded-2xl bg-[#f4f4ed] border border-[#e6e8de] flex flex-col">
-              <span class="text-[10px] text-[#626f63] font-medium">Asosiy yo'nalishlar</span>
-              <span class="text-xs font-bold text-[#28372b] mt-0.5">Korporativ, raqobat va soliq</span>
-            </div>
-            <div class="p-3 rounded-2xl bg-[#e3ebd9]/60 border border-[#d6dad0] flex flex-col">
-              <span class="text-[10px] text-[#3e5641] font-medium">Texnologik vositalar</span>
-              <span class="text-xs font-bold text-[#28372b] mt-0.5">PyTorch, Groq, RAG, Node.js</span>
-            </div>
-          </div>
-
-          <div class="flex items-center justify-between text-xs pt-1 border-t border-[#e6e8de] text-[#626f63]">
-            <div class="flex items-center gap-1.5">
-              <span class="material-symbols-outlined text-[#3e5641] text-[16px]">verified</span>
-              <span>Ilmiy maqola muallifi · JNCI jurnali</span>
-            </div>
-            <a class="text-[#3e5641] hover:underline font-semibold flex items-center gap-1" href="https://github.com/DiyorbekZiyoxojayev" rel="noopener noreferrer" target="_blank">
-              <span>GitHub</span>
-              <span class="material-symbols-outlined text-[13px]">arrow_outward</span>
+          <div class="certs-grid">
+            <!-- Certs 1-8 (identical structure) -->
+            <a class="cert-card" href="files/AI-Justice-and-the-Rule-of-Law.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon"><span class="material-symbols-outlined icon-md">account_balance</span></div>
+              <h4 class="cert-title" data-i18n="cred.c1.title">Sun'iy intellekt, adolat va qonun ustuvorligi</h4>
+              <div class="cert-issuer" data-i18n="cred.c1.issuer">University of Oxford va UNESCO</div>
+              <span class="cert-view"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/certificate_HF_excellence.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon"><span class="material-symbols-outlined icon-md">psychology</span></div>
+              <h4 class="cert-title" data-i18n="cred.c2.title">Chuqur mustahkamlash asosida o'rganish</h4>
+              <div class="cert-issuer" data-i18n="cred.c2.issuer">Hugging Face · A'lo natija sertifikati</div>
+              <span class="cert-view"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/clio-certificate-diyorbek-ziyokhujaev.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon cert-icon-secondary"><span class="material-symbols-outlined icon-md">gavel</span></div>
+              <h4 class="cert-title" data-i18n="cred.c3.title">Yuridik sun'iy intellekt asoslari</h4>
+              <div class="cert-issuer" data-i18n="cred.c3.issuer">Clio Legal Tech</div>
+              <span class="cert-view cert-view-secondary"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/certificate-AI-for-LEGAL-HARVEYACADEMY.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon"><span class="material-symbols-outlined icon-md">terminal</span></div>
+              <h4 class="cert-title" data-i18n="cred.c4.title">Yuridik faoliyat uchun sun'iy intellekt</h4>
+              <div class="cert-issuer" data-i18n="cred.c4.issuer">Harvey Academy</div>
+              <span class="cert-view"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/5670167225DZ-ANTI-CORRUPTION-CERTICATE.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon cert-icon-secondary"><span class="material-symbols-outlined icon-md">security</span></div>
+              <h4 class="cert-title" data-i18n="cred.c5.title">Korrupsiyaga qarshi kurashish va etika</h4>
+              <div class="cert-issuer" data-i18n="cred.c5.issuer">UNODC (Birlashgan Millatlar Tashkiloti)</div>
+              <span class="cert-view cert-view-secondary"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/cybercrime-UNODC.pdf" target="_blank" rel="noopener">
+              <div class="cert-icon cert-icon-secondary"><span class="material-symbols-outlined icon-md">shield</span></div>
+              <h4 class="cert-title" data-i18n="cred.c6.title">Kiberjinoyatlarni tergov qilish</h4>
+              <div class="cert-issuer" data-i18n="cred.c6.issuer">UNODC (Birlashgan Millatlar Tashkiloti)</div>
+              <span class="cert-view cert-view-secondary"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/cert_advanced_sql.png" target="_blank" rel="noopener">
+              <div class="cert-icon"><span class="material-symbols-outlined icon-md">database</span></div>
+              <h4 class="cert-title" data-i18n="cred.c7.title">Kengaytirilgan SQL va ma'lumotlar mantiqi</h4>
+              <div class="cert-issuer" data-i18n="cred.c7.issuer">Kaggle Data Science</div>
+              <span class="cert-view"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
+            </a>
+            <a class="cert-card" href="files/cert_computer_vision.jpg" target="_blank" rel="noopener">
+              <div class="cert-icon"><span class="material-symbols-outlined icon-md">visibility</span></div>
+              <h4 class="cert-title" data-i18n="cred.c8.title">Kompyuter ko'rishi (Computer Vision)</h4>
+              <div class="cert-issuer" data-i18n="cred.c8.issuer">Kaggle Data Science</div>
+              <span class="cert-view"><span class="material-symbols-outlined icon-xs">verified</span> <span data-i18n="cred.view">Sertifikatni ko'rish</span></span>
             </a>
           </div>
         </div>
-      </div>
+      </section>
+
+      <!-- ==================== CONTACT ==================== -->
+      <section class="section-alt" id="contact">
+        <div class="container">
+          <div class="contact-grid">
+            <div class="contact-info">
+              <div>
+                <span class="eyebrow-plain" data-i18n="contact.eyebrow">Muloqotni boshlash</span>
+                <h2 class="section-title" data-i18n="contact.title">Ishni yoki modelni birgalikda loyihalashtiramiz</h2>
+                <p class="contact-desc" data-i18n="contact.desc">
+                  Yuridik konsultatsiyalar, da'vo xatlari tuzish, raqobat komplayensi auditi va moslashtirilgan AI tizimlari uchun ochiqman.
+                </p>
+
+                <div class="contact-list">
+                  <div class="contact-item">
+                    <div class="contact-icon contact-icon-primary">
+                      <span class="material-symbols-outlined icon-md">pin_drop</span>
+                    </div>
+                    <div>
+                      <span class="contact-label" data-i18n="contact.locationLabel">Joylashuv</span>
+                      <span class="contact-value" data-i18n="contact.locationValue">Toshkent, O'zbekiston · UTC+5</span>
+                    </div>
+                  </div>
+
+                  <div class="contact-item contact-item-btn">
+                    <div class="flex items-start gap-3.5">
+                      <div class="contact-icon contact-icon-secondary">
+                        <span class="material-symbols-outlined icon-md">phone_iphone</span>
+                      </div>
+                      <div>
+                        <span class="contact-label" data-i18n="contact.phoneLabel">Telefon va Telegram</span>
+                        <a class="contact-value contact-link" href="https://t.me/ziyoxojayev" target="_blank" rel="noopener">+998 90 004 17 06</a>
+                      </div>
+                    </div>
+                    <button class="copy-btn" type="button" data-copy="phone" title="Copy">
+                      <span class="material-symbols-outlined icon-sm">content_copy</span>
+                    </button>
+                  </div>
+
+                  <div class="contact-item contact-item-btn">
+                    <div class="flex items-start gap-3.5">
+                      <div class="contact-icon contact-icon-primary">
+                        <span class="material-symbols-outlined icon-md">mail</span>
+                      </div>
+                      <div>
+                        <span class="contact-label" data-i18n="contact.emailLabel">Elektron pochta</span>
+                        <a class="contact-value contact-link break-all" href="mailto:diyorbekziyoxojayev@gmail.com">diyorbekziyoxojayev@gmail.com</a>
+                      </div>
+                    </div>
+                    <button class="copy-btn" type="button" data-copy="email" title="Copy">
+                      <span class="material-symbols-outlined icon-sm">content_copy</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="contact-map">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187055.5!2d69.15!3d41.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTashkent!5e0!3m2!1sen!2sus" frameborder="0" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+              </div>
+            </div>
+
+            <div class="contact-form-wrap">
+              <div class="contact-form-card">
+                <h3 class="form-title" data-i18n="contact.formTitle">Xabar yo'llash</h3>
+                <p class="form-sub" data-i18n="contact.formSub">Xabarlar to'g'ridan-to'g'ri shaxsiy pochtamga yetkaziladi.</p>
+
+                <form id="cf" class="contact-form">
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" data-i18n="contact.fName">Ism va familiyangiz</label>
+                      <input id="name-field" name="name" class="form-input" data-i18n-placeholder="contact.fNamePh" placeholder="Masalan: Alisher Navoiy" required type="text" />
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" data-i18n="contact.fEmail">Elektron pochtangiz</label>
+                      <input id="email-field" name="email" class="form-input" data-i18n-placeholder="contact.fEmailPh" placeholder="nom@kompaniya.uz" required type="email" />
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-field">
+                      <label class="form-label" data-i18n="contact.fPhone">Telefon yoki Telegram</label>
+                      <input id="phone-field" name="phone" class="form-input" data-i18n-placeholder="contact.fPhonePh" placeholder="+998 90 000 00 00" type="tel" />
+                    </div>
+                    <div class="form-field">
+                      <label class="form-label" data-i18n="contact.fService">Xizmat yo'nalishi</label>
+                      <select id="service-field" name="service" class="form-input">
+                        <option value="" data-i18n="contact.fServiceEmpty">— Xizmatni tanlang —</option>
+                        <option data-i18n="contact.fs1">Mashinali o'rganish va ma'lumotlar tahlili</option>
+                        <option data-i18n="contact.fs2">Yuridik sun'iy intellekt tizimlari</option>
+                        <option data-i18n="contact.fs3">Korporativ huquq va shartnomalar</option>
+                        <option data-i18n="contact.fs4">Raqobat va kartellarga qarshi komplayens</option>
+                        <option data-i18n="contact.fs5">Sud da'vo arizasi tayyorlash</option>
+                        <option data-i18n="contact.fs6">Boshqa</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-field">
+                    <label class="form-label" data-i18n="contact.fMessage">Loyiha yoki murojaat tafsilotlari</label>
+                    <textarea id="message-field" name="message" rows="4" class="form-input form-textarea" data-i18n-placeholder="contact.fMessagePh" placeholder="Huquqiy holat yoki texnik vazifani bayon eting..." required></textarea>
+                  </div>
+
+                  <div id="form-status" class="form-status hidden"></div>
+
+                  <div class="form-actions">
+                    <span class="form-secure" data-i18n="contact.secure">Xavfsiz va maxfiy aloqa</span>
+                    <button id="submitBtn" class="btn btn-primary" type="submit" data-i18n="contact.submit">Xabarni yuborish →</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </div>
+  </main>
 
-    <!-- Metric Bar -->
-    <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-12">
-      <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs hover:border-[#3e5641]/40 transition-all">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold text-[#626f63]">Amaliyot muddati</span>
-          <span class="material-symbols-outlined text-[#3e5641] text-lg">history_edu</span>
-        </div>
-        <div class="text-2xl lg:text-3xl font-extrabold text-[#1e2b20]">2<span class="text-[#3e5641]">+</span> yil</div>
-        <p class="text-xs text-[#626f63] mt-1">Sud majlislari va advokatlik firmalarida faoliyat</p>
-      </div>
-      <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs hover:border-[#3e5641]/40 transition-all">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold text-[#626f63]">Yaratilgan modellar</span>
-          <span class="material-symbols-outlined text-[#3e5641] text-lg">model_training</span>
-        </div>
-        <div class="text-2xl lg:text-3xl font-extrabold text-[#1e2b20]">15<span class="text-[#3e5641]">+</span> ta</div>
-        <p class="text-xs text-[#626f63] mt-1">Mashinali o'rganish va RAG arxitekturalari</p>
-      </div>
-      <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs hover:border-[#3e5641]/40 transition-all">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold text-[#626f63]">Sud organlaridagi faoliyat</span>
-          <span class="material-symbols-outlined text-[#9e5353] text-lg">account_balance</span>
-        </div>
-        <div class="text-2xl lg:text-3xl font-extrabold text-[#1e2b20]">4 ta</div>
-        <p class="text-xs text-[#626f63] mt-1">Sudya yordamchisi va yurist yordamchisi vazifalari</p>
-      </div>
-      <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs hover:border-[#3e5641]/40 transition-all">
-        <div class="flex items-center justify-between mb-2">
-          <span class="text-xs font-semibold text-[#626f63]">Ilmiy izlanishlar</span>
-          <span class="material-symbols-outlined text-[#3e5641] text-lg">menu_book</span>
-        </div>
-        <div class="text-2xl lg:text-3xl font-extrabold text-[#1e2b20]">2 ta</div>
-        <p class="text-xs text-[#626f63] mt-1">Kartellar va raqobat huquqi bo'yicha ilmiy maqolalar</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== ABOUT SECTION ==================== -->
-<section class="w-full py-16 bg-[#f7f8f1] relative border-y border-[#e6e8de]" id="about">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-      <div>
-        <div class="text-xs font-bold text-[#3e5641] uppercase tracking-wider mb-2 flex items-center gap-1.5">
-          <span class="material-symbols-outlined text-[15px]">spa</span>
-          <span>Gibrid yondashuv</span>
-        </div>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1e2b20]">Yurist va ma'lumotlar tahlilchisi: gibrid ustunlik</h2>
-      </div>
-      <p class="text-sm text-[#626f63] max-w-md leading-relaxed">
-        Hisoblash imkoniyatlarisiz huquqiy tahlil sekinlashadi, me'yoriy chegaralarsiz esa algoritmlar xatoga yo'l qo'yadi. Ushbu ikki soha bir-birini to'ldiradi.
-      </p>
-    </div>
-
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 items-stretch">
-      <!-- Legal -->
-      <div class="rounded-3xl bg-white border border-[#e6e8de] p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
-        <div>
-          <div class="flex items-start justify-between mb-5">
-            <div class="w-12 h-12 rounded-2xl bg-[#fdeee9] border border-[#f5dad4] text-[#9e5353] flex items-center justify-center">
-              <span class="material-symbols-outlined text-2xl" style="font-variation-settings: 'FILL' 1;">balance</span>
-            </div>
-            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#fdeee9] text-[#9e5353]">Qonunchilik amaliyoti</span>
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="footer-brand-top">
+            <span class="tag tag-outline" data-i18n="footer.role">Yurist va data analyst</span>
+            <span class="footer-soft" data-i18n="footer.location">Toshkent va masofaviy</span>
           </div>
-          <h3 class="text-xl font-bold text-[#1e2b20] mb-2">Yuridik va institutsional maslahat</h3>
-          <p class="text-sm text-[#626f63] mb-6 leading-relaxed">
-            Toshkent davlat yuridik universitetida ta'lim olgan hamda ma'muriy va fuqarolik sudlarida amaliy tajribaga ega. O'zbekiston qonunchiligi, xo'jalik nizolari va monopoliyaga qarshi talablarga ixtisoslashgan.
-          </p>
-          <div class="grid grid-cols-2 gap-3 mb-6">
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#9e5353] block mb-1">Sud da'volari</span>
-              <span class="text-xs text-[#626f63]">Da'vo arizalari, iltimosnomalar va sud vakilligi</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#9e5353] block mb-1">Korporativ hujjatlar</span>
-              <span class="text-xs text-[#626f63]">Ta'sis shartnomalari, ustavlar va komplayens</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#9e5353] block mb-1">Raqobat huquqi</span>
-              <span class="text-xs text-[#626f63]">Kartel kelishuvlari va bozor talablarini tahlil qilish</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#9e5353] block mb-1">Raqamli aktivlar</span>
-              <span class="text-xs text-[#626f63]">Axborot texnologiyalari shartnomalari va litsenziyalash</span>
-            </div>
-          </div>
-        </div>
-        <div class="pt-4 border-t border-[#e6e8de] flex flex-wrap gap-2">
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Korporativ huquq</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Raqobat huquqi</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Soliq masalalari</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Sud simulyatsiyasi</span>
-        </div>
-      </div>
-
-      <!-- Tech -->
-      <div class="rounded-3xl bg-white border border-[#e6e8de] p-8 flex flex-col justify-between shadow-xs hover:shadow-md transition-all">
-        <div>
-          <div class="flex items-start justify-between mb-5">
-            <div class="w-12 h-12 rounded-2xl bg-[#e3ebd9] border border-[#d6dad0] text-[#3e5641] flex items-center justify-center">
-              <span class="material-symbols-outlined text-2xl">terminal</span>
-            </div>
-            <span class="text-xs font-semibold px-3 py-1 rounded-full bg-[#e3ebd9] text-[#3e5641]">Hisoblash aniqligi</span>
-          </div>
-          <h3 class="text-xl font-bold text-[#1e2b20] mb-2">Texnologiya va algoritmik sun'iy intellekt</h3>
-          <p class="text-sm text-[#626f63] mb-6 leading-relaxed">
-            To'liq tsiklli veb tizimlari va mashinali o'rganish quvurlarini loyihalash. Qidiruv bilan boyitilgan generatsiya (RAG) va Groq kabi tezkor dvigatellar yordamida qonun moddalarini amaliy vositaga aylantirish.
-          </p>
-          <div class="grid grid-cols-2 gap-3 mb-6">
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#3e5641] block mb-1">RAG tizimlari</span>
-              <span class="text-xs text-[#626f63]">Llama 3.3, Groq API, ChromaDB vektor bazasi</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#3e5641] block mb-1">Bashoratli tahlil</span>
-              <span class="text-xs text-[#626f63]">Kredit berish qarori, mijozlar oqimi, tibbiy modellar</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#3e5641] block mb-1">Veb platformalar</span>
-              <span class="text-xs text-[#626f63]">React / Vite, Node.js, Express, SQLite / PostgreSQL</span>
-            </div>
-            <div class="p-3.5 rounded-2xl bg-[#fafaf3] border border-[#e6e8de]">
-              <span class="text-xs font-bold text-[#3e5641] block mb-1">Avtomatlashtirish</span>
-              <span class="text-xs text-[#626f63]">Telegram botlari, huquqiy tahlil skriptlari, API integratsiyasi</span>
-            </div>
-          </div>
-        </div>
-        <div class="pt-4 border-t border-[#e6e8de] flex flex-wrap gap-2">
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Python va ML</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Llama 3.3</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Ma'lumotlar tahlili</span>
-          <span class="text-xs px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b] font-medium">Node.js</span>
-        </div>
-      </div>
-    </div>
-
-    <!-- Perspective Banner -->
-    <div class="mt-6 rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-wrap items-center justify-between gap-4 shadow-xs">
-      <div class="flex flex-wrap items-center gap-6">
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[#3e5641] text-lg">location_on</span>
-          <span class="text-xs font-semibold text-[#28372b]">Toshkent, O'zbekiston</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[#9e5353] text-lg">translate</span>
-          <span class="text-xs text-[#626f63]">O'zbek tili (C2) · Ingliz tili (C1) · Rus tili (B1)</span>
-        </div>
-        <div class="flex items-center gap-2">
-          <span class="material-symbols-outlined text-[#626f63] text-lg">sports_soccer</span>
-          <span class="text-xs text-[#626f63]">Futbol taktikasi · Shaxmat strategiyasi · Kinematografiya</span>
-        </div>
-      </div>
-      <div class="flex items-center gap-2 text-[#3e5641] text-xs font-bold">
-        <span class="w-2 h-2 rounded-full bg-[#3e5641]"></span>
-        <span>Masofaviy va Toshkentdagi loyihalar uchun tayyor</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== EXPERIENCE TIMELINE ==================== -->
-<section class="w-full py-16 bg-[#fafaf3] relative" id="experience">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-12">
-      <div>
-        <span class="text-xs font-bold text-[#3e5641] uppercase tracking-wider mb-2 block">Tasdiqlangan amaliy yo'l</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1e2b20]">Sud zali tajribasi va akademik faoliyat</h2>
-      </div>
-      <div class="text-xs text-[#626f63] font-semibold bg-white border border-[#e6e8de] px-3.5 py-1.5 rounded-full">Xronologiya: 2022 — 2026</div>
-    </div>
-
-    <div class="relative">
-      <div class="absolute left-4 md:left-1/2 top-4 bottom-4 w-0.5 bg-[#e6e8de] -translate-x-1/2"></div>
-      <div class="flex flex-col gap-8">
-
-        <!-- Item 1 -->
-        <div class="relative flex flex-col md:flex-row items-start group">
-          <div class="md:w-1/2 md:pr-10 md:text-right pl-12 md:pl-0 w-full">
-            <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs group-hover:border-[#3e5641]/40 transition-all">
-              <span class="text-[10px] font-bold text-[#3e5641] px-2.5 py-0.5 rounded-full bg-[#e3ebd9] inline-block mb-1.5">Hozirgi faoliyat</span>
-              <h3 class="text-base font-bold text-[#1e2b20]">Yurist yordamchisi (paralegal)</h3>
-              <div class="text-xs font-semibold text-[#3e5641] mb-2">"Law and Justice" advokatlik firmasi · Toshkent</div>
-              <p class="text-xs text-[#626f63] leading-relaxed">Murakkab da'vo arizalari, tijorat shartnomalari va ta'sis hujjatlarini loyihalashtirish. Sud majlislarida advokatlarga bevosita ko'maklashish.</p>
-            </div>
-          </div>
-          <div class="absolute left-4 md:left-1/2 top-5 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-[#3e5641] flex items-center justify-center text-[#3e5641] shadow-xs">
-            <span class="material-symbols-outlined text-[15px]">gavel</span>
-          </div>
-          <div class="md:w-1/2 md:pl-10 pl-12 pt-2 md:pt-6">
-            <span class="text-xs font-semibold text-[#626f63] bg-[#f4f4ed] px-3 py-1 rounded-full border border-[#e6e8de]">2025-yil noyabr — 2026-yil avgust</span>
-          </div>
-        </div>
-
-        <!-- Item 2 -->
-        <div class="relative flex flex-col md:flex-row items-start group">
-          <div class="md:w-1/2 md:pr-10 pl-12 md:pl-10 w-full order-1 md:order-2 md:text-left">
-            <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs group-hover:border-[#3e5641]/40 transition-all">
-              <h3 class="text-base font-bold text-[#1e2b20]">Yurist yordamchisi (paralegal)</h3>
-              <div class="text-xs font-semibold text-[#3e5641] mb-2">"Bukva Zakona" advokatlik firmasi · Toshkent</div>
-              <p class="text-xs text-[#626f63] leading-relaxed">Fuqarolik va xo'jalik nizolari bo'yicha huquqiy tadqiqotlar o'tkazish, shartnoma loyihalarini tayyorlash va sud majlislarida qatnashish.</p>
-            </div>
-          </div>
-          <div class="absolute left-4 md:left-1/2 top-5 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-[#9e5353] flex items-center justify-center text-[#9e5353] shadow-xs">
-            <span class="material-symbols-outlined text-[15px]">balance</span>
-          </div>
-          <div class="md:w-1/2 md:pr-10 md:text-right pl-12 md:pl-0 pt-2 md:pt-6 order-2 md:order-1">
-            <span class="text-xs font-semibold text-[#626f63] bg-[#f4f4ed] px-3 py-1 rounded-full border border-[#e6e8de]">2025-yil iyun — 2025-yil oktyabr</span>
-          </div>
-        </div>
-
-        <!-- Item 3 -->
-        <div class="relative flex flex-col md:flex-row items-start group">
-          <div class="md:w-1/2 md:pr-10 md:text-right pl-12 md:pl-0 w-full">
-            <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs group-hover:border-[#3e5641]/40 transition-all">
-              <h3 class="text-base font-bold text-[#1e2b20]">Sudya yordamchisi</h3>
-              <div class="text-xs font-semibold text-[#3e5641] mb-2">Toshkent tumanlararo ma'muriy sudi</div>
-              <p class="text-xs text-[#626f63] leading-relaxed">Rasmiy sud hujjatlarini rasmiylashtirish, fuqarolar va davlat organlari o'rtasidagi ma'muriy nizolarni qonunchilik me'yorlari asosida tahlil qilish.</p>
-            </div>
-          </div>
-          <div class="absolute left-4 md:left-1/2 top-5 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-[#3e5641] flex items-center justify-center text-[#3e5641] shadow-xs">
-            <span class="material-symbols-outlined text-[15px]">assured_workload</span>
-          </div>
-          <div class="md:w-1/2 md:pl-10 pl-12 pt-2 md:pt-6">
-            <span class="text-xs font-semibold text-[#626f63] bg-[#f4f4ed] px-3 py-1 rounded-full border border-[#e6e8de]">2025-yil yanvar — 2025-yil may</span>
-          </div>
-        </div>
-
-        <!-- Item 4 -->
-        <div class="relative flex flex-col md:flex-row items-start group">
-          <div class="md:w-1/2 md:pr-10 pl-12 md:pl-10 w-full order-1 md:order-2 md:text-left">
-            <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs group-hover:border-[#3e5641]/40 transition-all">
-              <h3 class="text-base font-bold text-[#1e2b20]">Sudya yordamchisi</h3>
-              <div class="text-xs font-semibold text-[#3e5641] mb-2">Fuqarolik ishlari bo'yicha Yakkasaroy tumanlararo sudi</div>
-              <p class="text-xs text-[#626f63] leading-relaxed">Sud buyruqlari, protokollari va ijro hujjatlarini tuzish; sudning elektron axborot tizimi va reyestrlari bilan ishlash.</p>
-            </div>
-          </div>
-          <div class="absolute left-4 md:left-1/2 top-5 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-[#3e5641] flex items-center justify-center text-[#3e5641] shadow-xs">
-            <span class="material-symbols-outlined text-[15px]">folder_special</span>
-          </div>
-          <div class="md:w-1/2 md:pr-10 md:text-right pl-12 md:pl-0 pt-2 md:pt-6 order-2 md:order-1">
-            <span class="text-xs font-semibold text-[#626f63] bg-[#f4f4ed] px-3 py-1 rounded-full border border-[#e6e8de]">2024-yil sentyabr — 2024-yil dekabr</span>
-          </div>
-        </div>
-
-        <!-- Item 5 -->
-        <div class="relative flex flex-col md:flex-row items-start group">
-          <div class="md:w-1/2 md:pr-10 md:text-right pl-12 md:pl-0 w-full">
-            <div class="p-5 rounded-3xl bg-white border border-[#e6e8de] shadow-xs group-hover:border-[#3e5641]/40 transition-all">
-              <span class="text-[10px] font-bold text-[#3e5641] px-2.5 py-0.5 rounded-full bg-[#e3ebd9] inline-block mb-1.5">Akademik asos</span>
-              <h3 class="text-base font-bold text-[#1e2b20]">Yurisprudensiya bakalavri (LL.B.)</h3>
-              <div class="text-xs font-semibold text-[#3e5641] mb-2">Toshkent davlat yuridik universiteti (TDYU / TSUL)</div>
-              <p class="text-xs text-[#626f63] leading-relaxed">Korporativ boshqaruv, monopoliyaga qarshi raqobat huquqi, soliq siyosati va raqamli huquq yo'nalishlariga qaratilgan to'rt yillik chuqur ta'lim dasturi.</p>
-            </div>
-          </div>
-          <div class="absolute left-4 md:left-1/2 top-5 -translate-x-1/2 w-8 h-8 rounded-full bg-white border-2 border-[#3e5641] flex items-center justify-center text-[#3e5641] shadow-xs">
-            <span class="material-symbols-outlined text-[15px]">school</span>
-          </div>
-          <div class="md:w-1/2 md:pl-10 pl-12 pt-2 md:pt-6">
-            <span class="text-xs font-semibold text-[#626f63] bg-[#f4f4ed] px-3 py-1 rounded-full border border-[#e6e8de]">2022 — 2026-yillar · Toshkent</span>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ==================== PORTFOLIO ==================== -->
-<section class="w-full py-16 bg-[#f7f8f1] relative border-y border-[#e6e8de]" id="portfolio">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
-      <div>
-        <span class="text-xs font-bold text-[#3e5641] uppercase tracking-wider mb-2 block">Amaliy natijalar</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1e2b20]">Tanlangan mashinali o'rganish, yuridik sun'iy intellekt va veb tizimlari</h2>
-      </div>
-      <div class="flex flex-wrap items-center gap-1.5 p-1 rounded-full bg-white border border-[#e6e8de] shadow-xs" id="portfolioFilter">
-        <button class="filter-btn active-filter px-4 py-1.5 rounded-full text-xs font-semibold bg-[#3e5641] text-white transition-all" data-filter="all" type="button">Barchasi (7)</button>
-        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium text-[#626f63] hover:text-[#28372b] transition-all" data-filter="legal-ai" type="button">Yuridik sun'iy intellekt</button>
-        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium text-[#626f63] hover:text-[#28372b] transition-all" data-filter="ml" type="button">Mashinali o'rganish</button>
-        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium text-[#626f63] hover:text-[#28372b] transition-all" data-filter="web" type="button">Veb platformalar</button>
-        <button class="filter-btn px-4 py-1.5 rounded-full text-xs font-medium text-[#626f63] hover:text-[#28372b] transition-all" data-filter="pub" type="button">Ilmiy ishlar</button>
-      </div>
-    </div>
-
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
-
-      <!-- Project 1 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="legal-ai">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#e3ebd9] text-[#3e5641]">Yuridik sun'iy intellekt</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">Groq · Llama 3.3</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">O'zbekiston qonunchiligi bo'yicha RAG yordamchisi</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">Konstitutsiyaning 155 ta moddasi hamda Fuqarolik kodeksining barcha 1 196 ta moddasi bo'yicha aniq so'rov beruvchi RAG tizimi. Groq vositasida tezkor tahlil.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">1 351 ta modda indeksi</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/my_constitution" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 2 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="legal-ai">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#e3ebd9] text-[#3e5641]">Yuridik komplayens</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">Node.js · Groq API</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">ComplianceUZ tizimi</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">O'zbekiston Respublikasining raqobat to'g'risidagi qonunchiligi talablari asosida bozor amaliyoti va shartnomaviy qoidalarni avtomatik tekshiruvchi komplayens vositasi.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">Bozor audit moduli</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/ComplianceUZ" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 3 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="web">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#f4f4ed] text-[#28372b]">To'liq veb platforma</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">React / Vite · Node.js</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">IjaraPro ijara platformasi</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">Ijaraga oluvchilar va mulk egalari uchun raqamli ijara shartnomasi rasmiylashtirish, tasdiqlangan profillar va qulay boshqaruv panelini taqdim etuvchi ekotizim.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">Express · REST API</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/ijarapro" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 4 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="ml">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#fdeee9] text-[#9e5353]">Mashinali o'rganish</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">Fintex klassifikatori</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">Kredit berish qarorini bashorat qilish</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">Mijozlarning moliyaviy ko'rsatkichlari, kredit tarixi va xavf darajalari asosida bank kreditlarini ma'qullash natijalarini hisoblovchi nazorat ostidagi tasniflash modeli.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">Scikit-Learn · Pandas</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/mijozga-kredit-berishni-predict-qilish" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 5 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="ml">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#e3ebd9] text-[#3e5641]">Mashinali o'rganish</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">Biotibbiyot tahlili</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">Diabet kasalligini aniqlash modeli</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">Klinik biometrik ko'rsatkichlar asosida diabet ehtimolini aniqlovchi optimallashtirilgan binar klassifikator; xususiyatlar ahamiyati va sinov ko'rsatkichlari bilan.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">Tasniflash tahlili</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/diagnostik-o-lchovlar-asosida-bemorda-diabet-bor-yo-qligini-taxmin-qilish" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 6 -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all" data-category="ml">
-        <div>
-          <div class="flex items-center justify-between mb-4">
-            <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#e3ebd9] text-[#3e5641]">Mashinali o'rganish</span>
-            <span class="text-[11px] font-semibold text-[#626f63]">Ansambl usullari</span>
-          </div>
-          <h3 class="text-base font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">Mijozlar oqimi va klinik omon qolish klassifikatori</h3>
-          <p class="text-xs text-[#626f63] mb-6 leading-relaxed">Bank mijozlarining ketish ehtimolini hisoblovchi algoritm hamda jigar sirrozi bilan og'rigan bemorlarning omon qolish ehtimolini baholovchi ansambl modeli.</p>
-        </div>
-        <div class="pt-3.5 flex items-center justify-between border-t border-[#e6e8de]">
-          <span class="text-[11px] text-[#626f63]">Kross-validatsiya</span>
-          <a class="inline-flex items-center gap-1 text-xs font-bold text-[#3e5641] hover:underline" href="https://github.com/DiyorbekZiyoxojayev/bank-mijozlarini-kelish-ketishini-bashorat-qilish" target="_blank" rel="noopener noreferrer">
-            <span>Kodni ko'rish</span>
-            <span class="material-symbols-outlined text-[14px]">arrow_outward</span>
-          </a>
-        </div>
-      </div>
-
-      <!-- Project 7 (Publication) -->
-      <div class="portfolio-item group rounded-3xl bg-white border border-[#e6e8de] p-6 flex flex-col justify-between shadow-xs hover:shadow-md transition-all md:col-span-2 lg:col-span-3" data-category="pub">
-        <div class="flex flex-col lg:flex-row lg:items-center justify-between gap-6">
-          <div class="max-w-3xl">
-            <div class="flex items-center gap-3 mb-2.5">
-              <span class="text-xs font-bold px-3 py-1 rounded-full bg-[#fdeee9] text-[#9e5353]">Taqrizdan o'tgan ilmiy nashr · 2025</span>
-              <span class="text-xs text-[#626f63]">Journal of New Century Innovations · 74-jild, 1-son</span>
-            </div>
-            <h3 class="text-lg font-bold text-[#1e2b20] mb-2 group-hover:text-[#3e5641] transition-colors">O'zbekiston raqobat huquqida kartel kelishuvlarining o'ziga xos jihatlari</h3>
-            <p class="text-xs lg:text-sm text-[#626f63] leading-relaxed">Raqobatga qarshi kartel kelishuvlari, narxlarni kelishib belgilash mexanizmlari hamda zamonaviy O'zbekiston antimonopoliya qonunchiligida huquqiy tartibga solish bo'yicha ilmiy tahlil.</p>
-          </div>
-          <div class="shrink-0">
-            <a class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-[#9e5353] text-white text-xs font-bold hover:bg-[#854343] transition-all shadow-xs" href="https://scientific-jl.com/new/article/view/7035" target="_blank" rel="noopener noreferrer">
-              <span>Maqolani to'liq o'qish</span>
-              <span class="material-symbols-outlined text-[16px]">menu_book</span>
+          <p class="footer-desc" data-i18n="footer.desc">Korporativ biznes raqobat huquqini zamonaviy mashinali o'rganish modellari va sun'iy intellekt bilan birlashtirish.</p>
+          <div class="footer-socials">
+            <a class="social-btn" href="https://t.me/ziyoxojayev" target="_blank" rel="noopener" title="Telegram">
+              <span class="material-symbols-outlined icon-md">send</span>
+            </a>
+            <a class="social-btn" href="https://github.com/DiyorbekZiyoxojayev" target="_blank" rel="noopener" title="GitHub">
+              <span class="material-symbols-outlined icon-md">terminal</span>
+            </a>
+            <a class="social-btn" href="https://www.linkedin.com/in/diyorbekziyokhujaev/" target="_blank" rel="noopener" title="LinkedIn">
+              <span class="material-symbols-outlined icon-md">work</span>
             </a>
           </div>
         </div>
+
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.sections">Bo'limlar</span>
+          <nav class="footer-nav">
+            <a href="#about" data-i18n="footer.linkAbout">Asosiy profil</a>
+            <a href="#experience" data-i18n="footer.linkExp">Amaliy tajriba</a>
+            <a href="#portfolio" data-i18n="footer.linkPortfolio">Loyihalar va ishlanmalar</a>
+            <a href="#credentials" data-i18n="footer.linkCred">Malaka va sertifikatlar</a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <span class="footer-col-title" data-i18n="footer.contact">Aloqa</span>
+          <div class="footer-contact">
+            <span data-i18n="footer.email">Pochta: diyorbekziyoxojayev@gmail.com</span>
+            <a class="footer-link" href="#contact" data-i18n="footer.reach">Murojaat qilish →</a>
+          </div>
+        </div>
       </div>
 
-    </div>
-  </div>
-</section>
-
-<!-- ==================== CREDENTIALS ==================== -->
-<section class="w-full py-16 bg-[#fafaf3] relative" id="credentials">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
-      <div>
-        <span class="text-xs font-bold text-[#3e5641] uppercase tracking-wider mb-2 block">Akkreditatsiya va xalqaro nishonlar</span>
-        <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1e2b20]">Sertifikatlar va kasbiy malakalar</h2>
-      </div>
-      <p class="text-xs sm:text-sm text-[#626f63] max-w-sm">
-        Oxford, UNESCO, Hugging Face, UNODC, Kaggle, Clio va Harvey AI kabi muassasalar tomonidan tasdiqlangan sertifikatlar.
-      </p>
-    </div>
-
-    <!-- Resume Download -->
-    <div class="rounded-3xl bg-[#f7f8f1] border border-[#e6e8de] p-7 mb-10 flex flex-col md:flex-row items-center justify-between gap-6 shadow-xs">
-      <div class="flex items-center gap-4">
-        <div class="w-12 h-12 rounded-2xl bg-[#e3ebd9] text-[#3e5641] flex items-center justify-center shrink-0">
-          <span class="material-symbols-outlined text-2xl">picture_as_pdf</span>
+      <div class="footer-bottom">
+        <div class="footer-bottom-left">
+          <p data-i18n="footer.copyright">© 2026 Diyorbek Ziyoxujayev. Barcha huquqlar himoyalangan.</p>
+          <span class="footer-sep">|</span>
+          <p class="footer-note" data-i18n="footer.note">Huquqiy texnologiyalar va sun'iy intellekt bo'yicha maslahatlar qonun hujjatlariga asoslangan.</p>
         </div>
-        <div>
-          <h3 class="text-base font-bold text-[#1e2b20]">To'liq rezyume (pdf)</h3>
-          <p class="text-xs text-[#626f63]">Sud amaliyoti, ishlab chiqilgan arxitekturalar va TDYU baholari ilovasi bilan.</p>
-        </div>
-      </div>
-      <a class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#3e5641] text-white text-xs font-bold hover:bg-[#314434] transition-all shrink-0 shadow-sm" href="files/Diyorbek_Ziyokhujaev_resume.pdf" download>
-        <span class="material-symbols-outlined text-[16px]">download</span>
-        <span>Rezyumeni yuklab olish</span>
-      </a>
-    </div>
-
-    <!-- 8 Certificates Grid -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
-
-      <a href="files/AI-Justice-and-the-Rule-of-Law.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#3e5641] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">account_balance</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Sun'iy intellekt, adolat va qonun ustuvorligi</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">University of Oxford va UNESCO</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#3e5641] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/certificate_HF_excellence.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#3e5641] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">psychology</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Chuqur mustahkamlash asosida o'rganish</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">Hugging Face · A'lo natija sertifikati</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#3e5641] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/clio-certificate-diyorbek-ziyokhujaev.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#9e5353] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">gavel</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Yuridik sun'iy intellekt asoslari</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">Clio Legal Tech</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#9e5353] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/certificate-AI-for-LEGAL-HARVEYACADEMY.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#3e5641] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">terminal</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Yuridik faoliyat uchun sun'iy intellekt</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">Harvey Academy</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#3e5641] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/5670167225DZ-ANTI-CORRUPTION-CERTICATE.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#9e5353] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">security</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Korrupsiyaga qarshi kurashish va etika</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">UNODC (Birlashgan Millatlar Tashkiloti)</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#9e5353] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/cybercrime-UNODC.pdf" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#9e5353] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">shield</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Kiberjinoyatlarni tergov qilish</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">UNODC (Birlashgan Millatlar Tashkiloti)</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#9e5353] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/cert_advanced_sql.png" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#3e5641] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">database</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Kengaytirilgan SQL va ma'lumotlar mantiqi</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">Kaggle Data Science</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#3e5641] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-      <a href="files/cert_computer_vision.jpg" target="_blank" class="p-5 rounded-3xl bg-white border border-[#e6e8de] hover:border-[#3e5641]/40 transition-all flex flex-col justify-between shadow-xs">
-        <div>
-          <div class="w-9 h-9 rounded-full bg-[#f4f4ed] text-[#3e5641] flex items-center justify-center mb-3">
-            <span class="material-symbols-outlined text-[18px]">visibility</span>
-          </div>
-          <h4 class="text-xs font-bold text-[#1e2b20] mb-1">Kompyuter ko'rishi (Computer Vision)</h4>
-          <div class="text-[11px] text-[#626f63] mb-3">Kaggle Data Science</div>
-        </div>
-        <span class="text-[10px] font-bold text-[#3e5641] flex items-center gap-1">
-          <span class="material-symbols-outlined text-[13px]">verified</span> Sertifikatni ko'rish
-        </span>
-      </a>
-
-    </div>
-  </div>
-</section>
-
-<!-- ==================== CONTACT ==================== -->
-<section class="w-full py-16 bg-[#f7f8f1] relative border-t border-[#e6e8de]" id="contact">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12">
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
-
-      <!-- Left -->
-      <div class="lg:col-span-5 flex flex-col justify-between">
-        <div>
-          <span class="text-xs font-bold text-[#3e5641] uppercase tracking-wider mb-2 block">Muloqotni boshlash</span>
-          <h2 class="text-2xl sm:text-3xl font-extrabold text-[#1e2b20] mb-3">Ishni yoki modelni birgalikda loyihalashtiramiz</h2>
-          <p class="text-xs sm:text-sm text-[#626f63] mb-6 leading-relaxed">
-            Yuridik konsultatsiyalar, da'vo xatlari tuzish, raqobat komplayensi auditi va moslashtirilgan sun'iy intellekt tizimlari uchun ochiqman. Javob berish muddati: 24 soat ichida.
-          </p>
-
-          <div class="flex flex-col gap-3">
-            <div class="p-4 rounded-2xl bg-white border border-[#e6e8de] flex items-start gap-3.5 shadow-xs">
-              <div class="w-9 h-9 rounded-full bg-[#e3ebd9] text-[#3e5641] flex items-center justify-center shrink-0">
-                <span class="material-symbols-outlined text-[18px]">pin_drop</span>
-              </div>
-              <div>
-                <span class="text-[10px] text-[#626f63] uppercase block font-semibold">Joylashuv</span>
-                <span class="text-xs font-bold text-[#28372b]">Toshkent, O'zbekiston · UTC+5</span>
-              </div>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-[#e6e8de] flex items-start justify-between gap-3 shadow-xs">
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-full bg-[#fdeee9] text-[#9e5353] flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[18px]">phone_iphone</span>
-                </div>
-                <div>
-                  <span class="text-[10px] text-[#626f63] uppercase block font-semibold">Telefon va Telegram</span>
-                  <a class="text-xs font-bold text-[#3e5641] hover:underline" href="https://t.me/ziyoxojayev" target="_blank" rel="noopener noreferrer">+998 90 004 17 06</a>
-                </div>
-              </div>
-              <button class="text-[#626f63] hover:text-[#28372b] p-1" onclick="navigator.clipboard.writeText('+998900041706'); alert('Telefon raqami nusxalandi');" title="Raqamni nusxalash">
-                <span class="material-symbols-outlined text-[16px]">content_copy</span>
-              </button>
-            </div>
-
-            <div class="p-4 rounded-2xl bg-white border border-[#e6e8de] flex items-start justify-between gap-3 shadow-xs">
-              <div class="flex items-start gap-3.5">
-                <div class="w-9 h-9 rounded-full bg-[#e3ebd9] text-[#3e5641] flex items-center justify-center shrink-0">
-                  <span class="material-symbols-outlined text-[18px]">mail</span>
-                </div>
-                <div>
-                  <span class="text-[10px] text-[#626f63] uppercase block font-semibold">Elektron pochta</span>
-                  <a class="text-xs font-bold text-[#3e5641] hover:underline break-all" href="mailto:diyorbekziyoxojayev@gmail.com">diyorbekziyoxojayev@gmail.com</a>
-                </div>
-              </div>
-              <button class="text-[#626f63] hover:text-[#28372b] p-1" onclick="navigator.clipboard.writeText('diyorbekziyoxojayev@gmail.com'); alert('Elektron pochta nusxalandi');" title="Pochtani nusxalash">
-                <span class="material-symbols-outlined text-[16px]">content_copy</span>
-              </button>
-            </div>
-          </div>
-
-          <div class="mt-4 rounded-2xl overflow-hidden h-36 bg-white border border-[#e6e8de] relative">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d187055.5!2d69.15!3d41.31!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sTashkent!5e0!3m2!1sen!2sus" frameborder="0" style="border:0; width:100%; height:100%;" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-        <div class="pt-4 text-[11px] text-[#626f63]">• PGP kaliti: 4A89 F201 E733 9D4E 27AF</div>
-      </div>
-
-      <!-- Right Form -->
-      <div class="lg:col-span-7">
-        <div class="rounded-3xl bg-white border border-[#e6e8de] p-8 shadow-xs">
-          <h3 class="text-xl font-bold text-[#1e2b20] mb-1">Xabar yo'llash</h3>
-          <p class="text-xs text-[#626f63] mb-6">Xabarlar to'g'ridan-to'g'ri shaxsiy pochtamga yetkaziladi.</p>
-
-          <form id="cf" class="flex flex-col gap-4">
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex flex-col gap-1.5">
-                <label class="text-[11px] font-semibold text-[#626f63]">Ism va familiyangiz</label>
-                <input id="name-field" name="name" class="px-4 py-3 rounded-2xl bg-[#fafaf3] border border-[#e6e8de] text-[#28372b] text-xs outline-none focus:border-[#3e5641] transition-colors placeholder:text-[#626f63]/60" placeholder="Masalan: Alisher Navoiy" required type="text"/>
-              </div>
-              <div class="flex flex-col gap-1.5">
-                <label class="text-[11px] font-semibold text-[#626f63]">Elektron pochtangiz</label>
-                <input id="email-field" name="email" class="px-4 py-3 rounded-2xl bg-[#fafaf3] border border-[#e6e8de] text-[#28372b] text-xs outline-none focus:border-[#3e5641] transition-colors placeholder:text-[#626f63]/60" placeholder="nom@kompaniya.uz" required type="email"/>
-              </div>
-            </div>
-            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              <div class="flex flex-col gap-1.5">
-                <label class="text-[11px] font-semibold text-[#626f63]">Telefon raqami yoki Telegram</label>
-                <input id="phone-field" name="phone" class="px-4 py-3 rounded-2xl bg-[#fafaf3] border border-[#e6e8de] text-[#28372b] text-xs outline-none focus:border-[#3e5641] transition-colors placeholder:text-[#626f63]/60" placeholder="+998 90 000 00 00" type="tel"/>
-              </div>
-              <div class="flex flex-col gap-1.5">
-                <label class="text-[11px] font-semibold text-[#626f63]">Xizmat yo'nalishi</label>
-                <select id="service-field" name="service" class="px-4 py-3 rounded-2xl bg-[#fafaf3] border border-[#e6e8de] text-[#28372b] text-xs outline-none focus:border-[#3e5641] transition-colors">
-                  <option value="">— Xizmatni tanlang —</option>
-                  <option>Mashinali o'rganish va ma'lumotlar tahlili</option>
-                  <option>Yuridik sun'iy intellekt va RAG tizimlari</option>
-                  <option>Korporativ huquq va shartnomalar tuzish</option>
-                  <option>Raqobat va kartellarga qarshi komplayens</option>
-                  <option>Sud da'vo arizasi va iltimosnoma tayyorlash</option>
-                  <option>To'liq tsiklli veb ishlab chiqish</option>
-                  <option>Boshqa</option>
-                </select>
-              </div>
-            </div>
-            <div class="flex flex-col gap-1.5">
-              <label class="text-[11px] font-semibold text-[#626f63]">Loyiha yoki murojaat tafsilotlari</label>
-              <textarea id="message-field" name="message" rows="4" class="px-4 py-3 rounded-2xl bg-[#fafaf3] border border-[#e6e8de] text-[#28372b] text-xs outline-none focus:border-[#3e5641] transition-colors resize-none placeholder:text-[#626f63]/60" placeholder="Huquqiy holat yoki texnik vazifani bayon eting..." required></textarea>
-            </div>
-
-            <div id="form-status" class="hidden"></div>
-
-            <div class="flex items-center justify-between pt-2">
-              <span class="text-[11px] text-[#626f63]">Xavfsiz va maxfiy aloqa</span>
-              <button id="submitBtn" class="px-6 py-3 rounded-full bg-[#3e5641] text-white text-xs font-bold hover:bg-[#314434] shadow-sm transition-all" type="submit">
-                Xabarni yuborish →
-              </button>
-            </div>
-          </form>
-        </div>
+        <a class="scroll-top" href="#">
+          <span class="material-symbols-outlined icon-xs">north</span>
+          <span data-i18n="footer.top">Yuqoriga</span>
+        </a>
       </div>
     </div>
-  </div>
-</section>
+  </footer>
 
-</div>
-</main>
-
-<!-- ==================== FOOTER ==================== -->
-<footer class="w-full bg-[#f4f4ed] border-t border-[#e6e8de]">
-  <div class="max-w-7xl mx-auto px-6 lg:px-12 pt-10 pb-8">
-    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 pb-8">
-      <div class="md:col-span-2 flex flex-col gap-2.5">
-        <div class="flex items-center gap-2 flex-wrap">
-          <span class="text-xs font-bold px-2.5 py-0.5 rounded-full bg-white border border-[#e6e8de] text-[#3e5641]">Yurist va mashinali o'rganish muhandisi</span>
-          <span class="text-xs text-[#626f63]">Toshkent va masofaviy</span>
-        </div>
-        <p class="text-xs text-[#626f63] max-w-md leading-relaxed">Konstitutsiyaviy, korporativ va raqobat qonunchiligini zamonaviy mashinali o'rganish modellari, katta til modellari hamda qat'iy tahlil me'yorlari bilan birlashtirish.</p>
-        <div class="flex items-center gap-2.5 pt-1">
-          <a class="w-8 h-8 rounded-full bg-white border border-[#e6e8de] flex items-center justify-center text-[#626f63] hover:text-[#3e5641] hover:border-[#3e5641] transition-colors shadow-xs" href="https://t.me/ziyoxojayev" target="_blank" rel="noopener noreferrer" title="Telegram">
-            <span class="material-symbols-outlined text-[16px]">send</span>
-          </a>
-          <a class="w-8 h-8 rounded-full bg-white border border-[#e6e8de] flex items-center justify-center text-[#626f63] hover:text-[#3e5641] hover:border-[#3e5641] transition-colors shadow-xs" href="https://github.com/DiyorbekZiyoxojayev" target="_blank" rel="noopener noreferrer" title="GitHub">
-            <span class="material-symbols-outlined text-[16px]">terminal</span>
-          </a>
-          <a class="w-8 h-8 rounded-full bg-white border border-[#e6e8de] flex items-center justify-center text-[#626f63] hover:text-[#3e5641] hover:border-[#3e5641] transition-colors shadow-xs" href="https://www.linkedin.com/in/diyorbekziyokhujaev/" target="_blank" rel="noopener noreferrer" title="LinkedIn">
-            <span class="material-symbols-outlined text-[16px]">work</span>
-          </a>
-        </div>
-      </div>
-      <div class="flex flex-col gap-2">
-        <span class="text-xs font-bold text-[#1e2b20]">Bo'limlar</span>
-        <nav class="flex flex-col gap-1.5">
-          <a class="text-xs text-[#626f63] hover:text-[#28372b] transition-colors" href="#about">Asosiy profil</a>
-          <a class="text-xs text-[#626f63] hover:text-[#28372b] transition-colors" href="#experience">Sud amaliyoti</a>
-          <a class="text-xs text-[#626f63] hover:text-[#28372b] transition-colors" href="#portfolio">Loyihalar va ishlanmalar</a>
-          <a class="text-xs text-[#626f63] hover:text-[#28372b] transition-colors" href="#credentials">Malaka va sertifikatlar</a>
-        </nav>
-      </div>
-      <div class="flex flex-col gap-2">
-        <span class="text-xs font-bold text-[#1e2b20]">Aloqa va xavfsizlik</span>
-        <div class="flex flex-col gap-1.5 text-xs text-[#626f63]">
-          <span>Pochta: diyorbekziyoxojayev@gmail.com</span>
-          <span>PGP kaliti: 0x9D4E27AF</span>
-          <a class="text-[#3e5641] font-semibold hover:underline pt-1" href="#contact">Murojaat qilish →</a>
-        </div>
-      </div>
-    </div>
-    <div class="pt-6 flex flex-col md:flex-row items-center justify-between gap-4 border-t border-[#e6e8de]">
-      <div class="flex flex-col sm:flex-row items-center gap-3 text-center sm:text-left">
-        <p class="text-xs text-[#626f63]">© 2026 Diyorbek Ziyoxo'jayev. Barcha huquqlar himoyalangan.</p>
-        <span class="hidden sm:inline text-[#d6dad0]">|</span>
-        <p class="text-[11px] text-[#626f63]/80">Huquqiy texnologiyalar va sun'iy intellekt bo'yicha maslahatlar qonun hujjatlariga asoslangan.</p>
-      </div>
-      <a class="flex items-center gap-1 px-3 py-1 rounded-full bg-white border border-[#e6e8de] text-xs font-semibold text-[#626f63] hover:text-[#28372b] transition-all shadow-xs" href="#">
-        <span class="material-symbols-outlined text-[14px]">north</span>
-        <span>Yuqoriga</span>
-      </a>
-    </div>
-  </div>
-</footer>
-
-<!-- ==================== SCRIPTS ==================== -->
-
-<!-- EmailJS -->
-<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-
-<script>
-  // ========== Portfolio Filter ==========
-  (function() {
-    const buttons = document.querySelectorAll('.filter-btn');
-    const items = document.querySelectorAll('.portfolio-item');
-
-    buttons.forEach(btn => {
-      btn.addEventListener('click', function() {
-        const filter = this.getAttribute('data-filter');
-
-        // Active button style
-        buttons.forEach(b => {
-          b.classList.remove('bg-[#3e5641]', 'text-white');
-          b.classList.add('text-[#626f63]');
-        });
-        this.classList.add('bg-[#3e5641]', 'text-white');
-        this.classList.remove('text-[#626f63]');
-
-        // Filter items
-        items.forEach(item => {
-          if (filter === 'all' || item.getAttribute('data-category') === filter) {
-            item.style.display = '';
-          } else {
-            item.style.display = 'none';
-          }
-        });
-      });
-    });
-  })();
-
-  // ========== EmailJS Contact Form ==========
-  (function() {
-    if (window.emailjs) {
-      emailjs.init("9mgs9BoBSXqgZPhrF");
-    }
-
-    const cf = document.getElementById('cf');
-    if (!cf) return;
-
-    cf.addEventListener('submit', function(e) {
-      e.preventDefault();
-
-      const name = document.getElementById('name-field').value.trim();
-      const email = document.getElementById('email-field').value.trim();
-      const phone = document.getElementById('phone-field').value.trim();
-      const service = document.getElementById('service-field').value;
-      const message = document.getElementById('message-field').value.trim();
-      const status = document.getElementById('form-status');
-      const btn = document.getElementById('submitBtn');
-
-      if (!name || !email || !message) {
-        status.className = 'block p-3 rounded-2xl bg-red-100 text-red-700 text-xs font-semibold text-center';
-        status.textContent = "Iltimos, barcha majburiy maydonlarni to'ldiring.";
-        return;
-      }
-
-      btn.disabled = true;
-      const originalLabel = btn.textContent;
-      btn.textContent = 'Yuborilmoqda...';
-
-      emailjs.send('service_v1d13sv', 'template_dvxw8pb', {
-        from_name: name,
-        from_email: email,
-        phone_number: phone || 'Kiritilmadi',
-        service_type: service || 'Belgilanmagan',
-        message: message
-      }).then(function() {
-        status.className = 'block p-3 rounded-2xl bg-green-100 text-green-700 text-xs font-semibold text-center';
-        status.textContent = "Xabar muvaffaqiyatli yuborildi! Tez orada javob beraman.";
-        btn.textContent = 'Yuborildi ✓';
-        cf.reset();
-        setTimeout(() => {
-          btn.disabled = false;
-          btn.textContent = originalLabel;
-          status.className = 'hidden';
-        }, 4000);
-      }).catch(function(err) {
-        status.className = 'block p-3 rounded-2xl bg-red-100 text-red-700 text-xs font-semibold text-center';
-        status.textContent = "Xatolik yuz berdi. Iltimos, qayta urinib ko'ring.";
-        btn.disabled = false;
-        btn.textContent = originalLabel;
-        console.error('EmailJS error:', err);
-      });
-    });
-  })();
-</script>
-
+  <!-- ==================== SCRIPTS ==================== -->
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+  <script src="translations.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
