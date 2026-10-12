@@ -16,9 +16,9 @@ const TRANSLATIONS = {
 
     // Hero
     "hero.badge": "Jurist & Data Analyst",
-    "hero.title1": "The union of jurisprudence and",
-    "hero.title2": "computational intelligence.",
-    "hero.desc": "I combine deep study of judicial process requirements with the power of machine learning. Working with high-dimensional legal data, building predictive models and reliable AI systems for institutions.",
+    "hero.title1": "where law meets",
+    "hero.title2": "technology",
+    "hero.desc": "I combine deep study of judicial process requirements with the power of machine learning , AI. Working with high-dimensional legal data, building predictive models and reliable AI systems for institutions.",
     "hero.noteStrong": "Precise analysis:",
     "hero.noteText": "Every article and algorithm is fully grounded in legal norms and computational accuracy.",
     "hero.ctaPrimary": "View systems & work",
