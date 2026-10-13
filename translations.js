@@ -53,7 +53,7 @@ const TRANSLATIONS = {
     // About
     "about.eyebrow": "Hybrid approach",
     "about.title": "Jurist and data analyst: hybrid advantage",
-    "about.desc": "Without computational capability, legal analysis slows down; without normative boundaries, algorithms make mistakes. These two fields complement each other.",
+    "about.desc": "Without technology and system, legal analysis slows down; without normative boundaries, algorithms make mistakes. These two fields complement each other.",
     "about.legal.tag": "Legislative practice",
     "about.legal.title": "Legal and institutional consulting",
     "about.legal.desc": "Educated at Tashkent State University of Law with hands-on experience in administrative and civil courts. Specialized in Uzbek legislation, commercial disputes and antitrust requirements.",
