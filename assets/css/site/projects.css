@@ -1,0 +1,234 @@
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.filter-btn {
+  min-height: 38px;
+  padding: 9px 15px;
+  border: 1px solid #87916b50;
+  border-radius: 6px;
+  background: linear-gradient(140deg, #4c57402b, #162111);
+  color: #bcc8ad;
+  font: 12px Arial, sans-serif;
+}
+
+.filter-btn:hover {
+  border-color: #c1ae7b;
+  color: #ead9b0;
+}
+
+.filter-btn.is-active {
+  border-color: #c7b17a;
+  background: linear-gradient(125deg, #cbb584, #938154);
+  color: #1f291a;
+  box-shadow: inset 0 1px #ffffd466, 0 3px 8px #0005;
+}
+
+.filter-results {
+  min-height: 18px;
+  margin-block: 14px 22px;
+  color: #a5b392;
+  font: 10px Consolas, monospace;
+}
+
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0,1fr));
+  gap: 22px;
+}
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: translate .3s, border-color .3s;
+}
+
+.project-card:hover {
+  translate: 0 -5px;
+  border-color: #bbaa78;
+}
+
+.project-card__media {
+  position: relative;
+  height: 180px;
+  margin: 7px 7px 0;
+  border: 1px solid #919a6c45;
+  border-radius: 7px;
+  overflow: hidden;
+  background: #0d160e;
+}
+
+.project-plate {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: repeating-linear-gradient(0deg, transparent 0 25px, #a0b58c10 26px), repeating-linear-gradient(90deg, transparent 0 25px, #a0b58c10 26px), radial-gradient(ellipse at center, #525e355c, #11190f 75%);
+}
+
+.project-plate::before, .project-plate::after {
+  content: '';
+  position: absolute;
+  width: 132px;
+  height: 132px;
+  border: 1px solid #c6aa6545;
+  rotate: 45deg;
+  box-shadow: inset 0 0 0 9px #8b955012, 0 0 0 12px #6d7a4610;
+}
+
+.project-plate::after {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  rotate: 0deg;
+}
+
+.project-plate > span {
+  z-index: 1;
+  color: #d5bc80;
+  font: 66px Georgia, serif;
+  text-shadow: 0 3px 3px #000;
+}
+
+.project-plate em {
+  position: absolute;
+  bottom: 16px;
+  right: 14px;
+  font: 8px Consolas, monospace;
+  letter-spacing: .18em;
+  color: #7e9069;
+}
+
+.project-plate--p2, .project-plate--p5 {
+  filter: hue-rotate(16deg);
+}
+
+.project-plate--p3, .project-plate--p6 {
+  filter: hue-rotate(-15deg);
+}
+
+.project-card__tag {
+  position: absolute;
+  top: 12px;
+  left: 12px;
+  z-index: 2;
+  padding: 5px 8px;
+  border: 1px solid #a7aa7255;
+  border-radius: 4px;
+  background: #17210fdf;
+  color: #d7c391;
+  font: 9px Consolas, monospace;
+}
+
+.project-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  padding: 22px;
+}
+
+.project-card__head {
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+  gap: 12px;
+}
+
+.project-card h3 {
+  font: 600 19px/1.35 Georgia, serif;
+  color: #e1d5b4;
+}
+
+.project-card__year {
+  padding-top: 4px;
+  font: 10px Consolas, monospace;
+  color: #8e9c7a;
+}
+
+.project-card__desc {
+  margin-block: 16px 20px;
+  color: #b6c2a8;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+.project-card .chip-row {
+  margin-top: auto;
+}
+
+.project-card__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin-top: 24px;
+  padding-top: 16px;
+  border-top: 1px solid #81915b3b;
+  font-size: 10px;
+  color: #7f906b;
+}
+
+.link-arrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #dfc58a;
+  font-size: 11px;
+}
+
+.link-arrow:hover {
+  color: #fff0c7;
+}
+
+.project-card--wide {
+  grid-column: 1 / -1;
+}
+
+.publication-strip {
+  border-color: #b29e6570;
+  background: url('../../img/home/metal-grain.svg'), radial-gradient(ellipse at top right, #9580472b, transparent 65%), #1a2316;
+}
+
+.publication-strip .project-card__body {
+  padding: 30px;
+}
+
+.publication-strip h3 {
+  font-size: clamp(22px, 2.5vw, 30px);
+  max-width: 38ch;
+}
+
+.publication-strip .chip-row {
+  margin-top: 16px;
+}
+
+.publication-strip .project-card__desc {
+  max-width: 70ch;
+  font-size: 14px;
+}
+
+@media (max-width: 1100px) {
+  .project-grid {
+    grid-template-columns: repeat(2,minmax(0,1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .project-grid {
+    grid-template-columns: 1fr;
+  }
+  .project-card__media {
+    height: 195px;
+  }
+  .filter-btn {
+    font-size: 11px;
+    padding: 9px 12px;
+  }
+  .publication-strip .project-card__body {
+    padding: 24px;
+  }
+}

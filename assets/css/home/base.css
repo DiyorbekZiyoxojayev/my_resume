@@ -1,0 +1,104 @@
+/* Shared tokens and reset. Component materials live in their own stylesheets. */
+:root {
+  color-scheme: dark;
+  --ink: #eeeee7;
+  --muted: #c1c0b4;
+  --gold: #d7bd87;
+  --ease: cubic-bezier(.2,.7,.2,1);
+  font-family: Arial,"Segoe UI",sans-serif;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #111310;
+  color: var(--ink);
+  min-width: 0;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  cursor: pointer;
+}
+
+button,a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button svg,a svg {
+  width: 1.2em;
+  height: 1.2em;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.6;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+h1,h2,h3,h4,p,figure {
+  margin: 0;
+}
+
+a:focus-visible,button:focus-visible {
+  outline: 2px solid #edcf90;
+  outline-offset: 5px;
+}
+
+.skip-link {
+  position: fixed;
+  top: -80px;
+  left: 24px;
+  z-index: 20;
+  padding: 12px 20px;
+  background: #d7bd87;
+  color: #181b17;
+}
+
+.skip-link:focus {
+  top: 12px;
+}
+
+::selection {
+  background: #a88e58;
+  color: #fff;
+}
+
+.copy-toast {
+  position: fixed;
+  bottom: 28px;
+  left: 50%;
+  z-index: 30;
+  transform: translate(-50%,18px);
+  padding: 12px 22px;
+  max-width: 90vw;
+  border: 1px solid #bfa777;
+  border-radius: 8px;
+  background: #292b25;
+  box-shadow: 0 10px 40px #000a;
+  color: #f1dfb8;
+  font-size: 14px;
+  text-align: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .25s,transform .25s,visibility .25s;
+}
+
+.copy-toast.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translate(-50%,0);
+}

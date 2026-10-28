@@ -1,0 +1,52 @@
+/* Small luminous segments travel along existing cables, behind the statue.
+   SVG dash animation requires no JavaScript frame loop or additional images. */
+.wire-flow {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+.wire-flow svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+}
+
+.wire-flow__pulse {
+  fill: none;
+  stroke: #fff0c6;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: .65 99.35;
+  filter: drop-shadow(0 0 3px #ffdda4) drop-shadow(0 0 6px #e4bd74);
+  animation: wire-travel var(--travel, 28s) var(--delay, 0s) linear infinite;
+}
+
+.wire-flow__pulse--soft {
+  stroke: #e5ece1;
+  stroke-width: 1.5;
+  opacity: .7;
+}
+
+@keyframes wire-travel {
+  from { stroke-dashoffset: 0; }
+  to { stroke-dashoffset: -100; }
+}
+
+@media (max-width: 900px) {
+  .wire-flow { opacity: .45; }
+  .wire-flow svg {
+    position: absolute;
+    left: 50%;
+    width: auto;
+    height: 100%;
+    translate: -50% 0;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .wire-flow { display: none; }
+}

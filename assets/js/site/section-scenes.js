@@ -1,0 +1,105 @@
+import * as THREE from '../../vendor/three/three.module.min.js';
+import { RoomEnvironment } from '../../vendor/three/RoomEnvironment.js';
+import { createSectionModels } from './section-models.js';
+
+// A single movable canvas serves all five section stages. Offscreen stages
+// retain their last real render as a snapshot, rather than keeping five GPUs busy.
+export function initSectionScenes() {
+  const stages = [...document.querySelectorAll('.section-stage')];
+  if (!stages.length) return;
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true, powerPreference: 'low-power' }); }
+  catch { return; }
+  renderer.setClearColor(0x000000, 0);
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.toneMappingExposure = 1.05;
+  const scene = new THREE.Scene();
+  const camera = new THREE.PerspectiveCamera(33, 1, .1, 20);
+  camera.position.set(0,.12,4.5);
+  camera.lookAt(0,0,0);
+  const room = new RoomEnvironment();
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const environment = pmrem.fromScene(room,.04);
+  scene.environment=environment.texture;
+  room.dispose(); pmrem.dispose();
+  scene.add(new THREE.HemisphereLight(0xe5e9da,0x18271c,1.3));
+  const key=new THREE.DirectionalLight(0xffe1b0,2.5);key.position.set(-3,4,4);scene.add(key);
+  const rim=new THREE.DirectionalLight(0xadc5c4,1.6);rim.position.set(3,1,-3);scene.add(rim);
+  const models=createSectionModels();
+  models.forEach(model=>{model.visible=false;scene.add(model);});
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)');
+  const visibility=new Map();
+  let active=null,model=null,frame=0,previous=0,time=0,disposed=false;
+
+  function resize() {
+    if(!active||disposed)return;
+    const {width,height}=active.getBoundingClientRect();
+    if(!width||!height)return;
+    renderer.setPixelRatio(Math.min(devicePixelRatio||1,1.4));
+    renderer.setSize(width,height,false);
+    camera.aspect=width/height;
+    camera.position.z=Math.max(4.15,3.35/camera.aspect);
+    camera.updateProjectionMatrix();
+    renderer.render(scene,camera);
+  }
+  const resizeObserver=new ResizeObserver(resize);
+  function capture() {
+    if(!active||!model)return;
+    try {
+      renderer.render(scene,camera);
+      let snapshot=active.querySelector('.section-scene-snapshot');
+      if(!snapshot){snapshot=document.createElement('img');snapshot.className='section-scene-snapshot';snapshot.alt='';active.prepend(snapshot);}
+      snapshot.src=renderer.domElement.toDataURL('image/webp',.84);
+    } catch { /* CSS fallback remains available if a snapshot cannot be made. */ }
+  }
+  function draw(now) {
+    if(disposed||!active||document.hidden||reduced.matches){frame=0;return;}
+    frame=requestAnimationFrame(draw);
+    if(now-previous<1000/24)return;
+    time+=previous?Math.min((now-previous)/1000,.12):0;
+    previous=now;
+    model.rotation.y=-.3+time*.14;
+    model.position.y=Math.sin(time*.6)*.035;
+    model.userData.animate?.(time);
+    renderer.render(scene,camera);
+  }
+  function sync() {
+    cancelAnimationFrame(frame);frame=0;previous=0;
+    if(active&&!document.hidden&&!reduced.matches&&!disposed)frame=requestAnimationFrame(draw);
+  }
+  function choose() {
+    const next=[...visibility].filter(([,ratio])=>ratio>0).sort((a,b)=>b[1]-a[1])[0]?.[0]||null;
+    if(next===active)return;
+    capture();
+    if(model)model.visible=false;
+    resizeObserver.disconnect();
+    active=next;model=next?models.get(next.dataset.scene):null;
+    if(model){
+      model.visible=true;
+      model.rotation.y=-.3+time*.14;
+      active.append(renderer.domElement);
+      active.classList.add('has-3d-render');
+      resizeObserver.observe(active);
+      resize();
+    }
+    sync();
+  }
+  const observer=new IntersectionObserver(entries=>{
+    for(const entry of entries)visibility.set(entry.target,entry.isIntersecting?entry.intersectionRatio:0);
+    choose();
+  },{threshold:[0,.1,.4,.7,1]});
+  stages.forEach(stage=>observer.observe(stage));
+  document.addEventListener('visibilitychange',sync);
+  reduced.addEventListener('change',sync);
+  window.addEventListener('pagehide',event=>{
+    if(event.persisted){cancelAnimationFrame(frame);return;}
+    disposed=true;cancelAnimationFrame(frame);observer.disconnect();resizeObserver.disconnect();
+    document.removeEventListener('visibilitychange',sync);reduced.removeEventListener('change',sync);
+    const geometries=new Set(),materials=new Set();
+    scene.traverse(object=>{if(object.geometry)geometries.add(object.geometry);if(object.material)materials.add(object.material);});
+    geometries.forEach(geometry=>geometry.dispose());materials.forEach(material=>material.dispose());
+    environment.dispose();renderer.dispose();
+  });
+  window.addEventListener('pageshow',sync);
+}

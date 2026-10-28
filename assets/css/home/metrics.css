@@ -1,0 +1,214 @@
+.metrics {
+  position: absolute;
+  left: 8.3%;
+  right: 6.3%;
+  top: 77%;
+  height: 15.6%;
+  display: grid;
+  grid-template-columns: repeat(4,minmax(0,1fr));
+  gap: .75cqw;
+  z-index: 2;
+}
+
+.metric {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+  border: 4px ridge #999e8c;
+  border-radius: .5cqw;
+  clip-path: polygon(5% 0,96% 0,100% 10%,100% 90%,95% 100%,0 100%,0 12%);
+  background: linear-gradient(110deg,#565b4f,#22291f 56%,#a68a50 57%,#5f4f30);
+  box-shadow: inset 0 0 0 2px #252b21,0 3px 6px #000;
+  transition: filter .3s,transform .3s var(--ease);
+}
+
+.metric:before {
+  content: "";
+  position: absolute;
+  inset: 3px;
+  border: 1px solid #d2d1b458;
+  clip-path: inherit;
+  pointer-events: none;
+  z-index: 4;
+}
+
+.metric:hover {
+  filter: brightness(1.13);
+  transform: translateY(-4px);
+}
+
+.metric__face {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: .6cqw .8cqw;
+  background: none;
+}
+
+.metric__label {
+  font-size: .95cqw;
+  color: #eee9d9;
+  text-shadow: 0 1px 2px #000;
+  margin-bottom: 1cqw;
+}
+
+.metric h2 {
+  font-size: 2cqw;
+  color: #e8d5ae;
+  font-weight: 750;
+  letter-spacing: -.06cqw;
+  text-shadow: 0 2px 2px #000;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.metric__detail {
+  font-size: .84cqw;
+  color: #ece9d8;
+  margin-top: .5cqw;
+  white-space: nowrap;
+  letter-spacing: -.02cqw;
+  transform-origin: left;
+}
+
+.metric:nth-child(2) .metric__detail,.metric:nth-child(3) .metric__detail {
+  font-size: .8cqw;
+}
+
+.metric__inlay {
+  position: absolute;
+  right: 17%;
+  top: 0;
+  width: 34%;
+  height: 40%;
+  background: conic-gradient(from 35deg,#08251e,#31594b,#041d17,#617d66,#0a2820);
+  clip-path: polygon(0 0,100% 0,60% 100%);
+  box-shadow: inset 0 0 10px #000;
+}
+
+.metric__symbol {
+  position: absolute;
+  right: .65cqw;
+  top: .6cqw;
+  font-size: 1cqw;
+  display: grid;
+  place-items: center;
+  background: #292c21;
+  border: 1px solid #b9ab7c;
+  color: #dfd0a5;
+  border-radius: 4px;
+  width: 1.7cqw;
+  height: 1.7cqw;
+}
+
+.metric__chart {
+  position: absolute;
+  bottom: 1cqw;
+  right: .9cqw;
+  display: flex;
+  align-items: end;
+  gap: .28cqw;
+  height: 3.5cqw;
+}
+
+.metric__chart i {
+  width: .35cqw;
+  height: 42%;
+  border: 1px solid #dccb976e;
+  background: linear-gradient(90deg,#826b42,#e3c687,#9e804a);
+  box-shadow: 1px 0 #0006;
+}
+
+.metric__chart i:nth-child(2) {
+  height: 68%;
+}
+
+.metric__chart i:nth-child(3) {
+  height: 90%;
+}
+
+.metric__chart i:nth-child(4) {
+  height: 62%;
+}
+
+@media(max-width:900px) {
+  .metrics {
+    position: relative;
+    inset: auto;
+    height: auto;
+    grid-template-columns: repeat(2,minmax(0,1fr));
+    gap: 12px;
+  }
+  .metric {
+    height: 110px;
+    border-radius: 6px;
+    border-width: 3px;
+  }
+  .metric__face {
+    padding: 10px 8px;
+  }
+  .metric__label {
+    font-size: 10px;
+    margin-bottom: 12px;
+  }
+  .metric h2 {
+    font-size: 21px;
+    letter-spacing: -.6px;
+  }
+  .metric__detail {
+    font-size: 10px;
+    margin-top: 8px;
+    max-width: 95%;
+    white-space: normal;
+  }
+  .metric:nth-child(2) .metric__detail,.metric:nth-child(3) .metric__detail {
+    font-size: 10px;
+  }
+  .metric__symbol {
+    top: 7px;
+    right: 7px;
+    width: 19px;
+    height: 19px;
+    font-size: 12px;
+  }
+  .metric__chart {
+    bottom: 12px;
+    right: 10px;
+    height: 38px;
+    gap: 3px;
+  }
+  .metric__chart i {
+    width: 4px;
+  }
+}
+
+@media(max-width:390px) {
+  .metrics {
+    grid-template-columns: 1fr;
+  }
+  .metric {
+    height: 112px;
+  }
+  .metric h2 {
+    font-size: 25px;
+  }
+  .metric__label {
+    font-size: 12px;
+  }
+  .metric__detail,.metric:nth-child(2) .metric__detail,.metric:nth-child(3) .metric__detail {
+    font-size: 10px;
+  }
+}
+
+.metric:after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: url("../../img/home/metal-grain.svg"),linear-gradient(125deg,#b1b2a24a,#5d62577d 32%,#323b30 85%);
+  clip-path: polygon(0 0,61% 0,80% 75%,74% 100%,0 100%);
+  pointer-events: none;
+}

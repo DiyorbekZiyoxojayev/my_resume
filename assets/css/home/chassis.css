@@ -1,0 +1,87 @@
+/* The background contains materials and sculpture only; interface elements are live HTML. */
+.portfolio-machine {
+  position: relative;
+  isolation: isolate;
+  width: min(100%,1800px);
+  aspect-ratio: 1024/551;
+  overflow: hidden;
+  container-type: inline-size;
+  background: #191c18;
+  border-radius: 18px;
+  box-shadow: 0 30px 100px #000a;
+}
+
+.machine-art {
+  position: absolute;
+  inset: 0;
+  z-index: -3;
+  background: #171b18 url('../../img/home/chassis-clean.webp') center/100% 100% no-repeat;
+}
+
+.machine-light {
+  position: absolute;
+  inset: 10% 5% 5%;
+  z-index: -2;
+  pointer-events: none;
+  background: radial-gradient(ellipse at var(--light-x,30%) var(--light-y,10%),#f8e1ab0d,transparent 45%);
+  mix-blend-mode: screen;
+}
+
+.home {
+  position: absolute;
+  inset: 0;
+}
+
+.machine-serial {
+  position: absolute;
+  bottom: 1.05%;
+  left: 44%;
+  font-size: .52cqw;
+  letter-spacing: .21em;
+  color: #9d988a;
+  opacity: .6;
+  pointer-events: none;
+}
+
+@media(min-aspect-ratio:2/1) and (min-width:901px) {
+  .portfolio-machine {
+    width: min(100%,calc(100svh * 1.8584));
+  }
+}
+
+@media(max-width:900px) {
+  body {
+    display: block;
+    padding: 8px;
+  }
+  .portfolio-machine {
+    width: 100%;
+    aspect-ratio: auto;
+    min-height: 100svh;
+    border: 7px ridge #777971;
+    border-radius: 24px;
+    overflow: hidden;
+    padding: 0 20px 30px;
+    background: #151915;
+  }
+  .machine-art {
+    background-size: auto 100%;
+    background-position: center;
+    opacity: .52;
+  }
+  .machine-art:after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: #0e120eb0;
+  }
+  .home {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  .machine-serial {
+    display: none;
+  }
+}

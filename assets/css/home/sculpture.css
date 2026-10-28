@@ -1,0 +1,83 @@
+/* Decorative glass data blocks, independent of the profile interface. */
+.data-sculpture {
+  position: absolute;
+  top: 16%;
+  left: 66%;
+  width: 19%;
+  height: 33%;
+  pointer-events: none;
+  z-index: 3;
+  perspective: 900px;
+  opacity: .8;
+}
+
+.glass-cube {
+  position: absolute;
+  display: block;
+  --edge: 5cqw;
+  width: var(--edge);
+  height: var(--edge);
+  border: 1px solid #c7dfdbb3;
+  transform: rotateX(-19deg) rotateY(-31deg);
+  transform-style: preserve-3d;
+  background: linear-gradient(125deg,#cee2e533,#456a7a60 42%,#0f252abe 43%,#c4e1d326);
+  box-shadow: inset 0 0 0 .5cqw #182c3459,inset 0 0 18px #b5ece955,0 5px 10px #0008;
+  animation: cube-float 7s ease-in-out infinite;
+}
+
+.glass-cube:before,.glass-cube:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #d5eeeb91;
+  background: linear-gradient(140deg,#9daebd77,#1d333e77 30%,#839f9d66);
+  box-shadow: inset 0 0 0 .45cqw #12272c6b;
+}
+
+.glass-cube:before {
+  left: 100%;
+  transform-origin: left;
+  transform: rotateY(90deg);
+}
+
+.glass-cube:after {
+  bottom: 100%;
+  transform-origin: bottom;
+  transform: rotateX(90deg);
+}
+
+.glass-cube--large {
+  --edge: 6.6cqw;
+  top: 7.4cqw;
+  left: 0;
+  animation-delay: -2s;
+}
+
+.glass-cube--upper {
+  --edge: 4.4cqw;
+  top: 0;
+  left: 10cqw;
+}
+
+.glass-cube--small {
+  --edge: 3.5cqw;
+  top: 13.6cqw;
+  left: 10.1cqw;
+  animation-delay: -4s;
+}
+
+@keyframes cube-float {
+  0%,100% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 -.5cqw;
+  }
+}
+
+@media(max-width:900px) {
+  .data-sculpture {
+    display: none;
+  }
+}
