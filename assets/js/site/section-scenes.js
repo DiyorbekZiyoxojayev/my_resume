@@ -51,6 +51,7 @@ export function initSectionScenes() {
       let snapshot=active.querySelector('.section-scene-snapshot');
       if(!snapshot){snapshot=document.createElement('img');snapshot.className='section-scene-snapshot';snapshot.alt='';active.prepend(snapshot);}
       snapshot.src=renderer.domElement.toDataURL('image/webp',.84);
+      snapshot.hidden=false;
     } catch { /* CSS fallback remains available if a snapshot cannot be made. */ }
   }
   function draw(now) {
@@ -72,6 +73,7 @@ export function initSectionScenes() {
     const next=[...visibility].filter(([,ratio])=>ratio>0).sort((a,b)=>b[1]-a[1])[0]?.[0]||null;
     if(next===active)return;
     capture();
+    renderer.domElement.remove();
     if(model)model.visible=false;
     resizeObserver.disconnect();
     active=next;model=next?models.get(next.dataset.scene):null;
@@ -79,6 +81,8 @@ export function initSectionScenes() {
       model.visible=true;
       model.rotation.y=-.3+time*.14;
       active.append(renderer.domElement);
+      const snapshot=active.querySelector('.section-scene-snapshot');
+      if(snapshot)snapshot.hidden=true;
       active.classList.add('has-3d-render');
       resizeObserver.observe(active);
       resize();

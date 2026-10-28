@@ -29,7 +29,7 @@ assets/
   css/home/              Original home visual components
   css/site/              Shared materials and section-specific styles
   js/home/               Counters, pointer lighting and 3D renderer
-  js/site/               Navigation, translations, filters, documents, form
+  js/site/               Navigation, filters, documents, form and section scenes
   img/home/              Optimized WebP artwork and metal texture
   vendor/three/          Locally bundled Three.js and MIT license
 models/                  Real GLB sculpture and source/license documentation
@@ -38,14 +38,15 @@ files/                   Original certificates, diploma and resume
 scripts/                 Build, validation and local preview server
 ```
 
-Edit a component or `index.template.html`, then run `npm run build`. CSS and JavaScript files are served directly and do not need bundling. The build is deterministic; `npm run check` catches stale output, missing files/anchors, duplicate IDs, missing translations and JavaScript syntax errors.
+Edit a component or `index.template.html`, then run `npm run build`. CSS and JavaScript files are served directly and do not need bundling. The build is deterministic; `npm run check` catches stale output, missing files/anchors, duplicate IDs, retired language controls and JavaScript syntax errors.
 
 ## Behavior
 
 - Navigation works through section anchors, including a mobile menu and current-section indicator.
-- EN/UZ translation persists locally. Edit `assets/js/site/translations.js` or the inline `data-en`/`data-uz` copy.
+- The site is English-only. Copy lives directly in the section components; there is no language toggle or saved language preference.
 - Project filters work locally and announce result counts.
 - All five content sections share the home's machined metal frame, brass details and animated cable lights. Original Three.js geometry illustrates legal scales, banking architecture, connected glass cubes, a certificate and orbital communication.
+- Section objects are borderless background compositions with shared animated wire artwork in `components/shared/scene-wires.html`. Text stays above the artwork; mobile layouts soften the models to preserve readability. The navigation connects directly to the same chassis rails.
 - `assets/js/site/section-models.js` defines the geometry; `section-scenes.js` shares one additional WebGL canvas between the five stages. Offscreen stages retain a rendered snapshot. Rendering is capped at 24 fps and stops offscreen, in hidden tabs and for reduced motion.
 - `assets/css/site/machinery.css` defines the continuous chassis and dimensional surfaces; `depth.js` handles lazy scene loading, panel lighting and the illuminated career rail.
 - Certificate buttons open a native accessible dialog with preview, open and download actions. All 11 original documents are linked.

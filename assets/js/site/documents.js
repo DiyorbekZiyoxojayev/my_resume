@@ -1,5 +1,3 @@
-import { getLanguage } from './language.js';
-
 export function initDocuments() {
   const dialog = document.querySelector('.document-dialog');
   const body = dialog?.querySelector('[data-document-body]');
@@ -20,7 +18,7 @@ export function initDocuments() {
     preview.addEventListener('error', () => {
       const text = document.createElement('p');
       text.className = 'document-error';
-      text.textContent = getLanguage() === 'uz' ? "Ko'rish imkoni yo'q. Faylni ochish yoki yuklab olish tugmasidan foydalaning." : 'Preview unavailable. Open or download the file below.';
+      text.textContent = 'Preview unavailable. Open or download the file below.';
       body.replaceChildren(text);
     });
     body.replaceChildren(preview);

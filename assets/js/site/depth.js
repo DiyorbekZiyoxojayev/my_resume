@@ -6,6 +6,8 @@ export function initDepth() {
   });
   sections.forEach(section=>observer.observe(section));
   const stages=[...document.querySelectorAll('.section-stage')];
+  const wires=document.querySelector('#scene-wires');
+  if(wires)stages.forEach(stage=>stage.prepend(wires.content.cloneNode(true)));
   if(stages.length){
     const loader=new IntersectionObserver(entries=>{
       if(!entries.some(entry=>entry.isIntersecting))return;

@@ -1,5 +1,3 @@
-import { getLanguage } from './language.js';
-
 export function initProjects() {
   const buttons = [...document.querySelectorAll('[data-filter]')];
   const cards = [...document.querySelectorAll('.project-card[data-category]')];
@@ -16,9 +14,8 @@ export function initProjects() {
       button.classList.toggle('is-active', selected);
       button.setAttribute('aria-pressed', String(selected));
     }
-    if (output) output.textContent = getLanguage() === 'uz' ? `${count} ta loyiha va nashr` : `${count} projects and publications`;
+    if (output) output.textContent = `${count} projects and publications`;
   }
   for (const button of buttons) button.addEventListener('click', () => { active = button.dataset.filter; render(); });
-  document.addEventListener('languagechange', render);
   render();
 }

@@ -2,7 +2,6 @@ import assert from 'node:assert/strict';
 import { readFile, readdir, stat } from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import { translations } from '../assets/js/site/translations.js';
 import { spawnSync } from 'node:child_process';
 
 const root = path.resolve(fileURLToPath(new URL('../', import.meta.url)));
@@ -16,8 +15,8 @@ for (const match of html.matchAll(/(?:href|src|data-doc)="([^"]+)"/g)) {
   if (/^(https?:|mailto:|tel:)/.test(reference)) continue;
   await stat(path.join(root, reference.split('#')[0]));
 }
-const keys = [...html.matchAll(/data-i18n(?:-placeholder)?="([^"]+)"/g)].map(match => match[1]);
-for (const language of ['en','uz']) for (const key of keys) assert(key in translations[language], `Missing ${language} translation: ${key}`);
+assert(!/data-language|language-toggle|data-uz|data-i18n/.test(html), 'Retired language UI or bindings reintroduced');
+assert(html.includes('lang="en"'), 'English document language required');
 for (const file of await readdir(path.join(root, 'files'))) assert(html.includes(`files/${file}`), `Document not linked: ${file}`);
 assert.equal((html.match(/class="project-card[ "]/g) || []).length, 7, 'Project count');
 assert.equal((html.match(/class="cert-card[ "]/g) || []).length, 8, 'Certificate count');
@@ -52,4 +51,4 @@ for (const file of await walk(path.join(root, 'assets'))) {
     for (const match of code.matchAll(/\b(?:from\s*|import\s*\()['"](\.[^'"]+)['"]/g)) await stat(path.resolve(path.dirname(file), match[1]));
   }
 }
-console.log(`PASS: 6 sections, 7 projects, 8 certificates, all 11 documents, ${new Set(keys).size} bilingual keys, anchors and local asset imports.`);
+console.log(`PASS: 6 sections, 7 projects, 8 certificates, all 11 documents, English copy, anchors and local asset imports.`);

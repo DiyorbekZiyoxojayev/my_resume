@@ -1,5 +1,3 @@
-import { getLanguage } from './language.js';
-
 export function initClipboard() {
   const status = document.querySelector('[data-copy-status]');
   if (!status) return;
@@ -10,8 +8,8 @@ export function initClipboard() {
       let message;
       try {
         await navigator.clipboard.writeText(value);
-        message = getLanguage() === 'uz' ? 'Nusxalandi' : 'Copied to clipboard';
-      } catch { message = `${getLanguage() === 'uz' ? 'Nusxalash' : 'Copy'}: ${value}`; }
+        message = 'Copied to clipboard';
+      } catch { message = `Copy: ${value}`; }
       status.textContent = message;
       status.classList.add('is-visible');
       clearTimeout(timer);

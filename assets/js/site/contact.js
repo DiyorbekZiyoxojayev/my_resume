@@ -1,10 +1,7 @@
-import { getLanguage, phrase } from './language.js';
-
 // Existing public EmailJS integration. These are browser-safe service identifiers.
 const config = { service_id: 'service_v1d13sv', template_id: 'template_dvxw8pb', user_id: '9mgs9BoBSXqgZPhrF' };
 const messages = {
   en: { invalid: 'Please fill in your name, a valid email address and a message.', sending: 'Sending...', sent: 'Message sent. Thank you for getting in touch.', error: 'The message could not be sent. Please email diyorbekziyoxojayev@gmail.com directly.' },
-  uz: { invalid: "Ism, to'g'ri email manzil va xabarni kiriting.", sending: 'Yuborilmoqda...', sent: 'Xabar yuborildi. Murojaatingiz uchun rahmat.', error: "Xabar yuborilmadi. diyorbekziyoxojayev@gmail.com manziliga yozing." }
 };
 
 export async function sendContactMessage(params) {
@@ -28,7 +25,7 @@ export function initContact({ send = sendContactMessage } = {}) {
   form.addEventListener('submit', async event => {
     event.preventDefault();
     if (pending) return;
-    const copy = messages[getLanguage()];
+    const copy = messages.en;
     const name = form.querySelector('#name-field');
     const email = form.querySelector('#email-field');
     const message = form.querySelector('#message-field');
@@ -43,13 +40,13 @@ export function initContact({ send = sendContactMessage } = {}) {
     try {
       await send({ from_name: name.value.trim(), from_email: email.value.trim(), reply_to: email.value.trim(), phone_number: form.querySelector('#phone-field').value.trim() || '-', service_type: form.querySelector('#service-field').value || '-', message: message.value.trim() });
       form.reset();
-      show('success', messages[getLanguage()].sent);
-    } catch { show('error', messages[getLanguage()].error); }
+      show('success', messages.en.sent);
+    } catch { show('error', messages.en.error); }
     finally {
       pending = false;
       button.disabled = false;
       form.removeAttribute('aria-busy');
-      label.textContent = phrase('contact.submit', 'Send message');
+      label.textContent = 'Send message';
     }
   });
 }
