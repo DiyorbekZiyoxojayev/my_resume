@@ -24,9 +24,9 @@ export function createSceneMaterials() {
     return map;
   }
   const brushed = texture('metal'), stone = texture('stone');
-  const metal = (color, roughness) => new THREE.MeshPhysicalMaterial({ color, metalness: 1, roughness, roughnessMap: brushed, bumpMap: brushed, bumpScale: .003, clearcoat: .18, clearcoatRoughness: .25 });
+  const metal = (color, roughness) => new THREE.MeshPhysicalMaterial({ color, metalness: .88, roughness, roughnessMap: brushed, bumpMap: brushed, bumpScale: .003, envMapIntensity: 1.15, clearcoat: .24, clearcoatRoughness: .25 });
   return {
-    steel: metal(0x88928b,.42), dark: metal(0x253229,.55), gold: metal(0xb99652,.36),
+    steel: metal(0x88928b,.48), dark: metal(0x253229,.65), gold: metal(0xc6a665,.46),
     stone: new THREE.MeshStandardMaterial({ color: 0xb5b2a0, map: stone, roughness: .72, bumpMap: stone, bumpScale: .009, metalness: .04 }),
     paper: new THREE.MeshStandardMaterial({ color: 0xd8cdaa, roughness: .86, bumpMap: brushed, bumpScale: .002 }),
     leather: new THREE.MeshStandardMaterial({ color: 0x30251c, roughness: .8, bumpMap: stone, bumpScale: .016 }),

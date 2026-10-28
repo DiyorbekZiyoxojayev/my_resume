@@ -30,8 +30,10 @@ export function initSectionScenes() {
   key.castShadow=true;
   key.shadow.mapSize.set(matchMedia('(max-width:600px)').matches?512:1024,matchMedia('(max-width:600px)').matches?512:1024);
   Object.assign(key.shadow.camera,{left:-2.4,right:2.4,top:2.4,bottom:-2.4,near:.5,far:12});
+  key.shadow.camera.updateProjectionMatrix();
   key.shadow.bias=-.0003;key.shadow.normalBias=.015;key.shadow.radius=3;
   const rim=new THREE.DirectionalLight(0xadc5c4,1.6);rim.position.set(3,1,-3);scene.add(rim);
+  const fill=new THREE.DirectionalLight(0xf5eee0,.8);fill.position.set(1,1,5);scene.add(fill);
   const models=createSectionModels();
   models.forEach(model=>{model.visible=false;scene.add(model);});
   const floor=new THREE.Mesh(new THREE.PlaneGeometry(7,7),new THREE.ShadowMaterial({color:0x000000,opacity:.28}));
@@ -40,8 +42,9 @@ export function initSectionScenes() {
   const visibility=new Map();
   let active=null,model=null,frame=0,previous=0,time=0,disposed=false;
   const pointer={x:0,y:0},view={x:0,y:0};
+  const finePointer=matchMedia('(hover:hover) and (pointer:fine)');
   function followPointer(event){
-    if(!active||reduced.matches||!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+    if(!active||reduced.matches||!finePointer.matches)return;
     const box=active.parentElement.getBoundingClientRect();
     const inside=event.clientX>=box.left&&event.clientX<=box.right&&event.clientY>=box.top&&event.clientY<=box.bottom;
     pointer.x=inside?((event.clientX-box.left)/box.width-.5)*2:0;
@@ -72,7 +75,7 @@ export function initSectionScenes() {
     } catch { /* CSS fallback remains available if a snapshot cannot be made. */ }
   }
   function draw(now) {
-    if(disposed||!active||document.hidden||reduced.matches){frame=0;return;}
+    if(disposed||!active||document.hidden||reduced.matches||document.body.classList.contains('document-open')){frame=0;return;}
     frame=requestAnimationFrame(draw);
     if(now-previous<1000/24)return;
     time+=previous?Math.min((now-previous)/1000,.12):0;
@@ -86,7 +89,7 @@ export function initSectionScenes() {
   }
   function sync() {
     cancelAnimationFrame(frame);frame=0;previous=0;
-    if(active&&!document.hidden&&!reduced.matches&&!disposed)frame=requestAnimationFrame(draw);
+    if(active&&!document.hidden&&!reduced.matches&&!disposed&&!document.body.classList.contains('document-open'))frame=requestAnimationFrame(draw);
   }
   function choose() {
     const next=[...visibility].filter(([,ratio])=>ratio>0).sort((a,b)=>b[1]-a[1])[0]?.[0]||null;
@@ -99,6 +102,7 @@ export function initSectionScenes() {
     if(model){
       model.visible=true;
       pointer.x=pointer.y=0;
+      view.x=view.y=0;camera.position.x=0;camera.position.y=.12;camera.lookAt(0,0,0);
       model.rotation.y=-.3+time*.14;
       active.append(renderer.domElement);
       const snapshot=active.querySelector('.section-scene-snapshot');
@@ -115,11 +119,13 @@ export function initSectionScenes() {
   },{threshold:[0,.1,.4,.7,1]});
   stages.forEach(stage=>observer.observe(stage));
   document.addEventListener('visibilitychange',sync);
+  document.addEventListener('documentpreviewchange',sync);
   reduced.addEventListener('change',sync);
   window.addEventListener('pagehide',event=>{
     if(event.persisted){cancelAnimationFrame(frame);return;}
     disposed=true;cancelAnimationFrame(frame);observer.disconnect();resizeObserver.disconnect();
     document.removeEventListener('visibilitychange',sync);reduced.removeEventListener('change',sync);
+    document.removeEventListener('documentpreviewchange',sync);
     document.removeEventListener('pointermove',followPointer);
     const geometries=new Set(),materials=new Set(),textures=new Set();
     scene.traverse(object=>{if(object.geometry)geometries.add(object.geometry);if(object.material)materials.add(object.material);});

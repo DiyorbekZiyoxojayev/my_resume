@@ -17,6 +17,19 @@ for (const match of html.matchAll(/(?:href|src|data-doc)="([^"]+)"/g)) {
 }
 assert(!/data-language|language-toggle|data-uz|data-i18n/.test(html), 'Retired language UI or bindings reintroduced');
 assert(html.includes('lang="en"'), 'English document language required');
+const sharedCss = await readFile(path.join(root, 'assets/css/site/shell.css'), 'utf8');
+const colors = Object.fromEntries([...sharedCss.matchAll(/(--site-[\w-]+):\s*(#[0-9a-f]{6});/g)].map(match => [match[1], match[2]]));
+function luminance(hex) {
+  const rgb = [1,3,5].map(offset => parseInt(hex.slice(offset,offset+2),16)/255);
+  const linear = rgb.map(value => value <= .04045 ? value/12.92 : ((value+.055)/1.055)**2.4);
+  return linear.reduce((sum,value,index) => sum+value*[.2126,.7152,.0722][index],0);
+}
+// Guard the actual shared text tokens against the lightest base panel tone.
+for (const token of ['--site-ink','--site-muted','--site-label','--site-gold']) {
+  assert(colors[token] && colors['--site-panel-lit'], `Missing design color: ${token}`);
+  const values = [luminance(colors[token]),luminance(colors['--site-panel-lit'])].sort((a,b)=>a-b);
+  assert((values[1]+.05)/(values[0]+.05) >= 4.5, `Low base-panel text contrast: ${token}`);
+}
 for (const file of await readdir(path.join(root, 'files'))) assert(html.includes(`files/${file}`), `Document not linked: ${file}`);
 assert.equal((html.match(/class="project-card[ "]/g) || []).length, 7, 'Project count');
 assert.equal((html.match(/class="cert-card[ "]/g) || []).length, 8, 'Certificate count');

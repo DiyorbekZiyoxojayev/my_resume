@@ -24,7 +24,9 @@ export function createSectionModels() {
   }
   function cube(parent, size, position) {
     const mesh = box(parent, [size, size, size], position, glass);
-    const lines = new THREE.LineSegments(new THREE.EdgesGeometry(mesh.geometry), edge);
+    const outline=new THREE.BoxGeometry(size-.008,size-.008,size-.008);
+    const lines = new THREE.LineSegments(new THREE.EdgesGeometry(outline), edge);
+    outline.dispose();
     mesh.add(lines);
     const core = box(mesh, [size * .52, size * .52, size * .52], [0, 0, 0], dark);
     core.rotation.y = .22;
@@ -33,7 +35,7 @@ export function createSectionModels() {
     return mesh;
   }
   function sphere(parent, radius, position, material = gold) {
-    return add(parent, new THREE.SphereGeometry(radius, 32, 24), material, position);
+    return add(parent, new THREE.SphereGeometry(radius, radius<.025?10:32, radius<.025?8:24), material, position);
   }
   const models = new Map();
 

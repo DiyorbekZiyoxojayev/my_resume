@@ -20,5 +20,7 @@
 @media (prefers-reduced-motion: reduce) {
   .project-card, .cert-card, .tl-panel { transform: none; transition: border-color .2s; }
   .project-card__media, .cert-card__icon { transform: none; }
+  .cert-card:hover .cert-card__icon { rotate: none; }
+  .project-card:hover, .cert-card:hover { translate: none; }
   .project-card:hover .project-card__media::after, .section.is-engaged .section-console__index { animation: none; }
 }

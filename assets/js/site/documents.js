@@ -24,6 +24,7 @@ export function initDocuments() {
     body.replaceChildren(preview);
     document.body.classList.add('document-open');
     dialog.showModal();
+    document.dispatchEvent(new Event('documentpreviewchange'));
     dialog.querySelector('[data-document-close]').focus();
   }));
   dialog.querySelector('[data-document-close]').addEventListener('click', () => dialog.close());
@@ -31,6 +32,7 @@ export function initDocuments() {
   dialog.addEventListener('close', () => {
     body.replaceChildren();
     document.body.classList.remove('document-open');
+    document.dispatchEvent(new Event('documentpreviewchange'));
     opener?.focus();
   });
 }

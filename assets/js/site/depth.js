@@ -16,15 +16,6 @@ export function initDepth() {
     },{rootMargin:'300px'});
     stages.forEach(stage=>loader.observe(stage));
   }
-  const timeline=document.querySelector('.timeline');
-  let scrollFrame=0;
-  function paintTimeline(){
-    scrollFrame=0;if(!timeline)return;
-    const box=timeline.getBoundingClientRect();
-    timeline.style.setProperty('--timeline-fill',Math.min(1,Math.max(0,(innerHeight*.7-box.top)/Math.max(1,box.height))).toFixed(3));
-  }
-  window.addEventListener('scroll',()=>{if(!scrollFrame)scrollFrame=requestAnimationFrame(paintTimeline);},{passive:true});
-  paintTimeline();
   if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
   let pointerFrame=0;
   document.querySelector('.site-content')?.addEventListener('pointermove',event=>{
@@ -35,8 +26,8 @@ export function initDepth() {
       const box=panel.getBoundingClientRect();
       panel.style.setProperty('--shine-x',`${event.clientX-box.left}px`);
       panel.style.setProperty('--shine-y',`${event.clientY-box.top}px`);
-      panel.style.setProperty('--tilt-x',`${((event.clientY-box.top)/box.height-.5)*-2}deg`);
-      panel.style.setProperty('--tilt-y',`${((event.clientX-box.left)/box.width-.5)*2.5}deg`);
+      panel.style.setProperty('--tilt-x',`${((event.clientY-box.top)/box.height-.5)*-1}deg`);
+      panel.style.setProperty('--tilt-y',`${((event.clientX-box.left)/box.width-.5)*1.2}deg`);
     });
   },{passive:true});
   document.querySelector('.site-content')?.addEventListener('pointerout',event=>{
