@@ -1,0 +1,24 @@
+/* Movement follows the object and the pointer; copy stays steady and legible. */
+@media (hover: hover) and (pointer: fine) {
+  .project-card, .cert-card, .tl-panel {
+    transform: perspective(1100px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg));
+    transition: transform .35s var(--ease), border-color .3s, translate .3s;
+    transform-style: preserve-3d;
+  }
+  .project-card__media { transform: translateZ(7px); }
+  .cert-card__icon { transform: translateZ(10px); }
+  .project-card__media::after {
+    content: ''; position: absolute; inset: 0; pointer-events: none;
+    background: linear-gradient(115deg, transparent 30%, #f4e6ba15 48%, #f4e6ba2b 50%, transparent 65%);
+    transform: translateX(-115%);
+  }
+  .project-card:hover .project-card__media::after { animation: instrument-reflection 1.8s ease-out; }
+}
+@keyframes instrument-reflection { to { transform: translateX(115%); } }
+.section.is-engaged .section-console__index { animation: instrument-indicator 5s ease-in-out infinite; }
+@keyframes instrument-indicator { 0%,100% { box-shadow: inset 0 1px #eee6c12b, 0 0 0 #c4a66300; } 50% { box-shadow: inset 0 1px #eee6c155, 0 0 12px #c4a6631a; } }
+@media (prefers-reduced-motion: reduce) {
+  .project-card, .cert-card, .tl-panel { transform: none; transition: border-color .2s; }
+  .project-card__media, .cert-card__icon { transform: none; }
+  .project-card:hover .project-card__media::after, .section.is-engaged .section-console__index { animation: none; }
+}

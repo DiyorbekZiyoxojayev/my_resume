@@ -20,7 +20,7 @@
   margin-top: 20px;
   font-size: 14px;
   line-height: 1.85;
-  color: #bec6b0;
+  color: #c1bdb5;
 }
 
 .about-divider {
@@ -50,7 +50,7 @@
   margin-top: 7px;
   font-size: 12px;
   line-height: 1.7;
-  color: #aab69d;
+  color: #b1aba2;
 }
 
 .about-side {
@@ -89,7 +89,7 @@
 .portrait-panel figcaption span {
   font-size: 11px;
   line-height: 1.5;
-  color: #aeba9f;
+  color: #b4aea5;
 }
 
 .edu-card {
@@ -113,7 +113,7 @@
 .edu-card p {
   font-size: 12px;
   line-height: 1.7;
-  color: #b7c2a8;
+  color: #bbb7af;
   margin-top: 10px;
 }
 
@@ -122,7 +122,7 @@
   gap: 12px;
   margin-top: 18px;
   padding-top: 14px;
-  border-top: 1px solid #a7ac7f2b;
+  border-top: 1px solid #9e988d2b;
   font: 10px Consolas, monospace;
   text-transform: uppercase;
   color: #c4b486;
@@ -145,7 +145,7 @@
   justify-content: space-between;
   padding-block: 8px;
   font-size: 12px;
-  color: #d5dac9;
+  color: #d5d3ce;
 }
 
 .lang-row__lvl {
@@ -157,8 +157,8 @@
 .lang-row__lvl i {
   width: 14px;
   height: 5px;
-  border: 1px solid #7a856138;
-  background: #11190e;
+  border: 1px solid #7d766938;
+  background: #151412;
 }
 
 .lang-row__lvl .on {

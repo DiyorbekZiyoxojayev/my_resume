@@ -1,7 +1,7 @@
 /* One continuous metal chassis, from the home viewport to the final terminal. */
-body { background: #090d0b; }
+body { background: #0c0b0a; }
 .site-content, .site-footer { width: min(100%, 1800px); }
-.site-content { border: 0; box-shadow: none; background: #101613; }
+.site-content { border: 0; box-shadow: none; background: #151311; }
 .site-navigation {
   width: min(100%, 1800px);
   margin: -2px auto 0;
@@ -10,40 +10,40 @@ body { background: #090d0b; }
   padding-inline: 34px;
   border-radius: 0;
   min-height: 68px;
-  border-block: 1px solid #b6b6a24d;
-  background: url('../../img/home/metal-grain.svg'), linear-gradient(165deg, #4b5149f5, #202923fa 60%, #424b3ef5);
-  box-shadow: inset 0 1px #c7cbb740, 0 8px 28px #0009;
+  border-block: 1px solid #b3aea54d;
+  background: url('../../img/home/metal-grain.svg'), linear-gradient(165deg, #514e49f5, #282521fa 60%, #4a463ff5);
+  box-shadow: inset 0 1px #c6c2bc40, 0 8px 28px #0009;
 }
 .site-navigation::before {
   content: '';
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: linear-gradient(90deg, #aeb4aa, #4c554c 7px, #101813 14px, #737e6b 17px, transparent 19px) left / 20px 100% no-repeat,
-    linear-gradient(270deg, #aeb4aa, #4c554c 7px, #101813 14px, #737e6b 17px, transparent 19px) right / 20px 100% no-repeat;
+  background: linear-gradient(90deg, #b4b0aa, #55524c 7px, #161412 14px, #7e776b 17px, transparent 19px) left / 20px 100% no-repeat,
+    linear-gradient(270deg, #b4b0aa, #55524c 7px, #161412 14px, #7e776b 17px, transparent 19px) right / 20px 100% no-repeat;
 }
 .section {
   isolation: isolate;
   padding: clamp(62px, 6vw, 100px) clamp(30px, 6vw, 100px);
   border: 0;
-  background: url('../../img/home/metal-grain.svg'), radial-gradient(ellipse at 85% 16%, #bca06c13, transparent 50%), linear-gradient(110deg, #202923, #111916 45%, #1d2821);
+  background: url('../../img/home/metal-grain.svg'), radial-gradient(ellipse at 85% 16%, #bca06c13, transparent 50%), linear-gradient(110deg, #282521, #171513 45%, #252320);
 }
-.section--alt { background-color: #18231d; }
+.section--alt { background-color: #201e1b; }
 .section::before {
   content: '';
   position: absolute;
   inset: 0;
   z-index: 3;
   pointer-events: none;
-  background: linear-gradient(90deg, #aeb4aa, #4c554c 7px, #101813 14px, #737e6b 17px, transparent 19px) left / 20px 100% no-repeat,
-    linear-gradient(270deg, #aeb4aa, #4c554c 7px, #101813 14px, #737e6b 17px, transparent 19px) right / 20px 100% no-repeat,
-    linear-gradient(180deg, #7f897b, #303c31 4px, #101813 8px, transparent 10px) top / 100% 12px no-repeat,
-    linear-gradient(0deg, #7f897b, #303c31 4px, #101813 8px, transparent 10px) bottom / 100% 12px no-repeat;
+  background: linear-gradient(90deg, #b4b0aa, #55524c 7px, #161412 14px, #7e776b 17px, transparent 19px) left / 20px 100% no-repeat,
+    linear-gradient(270deg, #b4b0aa, #55524c 7px, #161412 14px, #7e776b 17px, transparent 19px) right / 20px 100% no-repeat,
+    linear-gradient(180deg, #89847b, #3b3731 4px, #161412 8px, transparent 10px) top / 100% 12px no-repeat,
+    linear-gradient(0deg, #89847b, #3b3731 4px, #161412 8px, transparent 10px) bottom / 100% 12px no-repeat;
   clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
 }
 .section .shell { z-index: 1; max-width: 1280px; margin-inline: auto; }
 .section-hardware { position: absolute; inset: 24px; pointer-events: none; z-index: 3; }
-.section-hardware i { position: absolute; width: 8px; height: 8px; border: 2px ridge #b4b5a4; border-radius: 50%; background: linear-gradient(135deg, #6d7768 45%, #1a2219 46% 56%, #929780 57%); box-shadow: 0 1px 3px #000; }
+.section-hardware i { position: absolute; width: 8px; height: 8px; border: 2px ridge #b4aea5; border-radius: 50%; background: linear-gradient(135deg, #777268 45%, #201e1b 46% 56%, #958e82 57%); box-shadow: 0 1px 3px #000; }
 .section-hardware i:nth-child(2) { right: 0; }
 .section-hardware i:nth-child(3) { bottom: 0; }
 .section-hardware i:nth-child(4) { right: 0; bottom: 0; }
@@ -69,12 +69,12 @@ body { background: #090d0b; }
   max-width: 740px;
   margin: 0;
   padding: 30px 0;
-  background: radial-gradient(ellipse at 25% 50%, #141d18eb, #141d1800 73%);
+  background: radial-gradient(ellipse at 25% 50%, #1b1916eb, #1b191600 73%);
 }
 .section-header .section-title {
   font-size: clamp(29px, 3.4vw, 48px);
   color: #f0eddf;
-  text-shadow: 0 2px 2px #000, 0 0 22px #0a110b;
+  text-shadow: 0 2px 2px #000, 0 0 22px #0f0e0c;
 }
 .section-header .section-lead { text-shadow: 0 1px 4px #000; }
 .section-header .section-number { left: -8px; right: auto; top: -24px; color: #e2c58a0c; -webkit-text-stroke-color: #c0b28b38; }
@@ -111,34 +111,30 @@ body { background: #090d0b; }
 .scene-wires .scene-wires__light--second { animation-duration: 33s; animation-delay: -20s; }
 .section.is-engaged .scene-wires__light { animation-play-state: running; }
 @media (prefers-reduced-motion: reduce) { .scene-wires .scene-wires__light { animation: none; opacity: .2; } }
-.scene-fallback { position: absolute; left: 50%; top: 45%; width: 100px; height: 100px; translate: -50% -50%; border-radius: 50%; border: 3px double #c7b28188; background: radial-gradient(circle at 30% 20%, #a7b5ab60, #18251d 60%); box-shadow: inset -12px -10px 20px #0008, 0 0 35px #cfba7c15; }
+.scene-fallback { position: absolute; left: 50%; top: 45%; width: 100px; height: 100px; translate: -50% -50%; border-radius: 50%; border: 3px double #c7b28188; background: radial-gradient(circle at 30% 20%, #b5b0a760, #211f1c 60%); box-shadow: inset -12px -10px 20px #0008, 0 0 35px #cfba7c15; }
 .scene-fallback i { position: absolute; inset: -24px; border: 1px solid #d7c69777; border-radius: 50%; transform: rotateX(60deg) rotateZ(-25deg); }
 .scene-fallback i:nth-child(2) { transform: rotateY(60deg) rotateZ(30deg); }
 .scene-fallback i:nth-child(3) { transform: rotateX(70deg) rotateZ(70deg); }
 .section-stage.has-3d-render .scene-fallback { opacity: 0; }
-.site-content .panel { border: 3px double #92998988; background: url('../../img/home/metal-grain.svg'), linear-gradient(135deg, #818c7333, #2a372cdd 35%, #1b2820f5); box-shadow: inset 0 0 0 2px #172019, inset 0 2px 7px #e3e7cb14, 0 12px 24px #0005; }
+.site-content .panel { border: 3px double #99938988; background: url('../../img/home/metal-grain.svg'), linear-gradient(135deg, #8a827533, #35322cdd 35%, #24221ff5); box-shadow: inset 0 0 0 2px #1e1c19, inset 0 2px 7px #dcdad614, 0 12px 24px #0005; }
 .site-content .panel::before { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(180px circle at var(--shine-x, 50%) var(--shine-y, 20%), #fff0cf12, transparent 75%); }
 .site-content .panel:hover::before { opacity: 1; }
-.site-content .panel::after { width: 5px; height: 5px; border-style: ridge; border-color: #c1c4ac; }
-.project-card__media { perspective: 700px; border: 2px ridge #8c987d85; background-color: #101c15; }
-.project-plate { transform-style: preserve-3d; transition: transform .6s var(--ease); }
-.project-card:hover .project-plate { transform: rotateY(-12deg) rotateX(6deg) scale(1.04); }
-.project-plate > span { transform: translateZ(24px); text-shadow: 2px 3px #554b31, 4px 7px 12px #000; }
-.project-plate::before { box-shadow: 5px 7px 0 #283526, 8px 10px 15px #0008; }
-.cert-card__icon { border: 3px double #d0bb8777; box-shadow: inset 0 1px #ece5c34d, 3px 4px 0 #111b11, 5px 8px 14px #0005; transition: rotate .4s, box-shadow .4s; }
-.cert-card:hover .cert-card__icon { rotate: -8deg; box-shadow: inset 0 1px #ece5c34d, 5px 7px 0 #111b11, 8px 12px 14px #0005; }
+.site-content .panel::after { width: 5px; height: 5px; border-style: ridge; border-color: #bebab2; }
+.project-card__media { perspective: 700px; border: 2px ridge #948d8185; background-color: #181614; }
+.cert-card__icon { border: 3px double #d0bb8777; box-shadow: inset 0 1px #ece5c34d, 3px 4px 0 #181614, 5px 8px 14px #0005; transition: rotate .4s, box-shadow .4s; }
+.cert-card:hover .cert-card__icon { rotate: -8deg; box-shadow: inset 0 1px #ece5c34d, 5px 7px 0 #181614, 8px 12px 14px #0005; }
 .timeline::after { content: ''; position: absolute; left: 8px; top: 24px; bottom: 24px; width: 2px; background: #f1d495; box-shadow: 0 0 9px #e2b86877; transform: scaleY(var(--timeline-fill, 0)); transform-origin: top; pointer-events: none; }
 .tl-panel .chip-row { margin-top: 18px; }
-.site-footer { border: 12px ridge #68735f; border-top-width: 8px; background: url('../../img/home/metal-grain.svg'), linear-gradient(#303c30, #121e16); }
+.site-footer { border: 12px ridge #726b60; border-top-width: 8px; background: url('../../img/home/metal-grain.svg'), linear-gradient(#3b3731, #1a1916); }
 @media (max-width: 1100px) { .section-stage { right: -8%; width: 66%; height: 390px; } .section-header .section-head { width: 66%; } }
 @media (max-width: 760px) {
   .site-navigation { width: 100%; margin: -2px auto 0; border-radius: 0; border-inline: 0; padding-inline: 30px; }
   .section { padding: 58px 30px; }
   .section-header { min-height: 330px; margin-bottom: 28px; }
-  .section-header .section-head { width: 100%; max-width: none; padding-block: 22px; background: linear-gradient(90deg, #141d18d9, #141d1859); }
+  .section-header .section-head { width: 100%; max-width: none; padding-block: 22px; background: linear-gradient(90deg, #1b1916d9, #1b191659); }
   .section-stage { right: -22px; width: 100%; height: 350px; opacity: .38; }
   .section-hardware { inset: 22px; }
   .section-header .section-number { font-size: 46px; right: 0; }
   .site-footer { padding-inline: 22px; border-width: 9px; }
 }
-@media (prefers-reduced-motion: reduce) { .section-conduits .section-pulse { animation: none; opacity: .15; } .project-card:hover .project-plate { transform: none; } }
+@media (prefers-reduced-motion: reduce) { .section-conduits .section-pulse { animation: none; opacity: .15; } }

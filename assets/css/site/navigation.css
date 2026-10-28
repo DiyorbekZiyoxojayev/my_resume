@@ -9,10 +9,10 @@
   min-height: 64px;
   margin: 24px auto 34px;
   padding: 9px 16px;
-  border: 3px double #8b8e70;
+  border: 3px double #8a8274;
   border-radius: 12px;
-  background: url('../../img/home/metal-grain.svg'), linear-gradient(165deg, #3e4736f2, #1c2519f5 60%, #404534f2);
-  box-shadow: inset 0 1px #d9ddbc44, 0 8px 25px #0008;
+  background: url('../../img/home/metal-grain.svg'), linear-gradient(165deg, #444039f2, #22201cf5 60%, #423e37f2);
+  box-shadow: inset 0 1px #d1cec844, 0 8px 25px #0008;
 }
 
 .navigation-monogram {
@@ -40,7 +40,7 @@
   align-items: center;
   gap: 5px;
   min-height: 36px;
-  color: #b8c0ac;
+  color: #bcb8b0;
   font-size: 12px;
   transition: color .2s;
 }
@@ -82,9 +82,9 @@
     width: 38px;
     height: 36px;
     margin-left: auto;
-    border: 1px solid #8e92715c;
+    border: 1px solid #8c84775c;
     border-radius: 6px;
-    background: #172013;
+    background: #1c1a17;
   }
   .navigation-toggle span {
     width: 16px;
@@ -98,9 +98,9 @@
     right: 0;
     display: none;
     padding: 14px;
-    border: 1px solid #9da07c;
+    border: 1px solid #989184;
     border-radius: 0 0 8px 8px;
-    background: #202b1cf5;
+    background: #272420f5;
     box-shadow: 0 12px 24px #0008;
   }
   .section-links.is-open {

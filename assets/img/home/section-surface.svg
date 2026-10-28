@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1100" viewBox="0 0 1600 1100">
+  <defs>
+    <linearGradient id="metal" x2="1" y2="1"><stop stop-color="#30312d"/><stop offset=".42" stop-color="#141714"/><stop offset="1" stop-color="#0b0e0c"/></linearGradient>
+    <radialGradient id="light"><stop stop-color="#c9ae6b" stop-opacity=".13"/><stop offset="1" stop-color="#c9ae6b" stop-opacity="0"/></radialGradient>
+    <pattern id="brushed" width="5" height="5" patternUnits="userSpaceOnUse"><path d="M0 1h5" stroke="#ecebd9" stroke-opacity=".018"/></pattern>
+    <filter id="grain"><feTurbulence type="fractalNoise" baseFrequency=".62" numOctaves="3" stitchTiles="stitch"/><feColorMatrix type="saturate" values="0"/></filter>
+  </defs>
+  <path fill="url(#metal)" d="M0 0h1600v1100H0z"/>
+  <ellipse cx="290" cy="40" rx="420" ry="410" fill="url(#light)"/>
+  <ellipse cx="1290" cy="100" rx="510" ry="460" fill="url(#light)"/>
+  <path fill="url(#brushed)" d="M0 0h1600v1100H0z"/>
+  <g fill="none" stroke="#060906" stroke-width="3" opacity=".35"><path d="M-100 480 370 10M990 1100l610-610M0 940l650-650M1080 0l520 520"/></g>
+  <g fill="none" stroke="#bca36f" stroke-width="1" opacity=".2"><path d="M-100 477 370 7M993 1100l610-610M0 937l650-650M1083 0l520 520"/><path d="M0 220h190l190 190v260l-180 180H0M1600 220h-190l-190 190v260l180 180h200"/><circle cx="1360" cy="890" r="155"/><circle cx="1360" cy="890" r="162"/></g>
+  <path filter="url(#grain)" opacity=".035" d="M0 0h1600v1100H0z"/>
+</svg>

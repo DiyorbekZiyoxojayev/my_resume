@@ -1,0 +1,82 @@
+/* Interior finish only: the approved outer frame and page structure stay intact. */
+.section {
+  background: #121310 url('../../img/home/section-surface.svg') center top / cover no-repeat;
+  background-clip: padding-box;
+}
+.section-header::before { opacity: .12; }
+.section-header .section-head { text-shadow: 0 2px 5px #0009; }
+.section-console { border-bottom-color: #d0bd8e36; }
+
+.site-content .panel {
+  border: 1px solid #919481;
+  border-top-color: #c3c5ba;
+  border-bottom-color: #585b4d;
+  border-radius: 17px 5px 17px 5px;
+  background:
+    linear-gradient(125deg, #d1d2cb12, transparent 27%),
+    repeating-linear-gradient(0deg, transparent 0 3px, #e0e1db03 4px),
+    radial-gradient(ellipse at 0 0, #797c6929, transparent 65%),
+    linear-gradient(150deg, #373830, #242520 50%, #181815);
+  box-shadow:
+    inset 0 1px #f1f0d73b,
+    inset 2px 0 #a8aa9c19,
+    inset 0 -3px #0c0c0a,
+    0 0 0 3px #171714,
+    0 0 0 4px #6b6e5d80,
+    4px 6px 0 #0d0e0b,
+    0 16px 27px #0008;
+}
+.site-content .panel::before {
+  content: '';
+  position: absolute;
+  inset: 5px;
+  border: 1px solid #b7b9ad25;
+  border-bottom-color: #0b0b09b3;
+  border-radius: 12px 2px 12px 2px;
+  background: radial-gradient(220px circle at var(--shine-x, 15%) var(--shine-y, 0%), #f9ecc51c, transparent 80%);
+  opacity: 1;
+  pointer-events: none;
+}
+.site-content .panel::after {
+  content: '';
+  position: absolute;
+  inset: 9px;
+  width: auto;
+  height: auto;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+  background:
+    radial-gradient(circle, #caccc3 0 1px, #535548 1.5px 2.5px, #0c0c0b 3px 4px, transparent 4.5px) left top / 9px 9px no-repeat,
+    radial-gradient(circle, #caccc3 0 1px, #535548 1.5px 2.5px, #0c0c0b 3px 4px, transparent 4.5px) right bottom / 9px 9px no-repeat;
+  pointer-events: none;
+}
+.about-main { padding: 34px; }
+.about-lead { padding-bottom: 23px; border-bottom: 1px solid #c5b17b3b; }
+.pillar { padding: 15px 12px 12px; border: 1px solid #888c7726; border-radius: 8px 2px; background: linear-gradient(135deg, #7a7d6b0c, #12131066); box-shadow: inset 0 1px #d3d4cc0a; }
+.portrait-panel { background: linear-gradient(120deg, #494b3f, #21211d) !important; }
+.portrait-panel img { border-right: 2px ridge #8f927f; }
+.tl-item:first-child .tl-panel {
+  border-color: #c8b57b;
+  background: radial-gradient(ellipse at 100% 0, #cdb17a23, transparent 65%), linear-gradient(125deg, #404138, #282922 65%, #20201c);
+  box-shadow: inset 0 1px #f5e6ba4d, 0 0 0 3px #161613, 0 0 0 4px #ac996360, 0 15px 25px #0008;
+}
+.tl-panel__period { color: #ddc993; }
+.tl-panel__org { color: #caccc3; }
+.project-card__media { margin: 13px 13px 0; border: 1px solid #878a76; border-radius: 10px 3px; box-shadow: inset 0 0 0 3px #11110f, 0 3px 12px #0005; }
+.project-blueprint { filter: saturate(.7); }
+.project-card__body { padding: 27px; }
+.project-card__foot { background: #11120f36; margin: 20px -10px -8px; padding: 17px 10px 7px; border-top-color: #a9ac9d36; }
+.cert-card::before { background: linear-gradient(135deg, #f2dfac0a, transparent 45%, #10100e33 75%); }
+.cert-card__icon { box-shadow: inset 0 1px #fff1bb, 0 0 0 3px #191a16, 0 0 0 4px #9d9d6366, 0 7px 12px #0006; }
+.publication-strip { background: radial-gradient(ellipse at 100% 0, #bdaa6633, transparent 55%), linear-gradient(120deg, #3e4036, #23241e) !important; }
+.resume-banner { background: linear-gradient(115deg, #46483d, #242520 70%) !important; }
+.contact-form-wrap { background: linear-gradient(135deg, #3f4137, #21211d 70%) !important; }
+.form-input { border: 1px solid #878a7670; background: linear-gradient(#121310, #21211d); box-shadow: inset 0 3px 7px #0009, 0 1px #c9cbc110; }
+.contact-item__icon { box-shadow: inset 0 1px #dadbd444, 0 3px 5px #0005; }
+@media (max-width: 600px) {
+  .about-main { padding: 24px; }
+  .pillar { padding: 12px 10px; }
+  .project-card__body { padding: 23px; }
+  .site-content .panel { box-shadow: inset 0 1px #f1f0d733, inset 0 -3px #0c0c0a, 0 0 0 3px #171714, 0 0 0 4px #6b6e5d80, 0 10px 18px #0006; }
+}

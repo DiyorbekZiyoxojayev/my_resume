@@ -1,0 +1,119 @@
+/* The content is built as instruments inside the same chassis as the hero. */
+:root { --alloy: #96938b; --brass: #cfb27b; --recess: #131311; }
+.portfolio-machine { width: min(100%, 1800px); border-bottom-left-radius: 0; border-bottom-right-radius: 0; }
+.site-content { background: #11100f; }
+.site-navigation {
+  min-height: 62px;
+  background: url('../../img/home/metal-grain.svg'), linear-gradient(#4e4b44, #2c2a25 48%, #1f1d1a 52%, #383630);
+  box-shadow: inset 0 2px #dddcd838, inset 0 -3px #0b0b0a, 0 7px 18px #0009;
+}
+.section {
+  border: 45px solid transparent;
+  border-image: url('../../img/home/interior-metal-v2.webp') 95 80 65 80 / 70px 45px 45px 45px / 0 stretch;
+  padding: 30px clamp(15px, 2.3vw, 38px) 35px;
+  background: url('../../img/home/metal-grain.svg'), radial-gradient(ellipse at 75% 0, #89785414, transparent 50%), linear-gradient(110deg, #181917, #0b0d0b 60%, #141612);
+}
+.section::before, .section::after, .section-hardware { display: none; }
+.section-console { display: flex; align-items: center; gap: 12px; min-height: 42px; border-bottom: 1px solid #a09b9040; color: #c4c1ba; font: 10px Consolas, monospace; letter-spacing: .16em; }
+.section-console__index { display: grid; place-items: center; width: 28px; height: 27px; border: 1px solid #ada7806b; color: #dec68c; background: linear-gradient(135deg, #555149, #272521); border-radius: 5px; box-shadow: inset 0 1px #eee6c12b; }
+.section-console i { flex: 1; height: 4px; margin-inline: 8px; background: repeating-linear-gradient(90deg, #7b766a44 0 2px, transparent 2px 6px); }
+.section-console__name { color: #938e82; font-size: 8px; letter-spacing: .12em; }
+.section-header { min-height: 270px; margin-bottom: 26px; }
+.section-header::before { content: ''; position: absolute; z-index: -1; inset: 0 -20px; pointer-events: none; opacity: .4; background: repeating-linear-gradient(135deg, transparent 0 120px, #a78f5d35 121px, #0b0a09 122px 124px, transparent 125px 250px); mask-image: linear-gradient(90deg, transparent, #000 40%, #000); }
+.section-header .section-head { width: 64%; padding: 30px 0; max-width: 730px; background: none; }
+.section-header .eyebrow { font: 10px Consolas, monospace; color: #bdb38e; letter-spacing: .14em; }
+.section-header .section-title { padding: 0; margin-block: 13px 17px; background: none; border: 0; box-shadow: none; color: #f1f0e6; font: 750 clamp(30px, 3.5vw, 48px)/1.08 Arial, sans-serif; letter-spacing: -.045em; text-shadow: 0 3px 2px #0009; max-width: 18ch; }
+.section-header .section-lead { max-width: 55ch; color: #bbb8b0; font-size: 14px; line-height: 1.75; }
+.section-header .section-number { display: none; }
+.section-header .chip { margin: 0; }
+.section-stage { width: 49%; right: -3%; height: 310px; mask-image: linear-gradient(90deg, transparent, #000 20% 85%, transparent); }
+.scene-wires { opacity: .6; }
+.site-content .panel {
+  border: 3px double #969185;
+  border-radius: 14px 5px;
+  background: url('../../img/home/metal-grain.svg'), linear-gradient(135deg, #726e6333, #36342eed 25%, #24231ff7 80%, #3c3933bd);
+  box-shadow: inset 0 0 0 2px #1c1b18, inset 0 3px 8px #dcdbd71c, inset 0 -4px 12px #0006, 3px 5px 0 #100f0e, 0 12px 22px #0006;
+}
+.site-content .panel::after { background: radial-gradient(circle at 30% 30%, #cac7c1, #4c4942 65%); }
+.about-grid { grid-template-columns: 1.5fr 1fr; gap: 22px; }
+.about-main { padding: 30px; }
+.about-lead { font: 650 clamp(22px, 2.3vw, 30px)/1.25 Arial, sans-serif; color: #e2d4b3; max-width: 30ch; }
+.about-body { color: #c7c4be; font-size: 14px; line-height: 1.75; }
+.pillar-grid { gap: 22px; }
+.pillar { position: relative; border-top: 1px solid #9c978b30; padding-top: 15px; }
+.pillar__i { color: #ceb781; }
+.pillar h3 { color: #ebe9d9; }
+.pillar p { color: #b4b0a8; line-height: 1.6; }
+.portrait-panel { border-radius: 18px 5px !important; }
+.portrait-panel img { filter: saturate(.65); }
+.timeline { padding: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.timeline::before, .timeline::after, .tl-item__node { display: none; }
+.tl-item { padding: 0; min-width: 0; display: flex; }
+.tl-panel { width: 100%; padding: 25px; }
+.tl-item:first-child, .tl-item:last-child { grid-column: 1 / -1; }
+.tl-item:first-child .tl-panel { border-color: #d1bd83; background: url('../../img/home/metal-grain.svg'), radial-gradient(ellipse at 90% 0, #c1a16433, transparent 65%), linear-gradient(125deg, #4b4840, #262420 70%); }
+.tl-item:first-child h3 { font-size: 27px; }
+.tl-panel__period { display: block; font-size: 10px; color: #cfb980; }
+.tl-panel h3 { font-size: 19px; line-height: 1.25; }
+.tl-panel__org { font-size: 13px; color: #c8c5bf; line-height: 1.5; }
+.tl-panel__desc { font-size: 13px; color: #b6b2aa; line-height: 1.7; }
+.tl-panel__badge.is-now { background: #d9c38f; color: #292723; border: 1px solid #f0d89f; box-shadow: inset 0 1px #fff2c3; }
+.project-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
+.project-card { border-radius: 15px 5px !important; }
+.project-card__media { height: auto; aspect-ratio: 400 / 205; margin: 8px 8px 0; background: #171614; border: 1px solid #7c766a; border-radius: 9px 2px; }
+.project-blueprint { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s var(--ease), filter .6s; }
+.project-card:hover .project-blueprint { transform: scale(1.035); filter: brightness(1.15); }
+.project-card__tag { top: 12px; left: 12px; padding: 6px 10px; border-radius: 4px; background: #25231ff2; border: 1px solid #9d998e77; }
+.project-card__body { padding: 25px; }
+.project-card h3 { font: 650 22px/1.2 Arial, sans-serif; color: #e9dfc4; letter-spacing: -.025em; }
+.project-card__desc { font-size: 13px; color: #c1beb8; line-height: 1.75; }
+.project-card__foot { padding-top: 17px; border-color: #97928640; }
+.project-card--wide { grid-column: 1 / -1; }
+.publication-strip { background: url('../../img/home/metal-grain.svg'), linear-gradient(110deg, #4e4b44, #282622) !important; }
+.publication-strip h3 { max-width: 45ch; font-size: 25px; }
+.filter-bar { padding: 10px; border: 1px solid #837d704d; border-radius: 10px; background: #121210; box-shadow: inset 0 2px 8px #0007; gap: 7px; }
+.filter-btn { min-height: 40px; border: 1px solid transparent; border-radius: 6px; background: transparent; color: #bebbb4; font-size: 12px; box-shadow: none; }
+.filter-btn.is-active { border: 1px solid #e0ca94; background: linear-gradient(135deg, #e6d19c, #9b8757); color: #22201d; box-shadow: inset 0 1px #fff5c9; }
+.filter-results { margin: 12px 2px 22px; color: #a39f95; }
+.cert-grid { grid-template-columns: repeat(4, 1fr); gap: 18px; }
+.cert-card { min-height: 215px; padding: 21px 18px; position: relative; overflow: hidden; }
+.cert-card::before { content: ''; position: absolute; inset: 0; pointer-events: none; opacity: 1 !important; background: linear-gradient(135deg, transparent 75%, #b89e5b20 75.2%, #b89e5b05); }
+.cert-card__top { margin-bottom: 22px; }
+.cert-card__icon { width: 43px; height: 43px; background: linear-gradient(135deg, #e0ce94, #7a6c42); border: 3px double #e6d59d; border-radius: 50%; color: #2b2925; box-shadow: 0 3px 0 #191815, 0 6px 9px #0005; }
+.cert-card h3 { font-family: Arial, sans-serif; font-size: 16px; color: #e5dfc9; line-height: 1.3; }
+.resume-banner { padding: 22px 25px; }
+.resume-banner h3 { font: 650 21px Arial, sans-serif; }
+.contact-grid { gap: 25px; grid-template-columns: .9fr 1.1fr; }
+.contact-desc { color: #c4c1bb; font-size: 14px; }
+.contact-item { min-height: 82px; }
+.contact-item__icon { border-radius: 50%; border: 3px double #a09c91; background: linear-gradient(135deg, #656056, #2d2b27); width: 38px; height: 38px; }
+.contact-item__value { font-size: 13px; color: #e0deda; }
+.contact-form-wrap { background: url('../../img/home/metal-grain.svg'), linear-gradient(135deg, #4f4c44, #262521 75%) !important; }
+.form-input { background: #171614; border: 1px solid #827d7063; color: #e5e3e0; border-radius: 6px; box-shadow: inset 0 3px 8px #0006; }
+.form-input:focus { border-color: #d3bc7c; box-shadow: 0 0 0 3px #cfb77316; }
+.btn--gold { background: linear-gradient(135deg, #e7d29c, #ae985f); color: #292723; border: 3px double #e8d59c; border-radius: 22px; box-shadow: inset 0 1px #fff2c8, 0 4px 10px #0007; }
+.site-footer { border: 15px ridge #6f6b60; background: url('../../img/home/metal-grain.svg'), linear-gradient(#34322d, #181715); }
+@media (max-width: 1100px) { .cert-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 900px) { .about-grid, .contact-grid { grid-template-columns: 1fr; } .about-side { grid-template-columns: 1fr 1fr; } .section-header .section-head { width: 68%; } .section-stage { width: 50%; right: -7%; } }
+@media (max-width: 600px) {
+  .section { border-width: 20px; border-image-width: 40px 20px 25px 20px; padding: 24px 12px 25px; }
+  .section-console { gap: 8px; font-size: 8px; }
+  .section-console__name { display: none; }
+  .section-header { min-height: 250px; margin-bottom: 22px; }
+  .section-header .section-head { width: 100%; padding-block: 25px; background: linear-gradient(90deg, #1a1916eb, #1a191677); }
+  .section-header .section-title { font-size: clamp(30px, 9vw, 39px); max-width: 17ch; }
+  .section-header .section-lead { font-size: 13px; }
+  .section-stage { width: 100%; right: -15px; height: 290px; opacity: .23; }
+  .about-main, .tl-panel, .project-card__body { padding: 22px; }
+  .about-side, .timeline, .project-grid, .contact-list { grid-template-columns: 1fr; }
+  .tl-item:first-child, .tl-item:last-child { grid-column: auto; }
+  .tl-panel__top { flex-wrap: wrap; gap: 12px; }
+  .project-card__media { aspect-ratio: 400 / 230; }
+  .project-card h3 { font-size: 21px; }
+  .cert-grid { grid-template-columns: 1fr; gap: 14px; }
+  .cert-card { min-height: 175px; padding: 20px; }
+  .cert-card__top { margin-bottom: 15px; }
+  .filter-btn { font-size: 11px; padding: 8px 10px; }
+  .site-footer { padding-inline: 20px; border-width: 10px; }
+}
+@media (prefers-reduced-motion: reduce) { .project-card:hover .project-blueprint { transform: none; } }

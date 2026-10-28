@@ -14,8 +14,8 @@
   top: 24px;
   bottom: 24px;
   width: 2px;
-  background: linear-gradient(#e0c68d, #736840 55%, #535e3e);
-  box-shadow: 1px 0 #000, -2px 0 #7d865133;
+  background: linear-gradient(#e0c68d, #736840 55%, #555047);
+  box-shadow: 1px 0 #000, -2px 0 #756e6233;
 }
 
 .tl-item {
@@ -35,13 +35,13 @@
   height: 16px;
   border: 3px double #bcaa73;
   border-radius: 50%;
-  background: #1c2718;
-  box-shadow: 0 0 0 5px #151d12;
+  background: #22201d;
+  box-shadow: 0 0 0 5px #191816;
 }
 
 .tl-item:first-child .tl-item__node {
   background: #e0bd77;
-  box-shadow: 0 0 0 5px #151d12, 0 0 18px #dcc08638;
+  box-shadow: 0 0 0 5px #191816, 0 0 18px #dcc08638;
 }
 
 .tl-panel {
@@ -71,14 +71,14 @@
 
 .tl-panel__org {
   margin-top: 8px;
-  color: #a7b49a;
+  color: #aea9a0;
   font-size: 13px;
 }
 
 .tl-panel__badge {
   flex: none;
   padding: 6px 9px;
-  border: 1px solid #969c6d45;
+  border: 1px solid #8f877a45;
   border-radius: 5px;
   font: 10px Consolas, monospace;
   color: #c2b27f;
@@ -93,7 +93,7 @@
 .tl-panel__desc {
   margin-block: 18px;
   max-width: 80ch;
-  color: #c1c9b4;
+  color: #c4c0b9;
   font-size: 14px;
   line-height: 1.75;
 }

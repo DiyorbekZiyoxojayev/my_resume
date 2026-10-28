@@ -35,6 +35,13 @@ export function initDepth() {
       const box=panel.getBoundingClientRect();
       panel.style.setProperty('--shine-x',`${event.clientX-box.left}px`);
       panel.style.setProperty('--shine-y',`${event.clientY-box.top}px`);
+      panel.style.setProperty('--tilt-x',`${((event.clientY-box.top)/box.height-.5)*-2}deg`);
+      panel.style.setProperty('--tilt-y',`${((event.clientX-box.left)/box.width-.5)*2.5}deg`);
     });
+  },{passive:true});
+  document.querySelector('.site-content')?.addEventListener('pointerout',event=>{
+    const panel=event.target.closest('.panel');
+    if(!panel||panel.contains(event.relatedTarget))return;
+    panel.style.setProperty('--tilt-x','0deg');panel.style.setProperty('--tilt-y','0deg');
   },{passive:true});
 }

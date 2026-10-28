@@ -47,6 +47,7 @@ Edit a component or `index.template.html`, then run `npm run build`. CSS and Jav
 - Project filters work locally and announce result counts.
 - All five content sections share the home's machined metal frame, brass details and animated cable lights. Original Three.js geometry illustrates legal scales, banking architecture, connected glass cubes, a certificate and orbital communication.
 - Section objects are borderless background compositions with shared animated wire artwork in `components/shared/scene-wires.html`. Text stays above the artwork; mobile layouts soften the models to preserve readability. The navigation connects directly to the same chassis rails.
+- `assets/css/site/continuity.css` defines the shared instrument-panel layout: compact section headers, two-column career cards, illustrated case files, credential tiles and the contact terminal. The generated `interior-metal-v2.webp` is a 118 KB frame asset, applied as a nine-slice border so corners retain their proportions. Project illustrations live as six original SVGs in `assets/img/projects/`.
 - `assets/js/site/section-models.js` defines the geometry; `section-scenes.js` shares one additional WebGL canvas between the five stages. Offscreen stages retain a rendered snapshot. Rendering is capped at 24 fps and stops offscreen, in hidden tabs and for reduced motion.
 - `assets/css/site/machinery.css` defines the continuous chassis and dimensional surfaces; `depth.js` handles lazy scene loading, panel lighting and the illuminated career rail.
 - Certificate buttons open a native accessible dialog with preview, open and download actions. All 11 original documents are linked.
@@ -66,3 +67,5 @@ Obsolete legacy pages, duplicate CSS/JavaScript, Tailwind configuration, empty m
 The `files/` directory was not changed. Its 11 file hashes were checked against the pre-change snapshot. Original photographs remain in `photos/`.
 
 The current biography records the completed LL.B., the Law and Justice role ending in August 2026 and the AGROBANK specialist role beginning in October 2026. Existing downloadable documents remain original.
+
+The interior finish is separated into `assets/css/site/surfaces.css`: recessed panel borders, corner fasteners, pointer highlights and input wells. The lightweight original `section-surface.svg` supplies brushed metal, etched geometry and restrained warm illumination without extra rendering loops.
